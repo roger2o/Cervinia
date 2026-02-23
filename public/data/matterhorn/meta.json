@@ -1,0 +1,29 @@
+{
+  "id": "matterhorn",
+  "name": "Matterhorn Ski Paradise",
+  "bbox": {
+    "south": 45.88,
+    "west": 7.58,
+    "north": 46.05,
+    "east": 7.8
+  },
+  "center": [
+    45.965,
+    7.6899999999999995
+  ],
+  "subAreas": [
+    "Cervinia",
+    "Valtournenche",
+    "Zermatt"
+  ],
+  "stats": {
+    "stations": 233,
+    "lifts": 158,
+    "pistes": 240,
+    "bluePistes": 45,
+    "redPistes": 155,
+    "blackPistes": 40
+  },
+  "fetchedAt": "2026-02-23T06:36:12Z",
+  "builtAt": "2026-02-23T08:27:42Z"
+}

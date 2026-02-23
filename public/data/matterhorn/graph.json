@@ -1,0 +1,6008 @@
+{
+  "nodes": [
+    {
+      "id": "station_0",
+      "name": "Zermatt\u2013Sunnegga funicular (bottom)",
+      "lat": 46.022027,
+      "lon": 7.753642,
+      "elevation": 2610,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_1",
+      "name": "Zermatt\u2013Sunnegga funicular (top)",
+      "lat": 46.016936,
+      "lon": 7.769593,
+      "elevation": 2585,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_2",
+      "name": "Patrullarve (bottom)",
+      "lat": 46.026108,
+      "lon": 7.768688,
+      "elevation": 2631,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_3",
+      "name": "Patrullarve (top)",
+      "lat": 46.017149,
+      "lon": 7.787515,
+      "elevation": 2586,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_4",
+      "name": "Hublot-Express (Gant - Blauherd) (bottom)",
+      "lat": 46.008599,
+      "lon": 7.788447,
+      "elevation": 2543,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_5",
+      "name": "Blauherd - Rothorn (bottom)",
+      "lat": 46.01706,
+      "lon": 7.785478,
+      "elevation": 2585,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_6",
+      "name": "Blauherd - Rothorn (top)",
+      "lat": 46.021219,
+      "lon": 7.798148,
+      "elevation": 2606,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_7",
+      "name": "Gant - Hoht\u00e4lli (top)",
+      "lat": 45.989023,
+      "lon": 7.802177,
+      "elevation": 2445,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_8",
+      "name": "Riffelberg-Express (bottom)",
+      "lat": 46.00156,
+      "lon": 7.731188,
+      "elevation": 2508,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_9",
+      "name": "Riffelberg-Express (top)",
+      "lat": 45.993268,
+      "lon": 7.754884,
+      "elevation": 2466,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_10",
+      "name": "Furi - Trockener Steg (top)",
+      "lat": 45.97074,
+      "lon": 7.722327,
+      "elevation": 2354,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_11",
+      "name": "Zermatt - Furi (bottom)",
+      "lat": 46.01465,
+      "lon": 7.741692,
+      "elevation": 2573,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_12",
+      "name": "Gifthittli (top)",
+      "lat": 45.985975,
+      "lon": 7.775071,
+      "elevation": 2430,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_13",
+      "name": "Furgg - Sandiger Boden (bottom)",
+      "lat": 45.987415,
+      "lon": 7.713731,
+      "elevation": 2437,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_14",
+      "name": "Furgg - Sandiger Boden (top)",
+      "lat": 45.977345,
+      "lon": 7.719055,
+      "elevation": 2387,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_15",
+      "name": "Furggsattel Gletscherbahn (top)",
+      "lat": 45.950833,
+      "lon": 7.704555,
+      "elevation": 2254,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_16",
+      "name": "Trockener Steg - Matterhorn glacier paradise (top)",
+      "lat": 45.937893,
+      "lon": 7.729413,
+      "elevation": 2189,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_17",
+      "name": "Funivia del Plateau Rosa (bottom)",
+      "lat": 45.9297,
+      "lon": 7.68034,
+      "elevation": 2148,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_18",
+      "name": "Funivia del Plateau Rosa (top)",
+      "lat": 45.934268,
+      "lon": 7.70857,
+      "elevation": 2171,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_19",
+      "name": "Plan Maison (bottom)",
+      "lat": 45.941491,
+      "lon": 7.656008,
+      "elevation": 2207,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_20",
+      "name": "Plan Maison (top)",
+      "lat": 45.945028,
+      "lon": 7.684967,
+      "elevation": 2225,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_21",
+      "name": "Fornet (top)",
+      "lat": 45.947761,
+      "lon": 7.695378,
+      "elevation": 2239,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_22",
+      "name": "Bontadini (top)",
+      "lat": 45.944181,
+      "lon": 7.708351,
+      "elevation": 2221,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_23",
+      "name": "Plan Maison (bottom)",
+      "lat": 45.934355,
+      "lon": 7.633274,
+      "elevation": 2172,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_24",
+      "name": "Plan Maison (top)",
+      "lat": 45.940202,
+      "lon": 7.654196,
+      "elevation": 2201,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_25",
+      "name": "Cretaz (bottom)",
+      "lat": 45.937438,
+      "lon": 7.631241,
+      "elevation": 2187,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_26",
+      "name": "Cretaz (top)",
+      "lat": 45.945392,
+      "lon": 7.649179,
+      "elevation": 2227,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_27",
+      "name": "Eisfluh (bottom)",
+      "lat": 46.017391,
+      "lon": 7.764111,
+      "elevation": 2587,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_28",
+      "name": "Findelbahn (Eja-Breitenboden) (bottom)",
+      "lat": 46.009997,
+      "lon": 7.769545,
+      "elevation": 2550,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_29",
+      "name": "Findelbahn (Eja-Breitenboden) (top)",
+      "lat": 46.002246,
+      "lon": 7.772308,
+      "elevation": 2511,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_30",
+      "name": "Campetto (top)",
+      "lat": 45.940224,
+      "lon": 7.634838,
+      "elevation": 2201,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_31",
+      "name": "Baby La Vieille (top)",
+      "lat": 45.942297,
+      "lon": 7.663316,
+      "elevation": 2211,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_32",
+      "name": "Plateau Rosa 2 (bottom)",
+      "lat": 45.936306,
+      "lon": 7.716059,
+      "elevation": 2182,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_33",
+      "name": "Plateau Rosa 2 (top)",
+      "lat": 45.923812,
+      "lon": 7.720521,
+      "elevation": 2119,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_34",
+      "name": "Salette (bottom)",
+      "lat": 45.888343,
+      "lon": 7.624205,
+      "elevation": 1942,
+      "subArea": "Valtournenche"
+    },
+    {
+      "id": "station_35",
+      "name": "Salette (top)",
+      "lat": 45.894145,
+      "lon": 7.647737,
+      "elevation": 1971,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_36",
+      "name": "Motta (top)",
+      "lat": 45.904296,
+      "lon": 7.653801,
+      "elevation": 2021,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_37",
+      "name": "Bec Carr\u00e9 (bottom)",
+      "lat": 45.905759,
+      "lon": 7.652597,
+      "elevation": 2029,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_38",
+      "name": "Bec Carr\u00e9 (top)",
+      "lat": 45.909558,
+      "lon": 7.677391,
+      "elevation": 2048,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_39",
+      "name": "Du Col (bottom)",
+      "lat": 45.910913,
+      "lon": 7.680695,
+      "elevation": 2055,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_40",
+      "name": "Gran Sometta (top)",
+      "lat": 45.919992,
+      "lon": 7.690505,
+      "elevation": 2100,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_41",
+      "name": "Plateau Rosa 3 (top)",
+      "lat": 45.930835,
+      "lon": 7.717703,
+      "elevation": 2154,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_42",
+      "name": "Matterhorn Express (top)",
+      "lat": 45.991588,
+      "lon": 7.709482,
+      "elevation": 2458,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_43",
+      "name": "Pancheron (bottom)",
+      "lat": 45.947606,
+      "lon": 7.649302,
+      "elevation": 2238,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_44",
+      "name": "Pancheron (top)",
+      "lat": 45.956588,
+      "lon": 7.669174,
+      "elevation": 2283,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_45",
+      "name": "Cieloalto (bottom)",
+      "lat": 45.928719,
+      "lon": 7.632992,
+      "elevation": 2144,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_46",
+      "name": "Cieloalto (top)",
+      "lat": 45.922485,
+      "lon": 7.641386,
+      "elevation": 2112,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_47",
+      "name": "Plateau Breithorn (bottom)",
+      "lat": 45.932545,
+      "lon": 7.731425,
+      "elevation": 2163,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_48",
+      "name": "Plateau Breithorn (top)",
+      "lat": 45.936559,
+      "lon": 7.729871,
+      "elevation": 2183,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_49",
+      "name": "Becca d'Aran (bottom)",
+      "lat": 45.891099,
+      "lon": 7.650751,
+      "elevation": 1955,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_50",
+      "name": "Becca d'Aran (top)",
+      "lat": 45.896952,
+      "lon": 7.657796,
+      "elevation": 1985,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_51",
+      "name": "Snowpark (top)",
+      "lat": 45.895417,
+      "lon": 7.650529,
+      "elevation": 1977,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_52",
+      "name": "Lago Goillet (bottom)",
+      "lat": 45.922733,
+      "lon": 7.673041,
+      "elevation": 2114,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_53",
+      "name": "Testa (bottom)",
+      "lat": 45.945352,
+      "lon": 7.711585,
+      "elevation": 2227,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_54",
+      "name": "Lift 332905047 (bottom)",
+      "lat": 46.006835,
+      "lon": 7.704475,
+      "elevation": 2534,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_55",
+      "name": "Lift 332905047 (top)",
+      "lat": 46.00983,
+      "lon": 7.707474,
+      "elevation": 2549,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_56",
+      "name": "Zmutt (bottom)",
+      "lat": 46.012279,
+      "lon": 7.740509,
+      "elevation": 2561,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_57",
+      "name": "Zmutt (top)",
+      "lat": 46.006956,
+      "lon": 7.712754,
+      "elevation": 2535,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_58",
+      "name": "Lift 332906111 (bottom)",
+      "lat": 46.012879,
+      "lon": 7.699014,
+      "elevation": 2564,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_59",
+      "name": "Lift 332906111 (top)",
+      "lat": 46.006704,
+      "lon": 7.696744,
+      "elevation": 2534,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_60",
+      "name": "Matterhorn Express (bottom)",
+      "lat": 45.987359,
+      "lon": 7.710693,
+      "elevation": 2437,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_61",
+      "name": "Hirli (top)",
+      "lat": 45.988947,
+      "lon": 7.698805,
+      "elevation": 2445,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_62",
+      "name": "Kumme (bottom)",
+      "lat": 46.035493,
+      "lon": 7.773101,
+      "elevation": 2677,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_63",
+      "name": "Kumme (top)",
+      "lat": 46.036105,
+      "lon": 7.789274,
+      "elevation": 2681,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_64",
+      "name": "Plateau Breithorn (bottom)",
+      "lat": 45.930052,
+      "lon": 7.732549,
+      "elevation": 2150,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_65",
+      "name": "Plateau Breithorn (top)",
+      "lat": 45.924315,
+      "lon": 7.734281,
+      "elevation": 2122,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_66",
+      "name": "Lift 1266342298 (bottom)",
+      "lat": 46.001674,
+      "lon": 7.728651,
+      "elevation": 2508,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_67",
+      "name": "Grenzlift (stillgelegt) (bottom)",
+      "lat": 45.923177,
+      "lon": 7.71865,
+      "elevation": 2116,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_68",
+      "name": "Breitboden - Rosenritz (top)",
+      "lat": 45.990675,
+      "lon": 7.781047,
+      "elevation": 2453,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_69",
+      "name": "Rotweng (top)",
+      "lat": 46.022684,
+      "lon": 7.805504,
+      "elevation": 2613,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_70",
+      "name": "Tuftern (top)",
+      "lat": 46.029827,
+      "lon": 7.775312,
+      "elevation": 2649,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_71",
+      "name": "Untere National (bottom)",
+      "lat": 46.029103,
+      "lon": 7.763078,
+      "elevation": 2646,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_72",
+      "name": "Fluhalp (top)",
+      "lat": 46.017612,
+      "lon": 7.803301,
+      "elevation": 2588,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_73",
+      "name": "Kelle (bottom)",
+      "lat": 45.992208,
+      "lon": 7.776422,
+      "elevation": 2461,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_74",
+      "name": "Gifthittli (top)",
+      "lat": 45.987414,
+      "lon": 7.778278,
+      "elevation": 2437,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_75",
+      "name": "Gifthittli (bottom)",
+      "lat": 45.989791,
+      "lon": 7.767327,
+      "elevation": 2449,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_76",
+      "name": "Riffelhorn (top)",
+      "lat": 45.98564,
+      "lon": 7.772696,
+      "elevation": 2428,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_77",
+      "name": "Riffelalp (bottom)",
+      "lat": 46.000415,
+      "lon": 7.752874,
+      "elevation": 2502,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_78",
+      "name": "Garten (top)",
+      "lat": 45.982165,
+      "lon": 7.714963,
+      "elevation": 2411,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_79",
+      "name": "Schusspiste (top)",
+      "lat": 45.975379,
+      "lon": 7.712382,
+      "elevation": 2377,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_80",
+      "name": "Theodulgletscher (bottom)",
+      "lat": 45.970528,
+      "lon": 7.71095,
+      "elevation": 2353,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_81",
+      "name": "Testa Grigia (bottom)",
+      "lat": 45.937536,
+      "lon": 7.709191,
+      "elevation": 2188,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_82",
+      "name": "Ventina-Cieloalto (top)",
+      "lat": 45.92633,
+      "lon": 7.654342,
+      "elevation": 2132,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_83",
+      "name": "Ventina-Cieloalto (bottom)",
+      "lat": 45.926404,
+      "lon": 7.649845,
+      "elevation": 2132,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_84",
+      "name": "Ventina-Cieloalto (top)",
+      "lat": 45.926502,
+      "lon": 7.635121,
+      "elevation": 2133,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_85",
+      "name": "Ventina-Cieloalto (bottom)",
+      "lat": 45.927473,
+      "lon": 7.63289,
+      "elevation": 2137,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_86",
+      "name": "Alpe Giomein 1 (top)",
+      "lat": 45.949274,
+      "lon": 7.663865,
+      "elevation": 2246,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_87",
+      "name": "Alpe Giomein 1 (bottom)",
+      "lat": 45.944854,
+      "lon": 7.661026,
+      "elevation": 2224,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_88",
+      "name": "Rennstrecke (bottom)",
+      "lat": 45.98106,
+      "lon": 7.718149,
+      "elevation": 2405,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_89",
+      "name": "Plateau Rosa - Bontadini (bottom)",
+      "lat": 45.947925,
+      "lon": 7.704115,
+      "elevation": 2240,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_90",
+      "name": "Piste 28541395 (bottom)",
+      "lat": 46.00357,
+      "lon": 7.774615,
+      "elevation": 2518,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_91",
+      "name": "Landtunnel (top)",
+      "lat": 46.000582,
+      "lon": 7.744219,
+      "elevation": 2503,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_92",
+      "name": "Iglupiste (bottom)",
+      "lat": 45.992014,
+      "lon": 7.758143,
+      "elevation": 2460,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_93",
+      "name": "Rotenboden (top)",
+      "lat": 45.984733,
+      "lon": 7.764982,
+      "elevation": 2424,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_94",
+      "name": "Stafelalp (bottom)",
+      "lat": 45.995295,
+      "lon": 7.703752,
+      "elevation": 2476,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_95",
+      "name": "Plateau Rosa (top)",
+      "lat": 45.928509,
+      "lon": 7.720547,
+      "elevation": 2143,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_96",
+      "name": "Weisse Perle (bottom)",
+      "lat": 46.002786,
+      "lon": 7.699632,
+      "elevation": 2514,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_97",
+      "name": "H\u00f6rnli (top)",
+      "lat": 45.997085,
+      "lon": 7.6991,
+      "elevation": 2485,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_98",
+      "name": "H\u00f6rnli (bottom)",
+      "lat": 46.001254,
+      "lon": 7.701782,
+      "elevation": 2506,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_99",
+      "name": "Stafelalp (bottom)",
+      "lat": 46.005237,
+      "lon": 7.700476,
+      "elevation": 2526,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_100",
+      "name": "Pirovano-Cervinia (top)",
+      "lat": 45.940523,
+      "lon": 7.637953,
+      "elevation": 2203,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_101",
+      "name": "Plan Maison-Cervinia (bottom)",
+      "lat": 45.94333,
+      "lon": 7.655458,
+      "elevation": 2217,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_102",
+      "name": "Gran Roc-Pre de Veau (bottom)",
+      "lat": 45.945556,
+      "lon": 7.642714,
+      "elevation": 2228,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_103",
+      "name": "Theodulo - Plan Maison (bottom)",
+      "lat": 45.944671,
+      "lon": 7.664823,
+      "elevation": 2223,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_104",
+      "name": "Ventina-Cieloalto (bottom)",
+      "lat": 45.92816,
+      "lon": 7.652026,
+      "elevation": 2141,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_105",
+      "name": "Obere National (top)",
+      "lat": 46.017904,
+      "lon": 7.78213,
+      "elevation": 2590,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_106",
+      "name": "Tuftern (top)",
+      "lat": 46.019173,
+      "lon": 7.786879,
+      "elevation": 2596,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_107",
+      "name": "Downhill (bottom)",
+      "lat": 46.028431,
+      "lon": 7.798008,
+      "elevation": 2642,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_108",
+      "name": "Gornergrat (top)",
+      "lat": 45.983311,
+      "lon": 7.781627,
+      "elevation": 2417,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_109",
+      "name": "Hoht\u00e4lli (top)",
+      "lat": 45.983338,
+      "lon": 7.778767,
+      "elevation": 2417,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_110",
+      "name": "Piste 30833431 (bottom)",
+      "lat": 45.988189,
+      "lon": 7.772729,
+      "elevation": 2441,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_111",
+      "name": "Theodulgletscher (top)",
+      "lat": 45.95676,
+      "lon": 7.708599,
+      "elevation": 2284,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_112",
+      "name": "Theodulgletscher (bottom)",
+      "lat": 45.961499,
+      "lon": 7.715564,
+      "elevation": 2307,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_113",
+      "name": "Piste 30833436 (top)",
+      "lat": 45.985697,
+      "lon": 7.714972,
+      "elevation": 2428,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_114",
+      "name": "Piste 30833443 (top)",
+      "lat": 45.927179,
+      "lon": 7.720689,
+      "elevation": 2136,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_115",
+      "name": "Reine Bianche (bottom)",
+      "lat": 45.903571,
+      "lon": 7.668154,
+      "elevation": 2018,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_116",
+      "name": "E. Noussan (top)",
+      "lat": 45.908215,
+      "lon": 7.673944,
+      "elevation": 2041,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_117",
+      "name": "Ventina - Colle Cime Bianche (top)",
+      "lat": 45.924339,
+      "lon": 7.698453,
+      "elevation": 2122,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_118",
+      "name": "Gran Pista di Valtournenche (top)",
+      "lat": 45.884314,
+      "lon": 7.632777,
+      "elevation": 1922,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_119",
+      "name": "Gran Pista di Valtournenche (bottom)",
+      "lat": 45.885536,
+      "lon": 7.625172,
+      "elevation": 1928,
+      "subArea": "Valtournenche"
+    },
+    {
+      "id": "station_120",
+      "name": "Gran Sometta 1 (top)",
+      "lat": 45.921914,
+      "lon": 7.692713,
+      "elevation": 2110,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_121",
+      "name": "Pancheron (top)",
+      "lat": 45.953492,
+      "lon": 7.670185,
+      "elevation": 2267,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_122",
+      "name": "Pancheron (bottom)",
+      "lat": 45.955001,
+      "lon": 7.664516,
+      "elevation": 2275,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_123",
+      "name": "Muro Europa (top)",
+      "lat": 45.942288,
+      "lon": 7.638626,
+      "elevation": 2211,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_124",
+      "name": "Gran Sometta 2 (bottom)",
+      "lat": 45.926201,
+      "lon": 7.686447,
+      "elevation": 2131,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_125",
+      "name": "Gran Sometta 3 (bottom)",
+      "lat": 45.923052,
+      "lon": 7.668805,
+      "elevation": 2115,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_126",
+      "name": "Ventina Bardoney 1 (bottom)",
+      "lat": 45.934506,
+      "lon": 7.637182,
+      "elevation": 2173,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_127",
+      "name": "Ried (top)",
+      "lat": 46.028667,
+      "lon": 7.759805,
+      "elevation": 2643,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_128",
+      "name": "Ried (bottom)",
+      "lat": 46.027808,
+      "lon": 7.757864,
+      "elevation": 2639,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_129",
+      "name": "Piste 44333267 (bottom)",
+      "lat": 45.94553,
+      "lon": 7.693398,
+      "elevation": 2228,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_130",
+      "name": "Bardoney (bottom)",
+      "lat": 45.932943,
+      "lon": 7.645179,
+      "elevation": 2165,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_131",
+      "name": "Gaspard (bottom)",
+      "lat": 45.924988,
+      "lon": 7.67692,
+      "elevation": 2125,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_132",
+      "name": "Piste 49885470 (top)",
+      "lat": 45.947623,
+      "lon": 7.677386,
+      "elevation": 2238,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_133",
+      "name": "Rientro 1 (top)",
+      "lat": 45.906823,
+      "lon": 7.662426,
+      "elevation": 2034,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_134",
+      "name": "Piste 50243340 (top)",
+      "lat": 45.950697,
+      "lon": 7.672217,
+      "elevation": 2253,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_135",
+      "name": "Cieloalto-Cervinia (bottom)",
+      "lat": 45.931969,
+      "lon": 7.632049,
+      "elevation": 2160,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_136",
+      "name": "Cieloalto 2 (top)",
+      "lat": 45.924434,
+      "lon": 7.638619,
+      "elevation": 2122,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_137",
+      "name": "Easy Run (top)",
+      "lat": 46.012614,
+      "lon": 7.768528,
+      "elevation": 2563,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_138",
+      "name": "Standard (top)",
+      "lat": 46.01771,
+      "lon": 7.775371,
+      "elevation": 2589,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_139",
+      "name": "Tuftern (bottom)",
+      "lat": 46.032356,
+      "lon": 7.773777,
+      "elevation": 2662,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_140",
+      "name": "Kelle (bottom)",
+      "lat": 45.997089,
+      "lon": 7.778394,
+      "elevation": 2485,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_141",
+      "name": "Kuhbodmen (bottom)",
+      "lat": 45.99679,
+      "lon": 7.718656,
+      "elevation": 2484,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_142",
+      "name": "Pirovano - Cervinia (top)",
+      "lat": 45.937322,
+      "lon": 7.63393,
+      "elevation": 2187,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_143",
+      "name": "Theodulo - Plan Maison (top)",
+      "lat": 45.947805,
+      "lon": 7.69943,
+      "elevation": 2239,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_144",
+      "name": "Canalino (top)",
+      "lat": 45.906068,
+      "lon": 7.672879,
+      "elevation": 2030,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_145",
+      "name": "Marmotte (top)",
+      "lat": 46.024988,
+      "lon": 7.79343,
+      "elevation": 2625,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_146",
+      "name": "Marmotte (bottom)",
+      "lat": 46.034578,
+      "lon": 7.777178,
+      "elevation": 2673,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_147",
+      "name": "Arbzug (top)",
+      "lat": 46.037426,
+      "lon": 7.780796,
+      "elevation": 2687,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_148",
+      "name": "Chamois (top)",
+      "lat": 46.024234,
+      "lon": 7.796994,
+      "elevation": 2621,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_149",
+      "name": "Chamois (bottom)",
+      "lat": 46.024582,
+      "lon": 7.780658,
+      "elevation": 2623,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_150",
+      "name": "Moosstrasse (top)",
+      "lat": 46.000724,
+      "lon": 7.736703,
+      "elevation": 2504,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_151",
+      "name": "Moosstrasse (bottom)",
+      "lat": 46.008298,
+      "lon": 7.744563,
+      "elevation": 2541,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_152",
+      "name": "Gandegg (bottom)",
+      "lat": 45.962966,
+      "lon": 7.717707,
+      "elevation": 2315,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_153",
+      "name": "Piste 57871631 (bottom)",
+      "lat": 45.928215,
+      "lon": 7.682932,
+      "elevation": 2141,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_154",
+      "name": "Gr\u00fcnsee (bottom)",
+      "lat": 46.004421,
+      "lon": 7.780393,
+      "elevation": 2522,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_155",
+      "name": "Pancheron (top)",
+      "lat": 45.954582,
+      "lon": 7.65907,
+      "elevation": 2273,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_156",
+      "name": "Pancheron (bottom)",
+      "lat": 45.952431,
+      "lon": 7.657732,
+      "elevation": 2262,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_157",
+      "name": "Gran Pista di Valtournenche (top)",
+      "lat": 45.89752,
+      "lon": 7.666787,
+      "elevation": 1988,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_158",
+      "name": "Baracon (bottom)",
+      "lat": 45.891341,
+      "lon": 7.653391,
+      "elevation": 1957,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_159",
+      "name": "Tunnel (top)",
+      "lat": 45.894602,
+      "lon": 7.66118,
+      "elevation": 1973,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_160",
+      "name": "Tunnel (bottom)",
+      "lat": 45.895268,
+      "lon": 7.653903,
+      "elevation": 1976,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_161",
+      "name": "Motta (bottom)",
+      "lat": 45.902796,
+      "lon": 7.652458,
+      "elevation": 2014,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_162",
+      "name": "Piste 95750713 (top)",
+      "lat": 45.885961,
+      "lon": 7.649964,
+      "elevation": 1930,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_163",
+      "name": "Campetto (top)",
+      "lat": 45.897942,
+      "lon": 7.647665,
+      "elevation": 1990,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_164",
+      "name": "Gran Collet (bottom)",
+      "lat": 45.904769,
+      "lon": 7.656901,
+      "elevation": 2024,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_165",
+      "name": "Crot (bottom)",
+      "lat": 45.901036,
+      "lon": 7.650726,
+      "elevation": 2005,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_166",
+      "name": "Piste 95751552 (top)",
+      "lat": 45.913432,
+      "lon": 7.681413,
+      "elevation": 2067,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_167",
+      "name": "Piste 95751553 (top)",
+      "lat": 45.905719,
+      "lon": 7.659402,
+      "elevation": 2029,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_168",
+      "name": "Bardoney (top)",
+      "lat": 45.930563,
+      "lon": 7.645009,
+      "elevation": 2153,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_169",
+      "name": "Pancheron (top)",
+      "lat": 45.953682,
+      "lon": 7.661444,
+      "elevation": 2268,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_170",
+      "name": "Pista Nera del Cervino (bottom)",
+      "lat": 45.955956,
+      "lon": 7.662543,
+      "elevation": 2280,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_171",
+      "name": "Piste 101836825 (top)",
+      "lat": 46.000849,
+      "lon": 7.686215,
+      "elevation": 2504,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_172",
+      "name": "Stafelalp (bottom)",
+      "lat": 46.003521,
+      "lon": 7.686324,
+      "elevation": 2518,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_173",
+      "name": "Piste 101847662 (top)",
+      "lat": 45.991265,
+      "lon": 7.762952,
+      "elevation": 2456,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_174",
+      "name": "Piste 101847694 (top)",
+      "lat": 45.999054,
+      "lon": 7.760842,
+      "elevation": 2495,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_175",
+      "name": "Berter (top)",
+      "lat": 46.005998,
+      "lon": 7.778803,
+      "elevation": 2530,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_176",
+      "name": "Hirli (bottom)",
+      "lat": 45.984465,
+      "lon": 7.693227,
+      "elevation": 2422,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_177",
+      "name": "Tumigu (top)",
+      "lat": 45.980093,
+      "lon": 7.713486,
+      "elevation": 2400,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_178",
+      "name": "Riffelboden (bottom)",
+      "lat": 46.005304,
+      "lon": 7.756011,
+      "elevation": 2527,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_179",
+      "name": "Piste 155880367 (top)",
+      "lat": 45.992176,
+      "lon": 7.713423,
+      "elevation": 2461,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_180",
+      "name": "Piste 155880369 (top)",
+      "lat": 45.997473,
+      "lon": 7.705347,
+      "elevation": 2487,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_181",
+      "name": "Piste 155880379 (top)",
+      "lat": 45.958667,
+      "lon": 7.717515,
+      "elevation": 2293,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_182",
+      "name": "Piste 155880379 (bottom)",
+      "lat": 45.968058,
+      "lon": 7.710094,
+      "elevation": 2340,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_183",
+      "name": "Gr\u00fcnsee (top)",
+      "lat": 46.008259,
+      "lon": 7.782803,
+      "elevation": 2541,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_184",
+      "name": "Riedweg (bottom)",
+      "lat": 46.02436,
+      "lon": 7.757567,
+      "elevation": 2622,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_185",
+      "name": "Balmbrunnen (top)",
+      "lat": 46.005759,
+      "lon": 7.759953,
+      "elevation": 2529,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_186",
+      "name": "Piste 233832572 (top)",
+      "lat": 45.964506,
+      "lon": 7.72456,
+      "elevation": 2323,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_187",
+      "name": "Piste 233832578 (bottom)",
+      "lat": 45.968571,
+      "lon": 7.722026,
+      "elevation": 2343,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_188",
+      "name": "Momatt (bottom)",
+      "lat": 46.003847,
+      "lon": 7.716968,
+      "elevation": 2519,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_189",
+      "name": "Tiefbach (bottom)",
+      "lat": 46.004928,
+      "lon": 7.71463,
+      "elevation": 2525,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_190",
+      "name": "Gran Roc (bottom)",
+      "lat": 45.951858,
+      "lon": 7.646752,
+      "elevation": 2259,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_191",
+      "name": "Vallone 5bis (top)",
+      "lat": 45.949733,
+      "lon": 7.647049,
+      "elevation": 2249,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_192",
+      "name": "Vallone 5bis (bottom)",
+      "lat": 45.947422,
+      "lon": 7.638436,
+      "elevation": 2237,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_193",
+      "name": "White Hare (top)",
+      "lat": 45.990792,
+      "lon": 7.800597,
+      "elevation": 2454,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_194",
+      "name": "White Hare (bottom)",
+      "lat": 45.995655,
+      "lon": 7.781451,
+      "elevation": 2478,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_195",
+      "name": "Balmbrunnen (top)",
+      "lat": 46.003958,
+      "lon": 7.768508,
+      "elevation": 2520,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_196",
+      "name": "Stafelalp (top)",
+      "lat": 46.004774,
+      "lon": 7.6891,
+      "elevation": 2524,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_197",
+      "name": "Pista Nera del Cervino (top)",
+      "lat": 45.95861,
+      "lon": 7.664498,
+      "elevation": 2293,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_198",
+      "name": "Plan Maison 1 (top)",
+      "lat": 45.945055,
+      "lon": 7.668705,
+      "elevation": 2225,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_199",
+      "name": "Piste 399074836 (top)",
+      "lat": 45.945596,
+      "lon": 7.706077,
+      "elevation": 2228,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_200",
+      "name": "Oberer Tiefbach (bottom)",
+      "lat": 45.993487,
+      "lon": 7.70413,
+      "elevation": 2467,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_201",
+      "name": "Ried (bottom)",
+      "lat": 46.03219,
+      "lon": 7.763747,
+      "elevation": 2661,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_202",
+      "name": "Plan Torrette-Pre de Veau (bottom)",
+      "lat": 45.944063,
+      "lon": 7.640003,
+      "elevation": 2220,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_203",
+      "name": "Bordercross Cervinia (top)",
+      "lat": 45.947012,
+      "lon": 7.664067,
+      "elevation": 2235,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_204",
+      "name": "Piste 771890848 (top)",
+      "lat": 45.954768,
+      "lon": 7.697667,
+      "elevation": 2274,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_205",
+      "name": "Piste 771890849 (bottom)",
+      "lat": 45.935831,
+      "lon": 7.638498,
+      "elevation": 2179,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_206",
+      "name": "Piste 771890850 (top)",
+      "lat": 45.938335,
+      "lon": 7.654681,
+      "elevation": 2192,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_207",
+      "name": "Piste 771890850 (bottom)",
+      "lat": 45.934739,
+      "lon": 7.65147,
+      "elevation": 2174,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_208",
+      "name": "Piste 771890852 (top)",
+      "lat": 45.933405,
+      "lon": 7.6641,
+      "elevation": 2167,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_209",
+      "name": "Piste 771890852 (bottom)",
+      "lat": 45.935741,
+      "lon": 7.655108,
+      "elevation": 2179,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_210",
+      "name": "Piste 771890853 (bottom)",
+      "lat": 45.935287,
+      "lon": 7.658594,
+      "elevation": 2176,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_211",
+      "name": "Piste 771890854 (bottom)",
+      "lat": 45.940774,
+      "lon": 7.694699,
+      "elevation": 2204,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_212",
+      "name": "Trecar (top)",
+      "lat": 45.901519,
+      "lon": 7.666975,
+      "elevation": 2008,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_213",
+      "name": "Tufternkumme (bottom)",
+      "lat": 46.036644,
+      "lon": 7.777355,
+      "elevation": 2683,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_214",
+      "name": "Tuftern (bottom)",
+      "lat": 46.020951,
+      "lon": 7.785045,
+      "elevation": 2605,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_215",
+      "name": "Standard (bottom)",
+      "lat": 46.017633,
+      "lon": 7.778915,
+      "elevation": 2588,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_216",
+      "name": "Easy Run (top)",
+      "lat": 46.013731,
+      "lon": 7.765091,
+      "elevation": 2569,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_217",
+      "name": "Easy Run (bottom)",
+      "lat": 46.011387,
+      "lon": 7.766337,
+      "elevation": 2557,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_218",
+      "name": "Untere National (bottom)",
+      "lat": 46.026409,
+      "lon": 7.75983,
+      "elevation": 2632,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_219",
+      "name": "Riedweg (bottom)",
+      "lat": 46.022723,
+      "lon": 7.756043,
+      "elevation": 2614,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_220",
+      "name": "Theodulgletscher (top)",
+      "lat": 45.966133,
+      "lon": 7.719586,
+      "elevation": 2331,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_221",
+      "name": "Theodulgletscher (bottom)",
+      "lat": 45.973158,
+      "lon": 7.717712,
+      "elevation": 2366,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_222",
+      "name": "Raccordo Cieloalto-Bardoney (top)",
+      "lat": 45.924751,
+      "lon": 7.636027,
+      "elevation": 2124,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_223",
+      "name": "Landtunnel (bottom)",
+      "lat": 46.00238,
+      "lon": 7.744726,
+      "elevation": 2512,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_224",
+      "name": "Bielti (top)",
+      "lat": 46.003755,
+      "lon": 7.726834,
+      "elevation": 2519,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_225",
+      "name": "Bielti (bottom)",
+      "lat": 46.006229,
+      "lon": 7.733464,
+      "elevation": 2531,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_226",
+      "name": "Canestrini bis (bottom)",
+      "lat": 45.908121,
+      "lon": 7.665253,
+      "elevation": 2041,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_227",
+      "name": "Plan Torrette (bottom)",
+      "lat": 45.94742,
+      "lon": 7.670773,
+      "elevation": 2237,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_228",
+      "name": "Fiererpiste (bottom)",
+      "lat": 45.947353,
+      "lon": 7.713077,
+      "elevation": 2237,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_229",
+      "name": "Moosstrasse (bottom)",
+      "lat": 46.011862,
+      "lon": 7.745723,
+      "elevation": 2559,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_230",
+      "name": "Grieschumme (top)",
+      "lat": 45.999562,
+      "lon": 7.808375,
+      "elevation": 2498,
+      "subArea": "Zermatt"
+    },
+    {
+      "id": "station_231",
+      "name": "Piste 1461645520 (top)",
+      "lat": 45.905313,
+      "lon": 7.666011,
+      "elevation": 2027,
+      "subArea": "Cervinia"
+    },
+    {
+      "id": "station_232",
+      "name": "Piste 1461646631 (bottom)",
+      "lat": 45.93062,
+      "lon": 7.726074,
+      "elevation": 2153,
+      "subArea": "Cervinia"
+    }
+  ],
+  "edges": [
+    {
+      "id": "lift_22330086",
+      "from": "station_0",
+      "to": "station_1",
+      "type": "lift",
+      "liftType": "funicular",
+      "name": "Zermatt\u2013Sunnegga funicular",
+      "distance": 1409,
+      "duration": 11.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22330667",
+      "from": "station_2",
+      "to": "station_3",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Patrullarve",
+      "distance": 1965,
+      "duration": 15.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22330668",
+      "from": "station_4",
+      "to": "station_3",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Hublot-Express (Gant - Blauherd)",
+      "distance": 897,
+      "duration": 7.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22330669",
+      "from": "station_5",
+      "to": "station_6",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Blauherd - Rothorn",
+      "distance": 1026,
+      "duration": 5.1,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22330670",
+      "from": "station_4",
+      "to": "station_7",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Gant - Hoht\u00e4lli",
+      "distance": 2493,
+      "duration": 12.5,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22337636",
+      "from": "station_8",
+      "to": "station_9",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Riffelberg-Express",
+      "distance": 1932,
+      "duration": 9.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22337638",
+      "from": "station_8",
+      "to": "station_10",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Furi - Trockener Steg",
+      "distance": 3358,
+      "duration": 16.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22338264",
+      "from": "station_11",
+      "to": "station_8",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Zermatt - Furi",
+      "distance": 1697,
+      "duration": 8.5,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22338265",
+      "from": "station_9",
+      "to": "station_12",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Gifthittli",
+      "distance": 1803,
+      "duration": 14.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341536",
+      "from": "station_13",
+      "to": "station_14",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Furgg - Sandiger Boden",
+      "distance": 1249,
+      "duration": 10.0,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341538",
+      "from": "station_10",
+      "to": "station_15",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Furggsattel Gletscherbahn",
+      "distance": 2538,
+      "duration": 20.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341540",
+      "from": "station_10",
+      "to": "station_16",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Trockener Steg - Matterhorn glacier paradise",
+      "distance": 3564,
+      "duration": 17.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341544",
+      "from": "station_17",
+      "to": "station_18",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Funivia del Plateau Rosa",
+      "distance": 2152,
+      "duration": 10.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341545",
+      "from": "station_19",
+      "to": "station_20",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Plan Maison",
+      "distance": 2225,
+      "duration": 17.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341546",
+      "from": "station_20",
+      "to": "station_21",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Fornet",
+      "distance": 906,
+      "duration": 7.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341547",
+      "from": "station_21",
+      "to": "station_22",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Bontadini",
+      "distance": 1095,
+      "duration": 8.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341548",
+      "from": "station_23",
+      "to": "station_24",
+      "type": "lift",
+      "liftType": "cable_car",
+      "name": "Plan Maison",
+      "distance": 1716,
+      "duration": 8.6,
+      "difficulty": null
+    },
+    {
+      "id": "lift_22341549",
+      "from": "station_25",
+      "to": "station_26",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Cretaz",
+      "distance": 1635,
+      "duration": 13.1,
+      "difficulty": null
+    },
+    {
+      "id": "lift_28541221",
+      "from": "station_27",
+      "to": "station_1",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Eisfluh",
+      "distance": 354,
+      "duration": 2.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_28541394",
+      "from": "station_28",
+      "to": "station_29",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Findelbahn (Eja-Breitenboden)",
+      "distance": 928,
+      "duration": 7.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_29997875",
+      "from": "station_25",
+      "to": "station_30",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Campetto",
+      "distance": 440,
+      "duration": 3.5,
+      "difficulty": null
+    },
+    {
+      "id": "lift_29999098",
+      "from": "station_19",
+      "to": "station_31",
+      "type": "lift",
+      "liftType": "platter",
+      "name": "Baby La Vieille",
+      "distance": 476,
+      "duration": 3.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833440",
+      "from": "station_32",
+      "to": "station_33",
+      "type": "lift",
+      "liftType": "t-bar",
+      "name": "Plateau Rosa 2",
+      "distance": 1465,
+      "duration": 11.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833737",
+      "from": "station_34",
+      "to": "station_35",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Salette",
+      "distance": 1884,
+      "duration": 9.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833738",
+      "from": "station_35",
+      "to": "station_36",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Motta",
+      "distance": 1176,
+      "duration": 9.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833739",
+      "from": "station_37",
+      "to": "station_38",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Bec Carr\u00e9",
+      "distance": 1979,
+      "duration": 15.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833740",
+      "from": "station_39",
+      "to": "station_38",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Du Col",
+      "distance": 209,
+      "duration": 1.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_30833742",
+      "from": "station_39",
+      "to": "station_40",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Gran Sometta",
+      "distance": 1174,
+      "duration": 9.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_44334074",
+      "from": "station_32",
+      "to": "station_41",
+      "type": "lift",
+      "liftType": "t-bar",
+      "name": "Plateau Rosa 3",
+      "distance": 654,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_44334075",
+      "from": "station_32",
+      "to": "station_33",
+      "type": "lift",
+      "liftType": "t-bar",
+      "name": "Plateau Rosa 1",
+      "distance": 1483,
+      "duration": 11.9,
+      "difficulty": null
+    },
+    {
+      "id": "lift_46715051",
+      "from": "station_8",
+      "to": "station_42",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Matterhorn Express",
+      "distance": 2078,
+      "duration": 10.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_49885289",
+      "from": "station_43",
+      "to": "station_44",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Pancheron",
+      "distance": 1805,
+      "duration": 14.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_50249647",
+      "from": "station_45",
+      "to": "station_46",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Cieloalto",
+      "distance": 1016,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "lift_57372030",
+      "from": "station_47",
+      "to": "station_48",
+      "type": "lift",
+      "liftType": "platter",
+      "name": "Plateau Breithorn",
+      "distance": 554,
+      "duration": 4.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_93487599",
+      "from": "station_49",
+      "to": "station_50",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Becca d'Aran",
+      "distance": 847,
+      "duration": 6.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_95750716",
+      "from": "station_35",
+      "to": "station_51",
+      "type": "lift",
+      "liftType": "magic_carpet",
+      "name": "Snowpark",
+      "distance": 117,
+      "duration": 0.9,
+      "difficulty": null
+    },
+    {
+      "id": "lift_102661014",
+      "from": "station_52",
+      "to": "station_40",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Lago Goillet",
+      "distance": 1397,
+      "duration": 11.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_114942017",
+      "from": "station_23",
+      "to": "station_24",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Plan Maison",
+      "distance": 1744,
+      "duration": 8.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_161430202",
+      "from": "station_53",
+      "to": "station_18",
+      "type": "lift",
+      "liftType": "t-bar",
+      "name": "Testa",
+      "distance": 1248,
+      "duration": 10.0,
+      "difficulty": null
+    },
+    {
+      "id": "lift_171854364",
+      "from": "station_28",
+      "to": "station_1",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Findelbahn (Eja-Sunnegga)",
+      "distance": 806,
+      "duration": 6.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_171854366",
+      "from": "station_1",
+      "to": "station_5",
+      "type": "lift",
+      "liftType": "mixed_lift",
+      "name": "Sunnegga-Blauherd",
+      "distance": 1184,
+      "duration": 9.5,
+      "difficulty": null
+    },
+    {
+      "id": "lift_322784212",
+      "from": "station_19",
+      "to": "station_17",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Cime Bianche Laghi",
+      "distance": 2247,
+      "duration": 11.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_332905047",
+      "from": "station_54",
+      "to": "station_55",
+      "type": "lift",
+      "liftType": "goods",
+      "name": "Lift 332905047",
+      "distance": 362,
+      "duration": 2.9,
+      "difficulty": null
+    },
+    {
+      "id": "lift_332905048",
+      "from": "station_56",
+      "to": "station_57",
+      "type": "lift",
+      "liftType": "goods",
+      "name": "Zmutt",
+      "distance": 2474,
+      "duration": 19.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_332906111",
+      "from": "station_58",
+      "to": "station_59",
+      "type": "lift",
+      "liftType": "goods",
+      "name": "Lift 332906111",
+      "distance": 647,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_333301450",
+      "from": "station_60",
+      "to": "station_10",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Matterhorn Express",
+      "distance": 1961,
+      "duration": 9.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_333301451",
+      "from": "station_42",
+      "to": "station_60",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Matterhorn Express",
+      "distance": 527,
+      "duration": 2.6,
+      "difficulty": null
+    },
+    {
+      "id": "lift_399058541",
+      "from": "station_59",
+      "to": "station_61",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Hirli",
+      "distance": 2005,
+      "duration": 16.0,
+      "difficulty": null
+    },
+    {
+      "id": "lift_519981791",
+      "from": "station_16",
+      "to": "station_10",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Trockener Steg - Klein Matterhorn Glacier Ride",
+      "distance": 3734,
+      "duration": 18.7,
+      "difficulty": null
+    },
+    {
+      "id": "lift_618950310",
+      "from": "station_18",
+      "to": "station_16",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Matterhorn Glacier Ride II",
+      "distance": 1710,
+      "duration": 8.5,
+      "difficulty": null
+    },
+    {
+      "id": "lift_660153038",
+      "from": "station_62",
+      "to": "station_63",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Kumme",
+      "distance": 1260,
+      "duration": 6.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_803858803",
+      "from": "station_64",
+      "to": "station_65",
+      "type": "lift",
+      "liftType": "platter",
+      "name": "Plateau Breithorn",
+      "distance": 700,
+      "duration": 5.6,
+      "difficulty": null
+    },
+    {
+      "id": "lift_903540908",
+      "from": "station_63",
+      "to": "station_6",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Kumme",
+      "distance": 1829,
+      "duration": 9.1,
+      "difficulty": null
+    },
+    {
+      "id": "lift_903540909",
+      "from": "station_11",
+      "to": "station_8",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Matterhorn Express",
+      "distance": 1662,
+      "duration": 8.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_1396688413",
+      "from": "station_47",
+      "to": "station_64",
+      "type": "lift",
+      "liftType": "platter",
+      "name": "Plateau Breithorn",
+      "distance": 291,
+      "duration": 2.3,
+      "difficulty": null
+    },
+    {
+      "id": "lift_1396690336",
+      "from": "station_67",
+      "to": "station_65",
+      "type": "lift",
+      "liftType": "t-bar",
+      "name": "Grenzlift (stillgelegt)",
+      "distance": 1264,
+      "duration": 10.1,
+      "difficulty": null
+    },
+    {
+      "id": "lift_1418030825",
+      "from": "station_29",
+      "to": "station_68",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Breitboden - Rosenritz",
+      "distance": 1405,
+      "duration": 11.2,
+      "difficulty": null
+    },
+    {
+      "id": "lift_1469089662",
+      "from": "station_23",
+      "to": "station_18",
+      "type": "lift",
+      "liftType": "gondola",
+      "name": "Cervino The One",
+      "distance": 5943,
+      "duration": 29.7,
+      "difficulty": null
+    },
+    {
+      "id": "piste_22462841",
+      "from": "station_69",
+      "to": "station_3",
+      "type": "piste",
+      "name": "Rotweng",
+      "distance": 2263,
+      "duration": 3.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22462843",
+      "from": "station_3",
+      "to": "station_1",
+      "type": "piste",
+      "name": "Standard",
+      "distance": 1440,
+      "duration": 2.9,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_22467261",
+      "from": "station_6",
+      "to": "station_63",
+      "type": "piste",
+      "name": "Kumme",
+      "distance": 2733,
+      "duration": 4.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22467267",
+      "from": "station_2",
+      "to": "station_71",
+      "type": "piste",
+      "name": "Untere National",
+      "distance": 548,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22467270",
+      "from": "station_1",
+      "to": "station_2",
+      "type": "piste",
+      "name": "Brunnjeschbord",
+      "distance": 1192,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22941632",
+      "from": "station_72",
+      "to": "station_4",
+      "type": "piste",
+      "name": "Fluhalp",
+      "distance": 3003,
+      "duration": 4.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22941635",
+      "from": "station_12",
+      "to": "station_9",
+      "type": "piste",
+      "name": "Gornergrat",
+      "distance": 2010,
+      "duration": 4.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_22941637",
+      "from": "station_12",
+      "to": "station_73",
+      "type": "piste",
+      "name": "Kelle",
+      "distance": 1010,
+      "duration": 1.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22941641",
+      "from": "station_74",
+      "to": "station_75",
+      "type": "piste",
+      "name": "Gifthittli",
+      "distance": 881,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22941642",
+      "from": "station_76",
+      "to": "station_9",
+      "type": "piste",
+      "name": "Riffelhorn",
+      "distance": 1752,
+      "duration": 3.5,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_22941645",
+      "from": "station_7",
+      "to": "station_74",
+      "type": "piste",
+      "name": "Hoht\u00e4lli",
+      "distance": 2504,
+      "duration": 3.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_22941836",
+      "from": "station_9",
+      "to": "station_77",
+      "type": "piste",
+      "name": "Riffelalp",
+      "distance": 1885,
+      "duration": 2.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23398342",
+      "from": "station_13",
+      "to": "station_66",
+      "type": "piste",
+      "name": "Furgg - Furi",
+      "distance": 2600,
+      "duration": 2.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_23398344",
+      "from": "station_42",
+      "to": "station_13",
+      "type": "piste",
+      "name": "Skiweg",
+      "distance": 1277,
+      "duration": 1.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23398588",
+      "from": "station_78",
+      "to": "station_13",
+      "type": "piste",
+      "name": "Garten",
+      "distance": 875,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23398589",
+      "from": "station_79",
+      "to": "station_78",
+      "type": "piste",
+      "name": "Schusspiste",
+      "distance": 812,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23398590",
+      "from": "station_15",
+      "to": "station_80",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 2236,
+      "duration": 3.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23398593",
+      "from": "station_18",
+      "to": "station_81",
+      "type": "piste",
+      "name": "Testa Grigia",
+      "distance": 345,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23399484",
+      "from": "station_41",
+      "to": "station_18",
+      "type": "piste",
+      "name": "Testa II",
+      "distance": 758,
+      "duration": 1.5,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_23399485",
+      "from": "station_18",
+      "to": "station_17",
+      "type": "piste",
+      "name": "Ventina Ghiacciaio",
+      "distance": 3092,
+      "duration": 4.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23399488",
+      "from": "station_82",
+      "to": "station_83",
+      "type": "piste",
+      "name": "Ventina-Cieloalto",
+      "distance": 357,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23399491",
+      "from": "station_84",
+      "to": "station_85",
+      "type": "piste",
+      "name": "Ventina-Cieloalto",
+      "distance": 330,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23399740",
+      "from": "station_86",
+      "to": "station_87",
+      "type": "piste",
+      "name": "Alpe Giomein 1",
+      "distance": 635,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23399743",
+      "from": "station_20",
+      "to": "station_19",
+      "type": "piste",
+      "name": "Plan Maison 1",
+      "distance": 2522,
+      "duration": 5.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_23400215",
+      "from": "station_10",
+      "to": "station_14",
+      "type": "piste",
+      "name": "Theodulsee",
+      "distance": 955,
+      "duration": 1.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23400216",
+      "from": "station_14",
+      "to": "station_88",
+      "type": "piste",
+      "name": "Rennstrecke",
+      "distance": 450,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_23400217",
+      "from": "station_88",
+      "to": "station_13",
+      "type": "piste",
+      "name": "Sandiger Boden",
+      "distance": 831,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28531546",
+      "from": "station_21",
+      "to": "station_20",
+      "type": "piste",
+      "name": "Fornet 1",
+      "distance": 833,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28540389",
+      "from": "station_22",
+      "to": "station_89",
+      "type": "piste",
+      "name": "Plateau Rosa - Bontadini",
+      "distance": 476,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28541223",
+      "from": "station_1",
+      "to": "station_27",
+      "type": "piste",
+      "name": "Eisfluh",
+      "distance": 718,
+      "duration": 1.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_28541393",
+      "from": "station_1",
+      "to": "station_28",
+      "type": "piste",
+      "name": "Easy Run",
+      "distance": 1692,
+      "duration": 3.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_28541395",
+      "from": "station_29",
+      "to": "station_90",
+      "type": "piste",
+      "name": "Piste 28541395",
+      "distance": 190,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28542021",
+      "from": "station_75",
+      "to": "station_92",
+      "type": "piste",
+      "name": "Iglupiste",
+      "distance": 900,
+      "duration": 1.8,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_28542022",
+      "from": "station_93",
+      "to": "station_9",
+      "type": "piste",
+      "name": "Rotenboden",
+      "distance": 1718,
+      "duration": 3.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_28561183",
+      "from": "station_42",
+      "to": "station_94",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 706,
+      "duration": 1.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_28561377",
+      "from": "station_95",
+      "to": "station_32",
+      "type": "piste",
+      "name": "Plateau Rosa",
+      "distance": 926,
+      "duration": 1.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28561486",
+      "from": "station_94",
+      "to": "station_96",
+      "type": "piste",
+      "name": "Weisse Perle",
+      "distance": 1079,
+      "duration": 1.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28561487",
+      "from": "station_97",
+      "to": "station_98",
+      "type": "piste",
+      "name": "H\u00f6rnli",
+      "distance": 644,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_28561488",
+      "from": "station_96",
+      "to": "station_99",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 321,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_29912834",
+      "from": "station_100",
+      "to": "station_25",
+      "type": "piste",
+      "name": "Pirovano-Cervinia",
+      "distance": 552,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_29913604",
+      "from": "station_100",
+      "to": "station_23",
+      "type": "piste",
+      "name": "Falliniere",
+      "distance": 1048,
+      "duration": 1.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_29913676",
+      "from": "station_19",
+      "to": "station_101",
+      "type": "piste",
+      "name": "Plan Maison-Cervinia",
+      "distance": 228,
+      "duration": 0.5,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_29917191",
+      "from": "station_43",
+      "to": "station_102",
+      "type": "piste",
+      "name": "Gran Roc-Pre de Veau",
+      "distance": 551,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_29917614",
+      "from": "station_21",
+      "to": "station_103",
+      "type": "piste",
+      "name": "Theodulo - Plan Maison",
+      "distance": 2499,
+      "duration": 3.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_29998134",
+      "from": "station_30",
+      "to": "station_25",
+      "type": "piste",
+      "name": "Cretaz",
+      "distance": 667,
+      "duration": 1.3,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_29998316",
+      "from": "station_87",
+      "to": "station_19",
+      "type": "piste",
+      "name": "Alpe Giomein 2",
+      "distance": 505,
+      "duration": 1.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_29999109",
+      "from": "station_31",
+      "to": "station_19",
+      "type": "piste",
+      "name": "Baby La Vieille 1",
+      "distance": 545,
+      "duration": 1.1,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_29999209",
+      "from": "station_83",
+      "to": "station_104",
+      "type": "piste",
+      "name": "Ventina-Cieloalto",
+      "distance": 256,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833002",
+      "from": "station_105",
+      "to": "station_2",
+      "type": "piste",
+      "name": "Obere National",
+      "distance": 1383,
+      "duration": 1.4,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_30833424",
+      "from": "station_106",
+      "to": "station_70",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 1423,
+      "duration": 2.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833425",
+      "from": "station_6",
+      "to": "station_107",
+      "type": "piste",
+      "name": "Downhill",
+      "distance": 862,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_30833426",
+      "from": "station_6",
+      "to": "station_107",
+      "type": "piste",
+      "name": "Schneehuhn",
+      "distance": 1140,
+      "duration": 1.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833429",
+      "from": "station_108",
+      "to": "station_12",
+      "type": "piste",
+      "name": "Gornergrat",
+      "distance": 691,
+      "duration": 1.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_30833430",
+      "from": "station_109",
+      "to": "station_74",
+      "type": "piste",
+      "name": "Hoht\u00e4lli",
+      "distance": 491,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833431",
+      "from": "station_12",
+      "to": "station_110",
+      "type": "piste",
+      "name": "Piste 30833431",
+      "distance": 260,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833432",
+      "from": "station_110",
+      "to": "station_9",
+      "type": "piste",
+      "name": "Gifthittli",
+      "distance": 1390,
+      "duration": 2.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833433",
+      "from": "station_111",
+      "to": "station_112",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 778,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833435",
+      "from": "station_88",
+      "to": "station_78",
+      "type": "piste",
+      "name": "Piste 30833435",
+      "distance": 299,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833436",
+      "from": "station_113",
+      "to": "station_13",
+      "type": "piste",
+      "name": "Piste 30833436",
+      "distance": 251,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833441",
+      "from": "station_33",
+      "to": "station_32",
+      "type": "piste",
+      "name": "Ventina Glacier",
+      "distance": 1453,
+      "duration": 2.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833745",
+      "from": "station_38",
+      "to": "station_39",
+      "type": "piste",
+      "name": "Du Col",
+      "distance": 314,
+      "duration": 0.6,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_30833746",
+      "from": "station_38",
+      "to": "station_115",
+      "type": "piste",
+      "name": "Reine Bianche",
+      "distance": 1015,
+      "duration": 1.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_30833747",
+      "from": "station_116",
+      "to": "station_36",
+      "type": "piste",
+      "name": "E. Noussan",
+      "distance": 1713,
+      "duration": 2.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32120120",
+      "from": "station_117",
+      "to": "station_40",
+      "type": "piste",
+      "name": "Ventina - Colle Cime Bianche",
+      "distance": 752,
+      "duration": 1.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32137057",
+      "from": "station_40",
+      "to": "station_39",
+      "type": "piste",
+      "name": "Gran Sometta",
+      "distance": 1504,
+      "duration": 3.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_32151643",
+      "from": "station_118",
+      "to": "station_119",
+      "type": "piste",
+      "name": "Gran Pista di Valtournenche",
+      "distance": 702,
+      "duration": 1.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32151659",
+      "from": "station_119",
+      "to": "station_34",
+      "type": "piste",
+      "name": "Gran Pista di Valtournenche",
+      "distance": 369,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32201529",
+      "from": "station_17",
+      "to": "station_82",
+      "type": "piste",
+      "name": "Ventina Goillet",
+      "distance": 2537,
+      "duration": 3.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32202325",
+      "from": "station_81",
+      "to": "station_22",
+      "type": "piste",
+      "name": "Plateau Rosa - Bontadini",
+      "distance": 607,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32204230",
+      "from": "station_121",
+      "to": "station_122",
+      "type": "piste",
+      "name": "Pancheron",
+      "distance": 499,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32205512",
+      "from": "station_123",
+      "to": "station_30",
+      "type": "piste",
+      "name": "Muro Europa",
+      "distance": 326,
+      "duration": 0.3,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_32206494",
+      "from": "station_40",
+      "to": "station_124",
+      "type": "piste",
+      "name": "Gran Sometta 2",
+      "distance": 665,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32206497",
+      "from": "station_40",
+      "to": "station_125",
+      "type": "piste",
+      "name": "Gran Sometta 3",
+      "distance": 1665,
+      "duration": 2.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_32207151",
+      "from": "station_82",
+      "to": "station_126",
+      "type": "piste",
+      "name": "Ventina Bardoney 1",
+      "distance": 1858,
+      "duration": 2.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_40091613",
+      "from": "station_127",
+      "to": "station_128",
+      "type": "piste",
+      "name": "Ried",
+      "distance": 235,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_42756944",
+      "from": "station_3",
+      "to": "station_106",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 158,
+      "duration": 0.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_44333267",
+      "from": "station_22",
+      "to": "station_129",
+      "type": "piste",
+      "name": "Piste 44333267",
+      "distance": 1399,
+      "duration": 1.4,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_44333268",
+      "from": "station_22",
+      "to": "station_89",
+      "type": "piste",
+      "name": "Bontadini",
+      "distance": 545,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_44333271",
+      "from": "station_31",
+      "to": "station_19",
+      "type": "piste",
+      "name": "Baby La Vieille 2",
+      "distance": 524,
+      "duration": 1.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_44334073",
+      "from": "station_18",
+      "to": "station_32",
+      "type": "piste",
+      "name": "Verbindungspiste",
+      "distance": 622,
+      "duration": 1.2,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_44334077",
+      "from": "station_41",
+      "to": "station_32",
+      "type": "piste",
+      "name": "Piste 44334077",
+      "distance": 489,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_44334079",
+      "from": "station_65",
+      "to": "station_47",
+      "type": "piste",
+      "name": "Gobba di Rollin",
+      "distance": 930,
+      "duration": 1.9,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_45840254",
+      "from": "station_33",
+      "to": "station_114",
+      "type": "piste",
+      "name": "Plateau Rosa",
+      "distance": 373,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_45840256",
+      "from": "station_33",
+      "to": "station_41",
+      "type": "piste",
+      "name": "Piste 45840256",
+      "distance": 848,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_49884627",
+      "from": "station_83",
+      "to": "station_130",
+      "type": "piste",
+      "name": "Bardoney",
+      "distance": 845,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_49884635",
+      "from": "station_124",
+      "to": "station_131",
+      "type": "piste",
+      "name": "Gaspard",
+      "distance": 789,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50243327",
+      "from": "station_133",
+      "to": "station_36",
+      "type": "piste",
+      "name": "Rientro 1",
+      "distance": 700,
+      "duration": 1.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_50243336",
+      "from": "station_38",
+      "to": "station_36",
+      "type": "piste",
+      "name": "S. Canestrini",
+      "distance": 1851,
+      "duration": 2.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50243345",
+      "from": "station_87",
+      "to": "station_26",
+      "type": "piste",
+      "name": "Plan Torrette",
+      "distance": 801,
+      "duration": 1.6,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_50243349",
+      "from": "station_89",
+      "to": "station_21",
+      "type": "piste",
+      "name": "Plateau Rosa - Bontadini",
+      "distance": 623,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50243350",
+      "from": "station_89",
+      "to": "station_21",
+      "type": "piste",
+      "name": "Bontadini 2",
+      "distance": 815,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50249648",
+      "from": "station_83",
+      "to": "station_84",
+      "type": "piste",
+      "name": "Ventina-Cieloalto",
+      "distance": 1157,
+      "duration": 1.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50249649",
+      "from": "station_46",
+      "to": "station_84",
+      "type": "piste",
+      "name": "Cieloalto 1",
+      "distance": 907,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_50249652",
+      "from": "station_45",
+      "to": "station_135",
+      "type": "piste",
+      "name": "Cieloalto-Cervinia",
+      "distance": 441,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_50249655",
+      "from": "station_136",
+      "to": "station_84",
+      "type": "piste",
+      "name": "Cieloalto 2",
+      "distance": 522,
+      "duration": 0.5,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_50249658",
+      "from": "station_21",
+      "to": "station_20",
+      "type": "piste",
+      "name": "Fornet 2",
+      "distance": 820,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_53576840",
+      "from": "station_70",
+      "to": "station_139",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 270,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_53762668",
+      "from": "station_1",
+      "to": "station_137",
+      "type": "piste",
+      "name": "Easy Run via Paradies",
+      "distance": 871,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_53764523",
+      "from": "station_73",
+      "to": "station_140",
+      "type": "piste",
+      "name": "Kelle",
+      "distance": 572,
+      "duration": 0.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_54070470",
+      "from": "station_94",
+      "to": "station_141",
+      "type": "piste",
+      "name": "Kuhbodmen",
+      "distance": 1398,
+      "duration": 2.8,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_54070484",
+      "from": "station_94",
+      "to": "station_97",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 454,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_54372298",
+      "from": "station_142",
+      "to": "station_23",
+      "type": "piste",
+      "name": "Pirovano - Cervinia",
+      "distance": 201,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_54372355",
+      "from": "station_30",
+      "to": "station_25",
+      "type": "piste",
+      "name": "Pirovano - Cervinia",
+      "distance": 401,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_54378448",
+      "from": "station_44",
+      "to": "station_121",
+      "type": "piste",
+      "name": "Rocce Nere 1",
+      "distance": 513,
+      "duration": 1.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_54379050",
+      "from": "station_143",
+      "to": "station_21",
+      "type": "piste",
+      "name": "Theodulo - Plan Maison",
+      "distance": 300,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_54380603",
+      "from": "station_144",
+      "to": "station_133",
+      "type": "piste",
+      "name": "Canalino",
+      "distance": 850,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_54879553",
+      "from": "station_13",
+      "to": "station_60",
+      "type": "piste",
+      "name": "Piste 54879553",
+      "distance": 348,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_55083670",
+      "from": "station_145",
+      "to": "station_146",
+      "type": "piste",
+      "name": "Marmotte",
+      "distance": 1666,
+      "duration": 1.7,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_55083672",
+      "from": "station_147",
+      "to": "station_62",
+      "type": "piste",
+      "name": "Arbzug",
+      "distance": 825,
+      "duration": 0.8,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_55083674",
+      "from": "station_148",
+      "to": "station_149",
+      "type": "piste",
+      "name": "Chamois",
+      "distance": 1295,
+      "duration": 1.3,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_56674721",
+      "from": "station_150",
+      "to": "station_151",
+      "type": "piste",
+      "name": "Moosstrasse",
+      "distance": 1097,
+      "duration": 1.1,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_57372031",
+      "from": "station_111",
+      "to": "station_60",
+      "type": "piste",
+      "name": "Matterhorn",
+      "distance": 5361,
+      "duration": 8.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_57372032",
+      "from": "station_53",
+      "to": "station_152",
+      "type": "piste",
+      "name": "Gandegg",
+      "distance": 1986,
+      "duration": 3.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_57871629",
+      "from": "station_43",
+      "to": "station_30",
+      "type": "piste",
+      "name": "Plan Maison - Cervinia",
+      "distance": 2584,
+      "duration": 5.2,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_57871631",
+      "from": "station_124",
+      "to": "station_153",
+      "type": "piste",
+      "name": "Piste 57871631",
+      "distance": 362,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_57871633",
+      "from": "station_121",
+      "to": "station_31",
+      "type": "piste",
+      "name": "Rocce Nere 1",
+      "distance": 1477,
+      "duration": 3.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_58069456",
+      "from": "station_15",
+      "to": "station_152",
+      "type": "piste",
+      "name": "Furggsattel",
+      "distance": 1735,
+      "duration": 2.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_59147348",
+      "from": "station_29",
+      "to": "station_154",
+      "type": "piste",
+      "name": "Gr\u00fcnsee",
+      "distance": 866,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_86429062",
+      "from": "station_121",
+      "to": "station_43",
+      "type": "piste",
+      "name": "Rocce Bianche",
+      "distance": 1838,
+      "duration": 2.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_86429065",
+      "from": "station_155",
+      "to": "station_156",
+      "type": "piste",
+      "name": "Pancheron",
+      "distance": 261,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_86429067",
+      "from": "station_122",
+      "to": "station_155",
+      "type": "piste",
+      "name": "Variante Pancheron",
+      "distance": 560,
+      "duration": 0.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_86429070",
+      "from": "station_44",
+      "to": "station_121",
+      "type": "piste",
+      "name": "Pancheron",
+      "distance": 308,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_93486891",
+      "from": "station_157",
+      "to": "station_49",
+      "type": "piste",
+      "name": "Gran Pista di Valtournenche",
+      "distance": 1777,
+      "duration": 2.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_93486892",
+      "from": "station_50",
+      "to": "station_158",
+      "type": "piste",
+      "name": "Baracon",
+      "distance": 1012,
+      "duration": 2.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_93487600",
+      "from": "station_36",
+      "to": "station_35",
+      "type": "piste",
+      "name": "Rientro 1",
+      "distance": 1210,
+      "duration": 2.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_93487603",
+      "from": "station_159",
+      "to": "station_160",
+      "type": "piste",
+      "name": "Tunnel",
+      "distance": 586,
+      "duration": 1.2,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_95750691",
+      "from": "station_49",
+      "to": "station_118",
+      "type": "piste",
+      "name": "Gran Pista di Valtournenche",
+      "distance": 2159,
+      "duration": 3.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_95750695",
+      "from": "station_36",
+      "to": "station_161",
+      "type": "piste",
+      "name": "Motta",
+      "distance": 192,
+      "duration": 0.4,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_95750696",
+      "from": "station_35",
+      "to": "station_49",
+      "type": "piste",
+      "name": "Salette",
+      "distance": 383,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_95750699",
+      "from": "station_116",
+      "to": "station_115",
+      "type": "piste",
+      "name": "Chateau",
+      "distance": 753,
+      "duration": 1.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_95750725",
+      "from": "station_163",
+      "to": "station_35",
+      "type": "piste",
+      "name": "Campetto",
+      "distance": 459,
+      "duration": 0.9,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_95750739",
+      "from": "station_115",
+      "to": "station_164",
+      "type": "piste",
+      "name": "Gran Collet",
+      "distance": 974,
+      "duration": 1.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_95750743",
+      "from": "station_36",
+      "to": "station_165",
+      "type": "piste",
+      "name": "Crot",
+      "distance": 529,
+      "duration": 1.1,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_95750745",
+      "from": "station_50",
+      "to": "station_51",
+      "type": "piste",
+      "name": "Roisette",
+      "distance": 612,
+      "duration": 1.2,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_95750746",
+      "from": "station_50",
+      "to": "station_49",
+      "type": "piste",
+      "name": "Becca d'Aran",
+      "distance": 809,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_95751549",
+      "from": "station_40",
+      "to": "station_39",
+      "type": "piste",
+      "name": "Gran Lago",
+      "distance": 1130,
+      "duration": 1.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_101518899",
+      "from": "station_168",
+      "to": "station_130",
+      "type": "piste",
+      "name": "Bardoney",
+      "distance": 341,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_101518901",
+      "from": "station_169",
+      "to": "station_43",
+      "type": "piste",
+      "name": "Pancheron",
+      "distance": 1199,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_101518906",
+      "from": "station_44",
+      "to": "station_170",
+      "type": "piste",
+      "name": "Pista Nera del Cervino",
+      "distance": 842,
+      "duration": 0.8,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_101836841",
+      "from": "station_13",
+      "to": "station_60",
+      "type": "piste",
+      "name": "Piste 101836841",
+      "distance": 145,
+      "duration": 0.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_101836846",
+      "from": "station_97",
+      "to": "station_172",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 1424,
+      "duration": 2.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_109770282",
+      "from": "station_56",
+      "to": "station_11",
+      "type": "piste",
+      "name": "Zen Steckenstrasse",
+      "distance": 210,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_132624421",
+      "from": "station_8",
+      "to": "station_56",
+      "type": "piste",
+      "name": "Blatten",
+      "distance": 1573,
+      "duration": 2.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_148113001",
+      "from": "station_175",
+      "to": "station_28",
+      "type": "piste",
+      "name": "Berter",
+      "distance": 866,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_148114155",
+      "from": "station_61",
+      "to": "station_176",
+      "type": "piste",
+      "name": "Hirli",
+      "distance": 575,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_148114158",
+      "from": "station_177",
+      "to": "station_60",
+      "type": "piste",
+      "name": "Tumigu",
+      "distance": 886,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_155880347",
+      "from": "station_80",
+      "to": "station_79",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 564,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_155880352",
+      "from": "station_174",
+      "to": "station_178",
+      "type": "piste",
+      "name": "Riffelboden",
+      "distance": 824,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_155880358",
+      "from": "station_42",
+      "to": "station_141",
+      "type": "piste",
+      "name": "Aroleid",
+      "distance": 1003,
+      "duration": 1.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_155880379",
+      "from": "station_181",
+      "to": "station_182",
+      "type": "piste",
+      "name": "Piste 155880379",
+      "distance": 1206,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_180243320",
+      "from": "station_139",
+      "to": "station_2",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 1457,
+      "duration": 2.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_180243321",
+      "from": "station_70",
+      "to": "station_139",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 265,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_180243322",
+      "from": "station_128",
+      "to": "station_184",
+      "type": "piste",
+      "name": "Riedweg",
+      "distance": 458,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_207858210",
+      "from": "station_185",
+      "to": "station_178",
+      "type": "piste",
+      "name": "Balmbrunnen",
+      "distance": 252,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_229166834",
+      "from": "station_175",
+      "to": "station_183",
+      "type": "piste",
+      "name": "Gr\u00fcnsee",
+      "distance": 382,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_229166837",
+      "from": "station_183",
+      "to": "station_4",
+      "type": "piste",
+      "name": "Gr\u00fcnsee",
+      "distance": 394,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_233832578",
+      "from": "station_186",
+      "to": "station_187",
+      "type": "piste",
+      "name": "Piste 233832578",
+      "distance": 899,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_237290006",
+      "from": "station_99",
+      "to": "station_54",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 632,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_237290009",
+      "from": "station_59",
+      "to": "station_8",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 2873,
+      "duration": 4.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_245285066",
+      "from": "station_180",
+      "to": "station_188",
+      "type": "piste",
+      "name": "Momatt",
+      "distance": 1208,
+      "duration": 1.2,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_245285068",
+      "from": "station_180",
+      "to": "station_189",
+      "type": "piste",
+      "name": "Tiefbach",
+      "distance": 1167,
+      "duration": 1.2,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_245285069",
+      "from": "station_141",
+      "to": "station_66",
+      "type": "piste",
+      "name": "Hermetje",
+      "distance": 1019,
+      "duration": 1.0,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_263293781",
+      "from": "station_156",
+      "to": "station_190",
+      "type": "piste",
+      "name": "Gran Roc",
+      "distance": 888,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_263293786",
+      "from": "station_191",
+      "to": "station_192",
+      "type": "piste",
+      "name": "Vallone 5bis",
+      "distance": 731,
+      "duration": 0.7,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_263293794",
+      "from": "station_115",
+      "to": "station_157",
+      "type": "piste",
+      "name": "Chateau",
+      "distance": 698,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_263293800",
+      "from": "station_115",
+      "to": "station_157",
+      "type": "piste",
+      "name": "Reine Bianche",
+      "distance": 647,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_263293810",
+      "from": "station_36",
+      "to": "station_35",
+      "type": "piste",
+      "name": "Motta",
+      "distance": 1251,
+      "duration": 2.5,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_263293822",
+      "from": "station_151",
+      "to": "station_56",
+      "type": "piste",
+      "name": "Moos",
+      "distance": 436,
+      "duration": 0.4,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_296199299",
+      "from": "station_193",
+      "to": "station_194",
+      "type": "piste",
+      "name": "White Hare",
+      "distance": 2346,
+      "duration": 3.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_296199301",
+      "from": "station_195",
+      "to": "station_185",
+      "type": "piste",
+      "name": "Balmbrunnen",
+      "distance": 690,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_311774719",
+      "from": "station_196",
+      "to": "station_59",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 584,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_366676022",
+      "from": "station_155",
+      "to": "station_190",
+      "type": "piste",
+      "name": "Morene del Furggen",
+      "distance": 1221,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_399074832",
+      "from": "station_197",
+      "to": "station_155",
+      "type": "piste",
+      "name": "Pista Nera del Cervino",
+      "distance": 643,
+      "duration": 0.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_399074833",
+      "from": "station_198",
+      "to": "station_103",
+      "type": "piste",
+      "name": "Plan Maison 1",
+      "distance": 353,
+      "duration": 0.7,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_399076186",
+      "from": "station_61",
+      "to": "station_200",
+      "type": "piste",
+      "name": "Oberer Tiefbach",
+      "distance": 1173,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_399076187",
+      "from": "station_61",
+      "to": "station_97",
+      "type": "piste",
+      "name": "Piste 399076187",
+      "distance": 975,
+      "duration": 1.0,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_399076190",
+      "from": "station_61",
+      "to": "station_97",
+      "type": "piste",
+      "name": "H\u00f6rnli",
+      "distance": 850,
+      "duration": 0.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_399077978",
+      "from": "station_2",
+      "to": "station_201",
+      "type": "piste",
+      "name": "Ried",
+      "distance": 789,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_436291242",
+      "from": "station_73",
+      "to": "station_29",
+      "type": "piste",
+      "name": "Kelle",
+      "distance": 2023,
+      "duration": 3.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_440720751",
+      "from": "station_26",
+      "to": "station_102",
+      "type": "piste",
+      "name": "Plan Torrette-Pre de Veau",
+      "distance": 517,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_440720752",
+      "from": "station_102",
+      "to": "station_202",
+      "type": "piste",
+      "name": "Plan Torrette-Pre de Veau",
+      "distance": 277,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_440720753",
+      "from": "station_202",
+      "to": "station_100",
+      "type": "piste",
+      "name": "Plan Torrette-Pre de Veau",
+      "distance": 436,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_440725633",
+      "from": "station_19",
+      "to": "station_43",
+      "type": "piste",
+      "name": "Plan Maison-Cervinia",
+      "distance": 962,
+      "duration": 1.9,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_709593404",
+      "from": "station_181",
+      "to": "station_186",
+      "type": "piste",
+      "name": "Piste 709593404",
+      "distance": 789,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_771890848",
+      "from": "station_204",
+      "to": "station_21",
+      "type": "piste",
+      "name": "Piste 771890848",
+      "distance": 745,
+      "duration": 0.7,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890849",
+      "from": "station_19",
+      "to": "station_205",
+      "type": "piste",
+      "name": "Piste 771890849",
+      "distance": 2044,
+      "duration": 2.0,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890850",
+      "from": "station_206",
+      "to": "station_207",
+      "type": "piste",
+      "name": "Piste 771890850",
+      "distance": 436,
+      "duration": 0.4,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890851",
+      "from": "station_24",
+      "to": "station_207",
+      "type": "piste",
+      "name": "Piste 771890851",
+      "distance": 642,
+      "duration": 0.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890852",
+      "from": "station_208",
+      "to": "station_209",
+      "type": "piste",
+      "name": "Piste 771890852",
+      "distance": 789,
+      "duration": 0.8,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890853",
+      "from": "station_208",
+      "to": "station_210",
+      "type": "piste",
+      "name": "Piste 771890853",
+      "distance": 466,
+      "duration": 0.5,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_771890854",
+      "from": "station_18",
+      "to": "station_211",
+      "type": "piste",
+      "name": "Piste 771890854",
+      "distance": 1612,
+      "duration": 1.6,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_803858804",
+      "from": "station_16",
+      "to": "station_47",
+      "type": "piste",
+      "name": "Gobba di Rollin",
+      "distance": 562,
+      "duration": 1.1,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_835160072",
+      "from": "station_212",
+      "to": "station_50",
+      "type": "piste",
+      "name": "Trecar",
+      "distance": 832,
+      "duration": 0.8,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_868337632",
+      "from": "station_71",
+      "to": "station_127",
+      "type": "piste",
+      "name": "Ried",
+      "distance": 286,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905018123",
+      "from": "station_147",
+      "to": "station_213",
+      "type": "piste",
+      "name": "Tufternkumme",
+      "distance": 386,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905018124",
+      "from": "station_63",
+      "to": "station_146",
+      "type": "piste",
+      "name": "Tufternkumme",
+      "distance": 1371,
+      "duration": 2.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905018125",
+      "from": "station_146",
+      "to": "station_70",
+      "type": "piste",
+      "name": "Tufternkumme",
+      "distance": 589,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905048248",
+      "from": "station_3",
+      "to": "station_214",
+      "type": "piste",
+      "name": "Tuftern",
+      "distance": 384,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905048253",
+      "from": "station_105",
+      "to": "station_215",
+      "type": "piste",
+      "name": "Standard",
+      "distance": 291,
+      "duration": 0.6,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_905048254",
+      "from": "station_216",
+      "to": "station_217",
+      "type": "piste",
+      "name": "Easy Run",
+      "distance": 507,
+      "duration": 1.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_905056541",
+      "from": "station_29",
+      "to": "station_195",
+      "type": "piste",
+      "name": "Balmbrunnen",
+      "distance": 260,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_905056545",
+      "from": "station_154",
+      "to": "station_175",
+      "type": "piste",
+      "name": "Gr\u00fcnsee",
+      "distance": 222,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1037782178",
+      "from": "station_172",
+      "to": "station_196",
+      "type": "piste",
+      "name": "Stafelalp",
+      "distance": 132,
+      "duration": 0.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1044431724",
+      "from": "station_71",
+      "to": "station_218",
+      "type": "piste",
+      "name": "Untere National",
+      "distance": 350,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1044431726",
+      "from": "station_218",
+      "to": "station_184",
+      "type": "piste",
+      "name": "Untere National",
+      "distance": 161,
+      "duration": 0.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1044431731",
+      "from": "station_184",
+      "to": "station_219",
+      "type": "piste",
+      "name": "Riedweg",
+      "distance": 160,
+      "duration": 0.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1044431735",
+      "from": "station_201",
+      "to": "station_71",
+      "type": "piste",
+      "name": "Ried",
+      "distance": 275,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1047690125",
+      "from": "station_220",
+      "to": "station_221",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 872,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1047690132",
+      "from": "station_1",
+      "to": "station_27",
+      "type": "piste",
+      "name": "Eisfluh",
+      "distance": 362,
+      "duration": 0.7,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1053284092",
+      "from": "station_122",
+      "to": "station_155",
+      "type": "piste",
+      "name": "Pancheron",
+      "distance": 536,
+      "duration": 0.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1100651987",
+      "from": "station_46",
+      "to": "station_136",
+      "type": "piste",
+      "name": "Cieloalto 2",
+      "distance": 410,
+      "duration": 0.4,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1100651988",
+      "from": "station_222",
+      "to": "station_126",
+      "type": "piste",
+      "name": "Raccordo Cieloalto-Bardoney",
+      "distance": 1236,
+      "duration": 1.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1127633371",
+      "from": "station_22",
+      "to": "station_53",
+      "type": "piste",
+      "name": "Plateau Rosa - Bontadini",
+      "distance": 301,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1132496344",
+      "from": "station_91",
+      "to": "station_223",
+      "type": "piste",
+      "name": "Landtunnel",
+      "distance": 52,
+      "duration": 0.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1132496346",
+      "from": "station_224",
+      "to": "station_225",
+      "type": "piste",
+      "name": "Bielti",
+      "distance": 650,
+      "duration": 0.7,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1152790861",
+      "from": "station_135",
+      "to": "station_23",
+      "type": "piste",
+      "name": "Cieloalto-Cervinia",
+      "distance": 212,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1163384663",
+      "from": "station_116",
+      "to": "station_226",
+      "type": "piste",
+      "name": "Canestrini bis",
+      "distance": 647,
+      "duration": 1.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1163396662",
+      "from": "station_160",
+      "to": "station_35",
+      "type": "piste",
+      "name": "Tunnel",
+      "distance": 517,
+      "duration": 1.0,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1163432942",
+      "from": "station_132",
+      "to": "station_227",
+      "type": "piste",
+      "name": "Plan Torrette",
+      "distance": 570,
+      "duration": 1.1,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1163432943",
+      "from": "station_103",
+      "to": "station_87",
+      "type": "piste",
+      "name": "Plan Torrette",
+      "distance": 302,
+      "duration": 0.6,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1194648013",
+      "from": "station_99",
+      "to": "station_59",
+      "type": "piste",
+      "name": "Weisse Perle Traverse",
+      "distance": 336,
+      "duration": 0.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1305881375",
+      "from": "station_65",
+      "to": "station_33",
+      "type": "piste",
+      "name": "Grenzpiste (stillgelegt)",
+      "distance": 1111,
+      "duration": 2.2,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1385736101",
+      "from": "station_32",
+      "to": "station_228",
+      "type": "piste",
+      "name": "Fiererpiste",
+      "distance": 1304,
+      "duration": 2.0,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1386959390",
+      "from": "station_152",
+      "to": "station_10",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 863,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1386959391",
+      "from": "station_152",
+      "to": "station_10",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 990,
+      "duration": 1.5,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1386959392",
+      "from": "station_220",
+      "to": "station_187",
+      "type": "piste",
+      "name": "Theodulgletscher",
+      "distance": 294,
+      "duration": 0.4,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1386965073",
+      "from": "station_18",
+      "to": "station_53",
+      "type": "piste",
+      "name": "Testa Grigia",
+      "distance": 1127,
+      "duration": 1.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1390349115",
+      "from": "station_151",
+      "to": "station_229",
+      "type": "piste",
+      "name": "Moosstrasse",
+      "distance": 653,
+      "duration": 1.3,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_1390418642",
+      "from": "station_77",
+      "to": "station_91",
+      "type": "piste",
+      "name": "Landtunnel",
+      "distance": 835,
+      "duration": 1.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1390418643",
+      "from": "station_91",
+      "to": "station_150",
+      "type": "piste",
+      "name": "Schweigmatten",
+      "distance": 1187,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1390418644",
+      "from": "station_230",
+      "to": "station_4",
+      "type": "piste",
+      "name": "Grieschumme",
+      "distance": 1933,
+      "duration": 1.9,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1396697508",
+      "from": "station_71",
+      "to": "station_127",
+      "type": "piste",
+      "name": "Piste 1396697508",
+      "distance": 297,
+      "duration": 0.3,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1459564618",
+      "from": "station_219",
+      "to": "station_0",
+      "type": "piste",
+      "name": "Riedweg",
+      "distance": 179,
+      "duration": 0.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1461645522",
+      "from": "station_116",
+      "to": "station_133",
+      "type": "piste",
+      "name": "15a Sigari",
+      "distance": 706,
+      "duration": 0.7,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1461645523",
+      "from": "station_48",
+      "to": "station_95",
+      "type": "piste",
+      "name": "85",
+      "distance": 1392,
+      "duration": 2.1,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1461646628",
+      "from": "station_95",
+      "to": "station_41",
+      "type": "piste",
+      "name": "Piste 1461646628",
+      "distance": 473,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1461646631",
+      "from": "station_47",
+      "to": "station_232",
+      "type": "piste",
+      "name": "Piste 1461646631",
+      "distance": 482,
+      "duration": 0.7,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1461646632",
+      "from": "station_65",
+      "to": "station_95",
+      "type": "piste",
+      "name": "Piste 1461646632",
+      "distance": 1189,
+      "duration": 1.8,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_1461646633",
+      "from": "station_232",
+      "to": "station_95",
+      "type": "piste",
+      "name": "85a Kilometro Lanciato",
+      "distance": 499,
+      "duration": 0.5,
+      "difficulty": "black"
+    },
+    {
+      "id": "piste_1461647517",
+      "from": "station_146",
+      "to": "station_62",
+      "type": "piste",
+      "name": "15b Murmelbodmen",
+      "distance": 350,
+      "duration": 0.3,
+      "difficulty": "black"
+    },
+    {
+      "id": "connector_0_ab",
+      "from": "station_8",
+      "to": "station_66",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lift 1266342298 (bottom)",
+      "distance": 196,
+      "duration": 3.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_0_ba",
+      "from": "station_66",
+      "to": "station_8",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Riffelberg-Express (bottom)",
+      "distance": 196,
+      "duration": 3.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_1_ab",
+      "from": "station_9",
+      "to": "station_92",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Iglupiste (bottom)",
+      "distance": 288,
+      "duration": 5.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_1_ba",
+      "from": "station_92",
+      "to": "station_9",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Riffelberg-Express (top)",
+      "distance": 288,
+      "duration": 5.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_2_ab",
+      "from": "station_45",
+      "to": "station_85",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Ventina-Cieloalto (bottom)",
+      "distance": 139,
+      "duration": 2.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_2_ba",
+      "from": "station_85",
+      "to": "station_45",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Cieloalto (bottom)",
+      "distance": 139,
+      "duration": 2.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_3_ab",
+      "from": "station_156",
+      "to": "station_169",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pancheron (top)",
+      "distance": 319,
+      "duration": 6.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_3_ba",
+      "from": "station_169",
+      "to": "station_156",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pancheron (bottom)",
+      "distance": 319,
+      "duration": 6.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_4_ab",
+      "from": "station_126",
+      "to": "station_142",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pirovano - Cervinia (top)",
+      "distance": 402,
+      "duration": 8.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_4_ba",
+      "from": "station_142",
+      "to": "station_126",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Ventina Bardoney 1 (bottom)",
+      "distance": 402,
+      "duration": 8.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_5_ab",
+      "from": "station_105",
+      "to": "station_214",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Tuftern (bottom)",
+      "distance": 407,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_5_ba",
+      "from": "station_214",
+      "to": "station_105",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Obere National (top)",
+      "distance": 407,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_6_ab",
+      "from": "station_170",
+      "to": "station_197",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pista Nera del Cervino (top)",
+      "distance": 332,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_6_ba",
+      "from": "station_197",
+      "to": "station_170",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pista Nera del Cervino (bottom)",
+      "distance": 332,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_7_ab",
+      "from": "station_67",
+      "to": "station_114",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 30833443 (top)",
+      "distance": 472,
+      "duration": 9.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_7_ba",
+      "from": "station_114",
+      "to": "station_67",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Grenzlift (stillgelegt) (bottom)",
+      "distance": 472,
+      "duration": 9.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_8_ab",
+      "from": "station_146",
+      "to": "station_147",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Arbzug (top)",
+      "distance": 422,
+      "duration": 8.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_8_ba",
+      "from": "station_147",
+      "to": "station_146",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Marmotte (bottom)",
+      "distance": 422,
+      "duration": 8.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_9_ab",
+      "from": "station_126",
+      "to": "station_205",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 771890849 (bottom)",
+      "distance": 179,
+      "duration": 3.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_9_ba",
+      "from": "station_205",
+      "to": "station_126",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Ventina Bardoney 1 (bottom)",
+      "distance": 179,
+      "duration": 3.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_10_ab",
+      "from": "station_19",
+      "to": "station_24",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Plan Maison (top)",
+      "distance": 200,
+      "duration": 4.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_10_ba",
+      "from": "station_24",
+      "to": "station_19",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Plan Maison (bottom)",
+      "distance": 200,
+      "duration": 4.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_11_ab",
+      "from": "station_94",
+      "to": "station_200",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Oberer Tiefbach (bottom)",
+      "distance": 203,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_11_ba",
+      "from": "station_200",
+      "to": "station_94",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Stafelalp (bottom)",
+      "distance": 203,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_12_ab",
+      "from": "station_91",
+      "to": "station_223",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Landtunnel (bottom)",
+      "distance": 204,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_12_ba",
+      "from": "station_223",
+      "to": "station_91",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Landtunnel (top)",
+      "distance": 204,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_13_ab",
+      "from": "station_19",
+      "to": "station_101",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Plan Maison-Cervinia (bottom)",
+      "distance": 209,
+      "duration": 4.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_13_ba",
+      "from": "station_101",
+      "to": "station_19",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Plan Maison (bottom)",
+      "distance": 209,
+      "duration": 4.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_14_ab",
+      "from": "station_146",
+      "to": "station_213",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Tufternkumme (bottom)",
+      "distance": 230,
+      "duration": 4.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_14_ba",
+      "from": "station_213",
+      "to": "station_146",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Marmotte (bottom)",
+      "distance": 230,
+      "duration": 4.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_15_ab",
+      "from": "station_29",
+      "to": "station_90",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 28541395 (bottom)",
+      "distance": 231,
+      "duration": 4.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_15_ba",
+      "from": "station_90",
+      "to": "station_29",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Findelbahn (Eja-Breitenboden) (top)",
+      "distance": 231,
+      "duration": 4.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_16_ab",
+      "from": "station_96",
+      "to": "station_98",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to H\u00f6rnli (bottom)",
+      "distance": 238,
+      "duration": 4.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_16_ba",
+      "from": "station_98",
+      "to": "station_96",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Weisse Perle (bottom)",
+      "distance": 238,
+      "duration": 4.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_17_ab",
+      "from": "station_105",
+      "to": "station_215",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Standard (bottom)",
+      "distance": 250,
+      "duration": 5.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_17_ba",
+      "from": "station_215",
+      "to": "station_105",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Obere National (top)",
+      "distance": 250,
+      "duration": 5.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_18_ab",
+      "from": "station_53",
+      "to": "station_228",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Fiererpiste (bottom)",
+      "distance": 251,
+      "duration": 5.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_18_ba",
+      "from": "station_228",
+      "to": "station_53",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Testa (bottom)",
+      "distance": 251,
+      "duration": 5.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_19_ab",
+      "from": "station_12",
+      "to": "station_76",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Riffelhorn (top)",
+      "distance": 187,
+      "duration": 3.7,
+      "difficulty": null
+    },
+    {
+      "id": "connector_19_ba",
+      "from": "station_76",
+      "to": "station_12",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gifthittli (top)",
+      "distance": 187,
+      "duration": 3.7,
+      "difficulty": null
+    },
+    {
+      "id": "connector_20_ab",
+      "from": "station_83",
+      "to": "station_104",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Ventina-Cieloalto (bottom)",
+      "distance": 258,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_20_ba",
+      "from": "station_104",
+      "to": "station_83",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Ventina-Cieloalto (bottom)",
+      "distance": 258,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_21_ab",
+      "from": "station_100",
+      "to": "station_123",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Muro Europa (top)",
+      "distance": 203,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_21_ba",
+      "from": "station_123",
+      "to": "station_100",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Pirovano-Cervinia (top)",
+      "distance": 203,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_22_ab",
+      "from": "station_21",
+      "to": "station_129",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 44333267 (bottom)",
+      "distance": 292,
+      "duration": 5.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_22_ba",
+      "from": "station_129",
+      "to": "station_21",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Fornet (top)",
+      "distance": 292,
+      "duration": 5.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_23_ab",
+      "from": "station_136",
+      "to": "station_222",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Raccordo Cieloalto-Bardoney (top)",
+      "distance": 204,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_23_ba",
+      "from": "station_222",
+      "to": "station_136",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Cieloalto 2 (top)",
+      "distance": 204,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_24_ab",
+      "from": "station_28",
+      "to": "station_137",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Easy Run (top)",
+      "distance": 301,
+      "duration": 6.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_24_ba",
+      "from": "station_137",
+      "to": "station_28",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Findelbahn (Eja-Breitenboden) (bottom)",
+      "distance": 301,
+      "duration": 6.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_25_ab",
+      "from": "station_13",
+      "to": "station_113",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 30833436 (top)",
+      "distance": 214,
+      "duration": 4.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_25_ba",
+      "from": "station_113",
+      "to": "station_13",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Furgg - Sandiger Boden (bottom)",
+      "distance": 214,
+      "duration": 4.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_26_ab",
+      "from": "station_29",
+      "to": "station_195",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Balmbrunnen (top)",
+      "distance": 350,
+      "duration": 7.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_26_ba",
+      "from": "station_195",
+      "to": "station_29",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Findelbahn (Eja-Breitenboden) (top)",
+      "distance": 350,
+      "duration": 7.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_27_ab",
+      "from": "station_78",
+      "to": "station_177",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Tumigu (top)",
+      "distance": 257,
+      "duration": 5.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_27_ba",
+      "from": "station_177",
+      "to": "station_78",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Garten (top)",
+      "distance": 257,
+      "duration": 5.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_28_ab",
+      "from": "station_54",
+      "to": "station_99",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Stafelalp (bottom)",
+      "distance": 356,
+      "duration": 7.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_28_ba",
+      "from": "station_99",
+      "to": "station_54",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lift 332905047 (bottom)",
+      "distance": 356,
+      "duration": 7.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_29_ab",
+      "from": "station_103",
+      "to": "station_198",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Plan Maison 1 (top)",
+      "distance": 303,
+      "duration": 6.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_29_ba",
+      "from": "station_198",
+      "to": "station_103",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Theodulo - Plan Maison (bottom)",
+      "distance": 303,
+      "duration": 6.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_30_ab",
+      "from": "station_68",
+      "to": "station_73",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Kelle (bottom)",
+      "distance": 396,
+      "duration": 7.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_30_ba",
+      "from": "station_73",
+      "to": "station_68",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Breitboden - Rosenritz (top)",
+      "distance": 396,
+      "duration": 7.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_31_ab",
+      "from": "station_21",
+      "to": "station_143",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Theodulo - Plan Maison (top)",
+      "distance": 313,
+      "duration": 6.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_31_ba",
+      "from": "station_143",
+      "to": "station_21",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Fornet (top)",
+      "distance": 313,
+      "duration": 6.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_32_ab",
+      "from": "station_56",
+      "to": "station_229",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Moosstrasse (bottom)",
+      "distance": 405,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_32_ba",
+      "from": "station_229",
+      "to": "station_56",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Zmutt (bottom)",
+      "distance": 405,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_33_ab",
+      "from": "station_54",
+      "to": "station_55",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lift 332905047 (top)",
+      "distance": 406,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_33_ba",
+      "from": "station_55",
+      "to": "station_54",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lift 332905047 (bottom)",
+      "distance": 406,
+      "duration": 8.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_34_ab",
+      "from": "station_12",
+      "to": "station_109",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Hoht\u00e4lli (top)",
+      "distance": 409,
+      "duration": 8.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_34_ba",
+      "from": "station_109",
+      "to": "station_12",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gifthittli (top)",
+      "distance": 409,
+      "duration": 8.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_35_ab",
+      "from": "station_108",
+      "to": "station_109",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Hoht\u00e4lli (top)",
+      "distance": 221,
+      "duration": 4.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_35_ba",
+      "from": "station_109",
+      "to": "station_108",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gornergrat (top)",
+      "distance": 221,
+      "duration": 4.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_36_ab",
+      "from": "station_17",
+      "to": "station_153",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 57871631 (bottom)",
+      "distance": 260,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_36_ba",
+      "from": "station_153",
+      "to": "station_17",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Funivia del Plateau Rosa (bottom)",
+      "distance": 260,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_37_ab",
+      "from": "station_124",
+      "to": "station_153",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 57871631 (bottom)",
+      "distance": 352,
+      "duration": 7.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_37_ba",
+      "from": "station_153",
+      "to": "station_124",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gran Sometta 2 (bottom)",
+      "distance": 352,
+      "duration": 7.0,
+      "difficulty": null
+    },
+    {
+      "id": "connector_38_ab",
+      "from": "station_52",
+      "to": "station_131",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gaspard (bottom)",
+      "distance": 391,
+      "duration": 7.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_38_ba",
+      "from": "station_131",
+      "to": "station_52",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lago Goillet (bottom)",
+      "distance": 391,
+      "duration": 7.8,
+      "difficulty": null
+    },
+    {
+      "id": "connector_39_ab",
+      "from": "station_37",
+      "to": "station_161",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Motta (bottom)",
+      "distance": 330,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_39_ba",
+      "from": "station_161",
+      "to": "station_37",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Bec Carr\u00e9 (bottom)",
+      "distance": 330,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_40_ab",
+      "from": "station_38",
+      "to": "station_116",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to E. Noussan (top)",
+      "distance": 306,
+      "duration": 6.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_40_ba",
+      "from": "station_116",
+      "to": "station_38",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Bec Carr\u00e9 (top)",
+      "distance": 306,
+      "duration": 6.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_41_ab",
+      "from": "station_51",
+      "to": "station_160",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Tunnel (bottom)",
+      "distance": 262,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_41_ba",
+      "from": "station_160",
+      "to": "station_51",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Snowpark (top)",
+      "distance": 262,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_42_ab",
+      "from": "station_163",
+      "to": "station_165",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Crot (bottom)",
+      "distance": 418,
+      "duration": 8.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_42_ba",
+      "from": "station_165",
+      "to": "station_163",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Campetto (top)",
+      "distance": 418,
+      "duration": 8.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_43_ab",
+      "from": "station_49",
+      "to": "station_158",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Baracon (bottom)",
+      "distance": 206,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_43_ba",
+      "from": "station_158",
+      "to": "station_49",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Becca d'Aran (bottom)",
+      "distance": 206,
+      "duration": 4.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_44_ab",
+      "from": "station_36",
+      "to": "station_164",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gran Collet (bottom)",
+      "distance": 246,
+      "duration": 4.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_44_ba",
+      "from": "station_164",
+      "to": "station_36",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Motta (top)",
+      "distance": 246,
+      "duration": 4.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_45_ab",
+      "from": "station_115",
+      "to": "station_212",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Trecar (top)",
+      "distance": 246,
+      "duration": 4.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_45_ba",
+      "from": "station_212",
+      "to": "station_115",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Reine Bianche (bottom)",
+      "distance": 246,
+      "duration": 4.9,
+      "difficulty": null
+    },
+    {
+      "id": "connector_46_ab",
+      "from": "station_116",
+      "to": "station_144",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Canalino (top)",
+      "distance": 253,
+      "duration": 5.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_46_ba",
+      "from": "station_144",
+      "to": "station_116",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to E. Noussan (top)",
+      "distance": 253,
+      "duration": 5.1,
+      "difficulty": null
+    },
+    {
+      "id": "connector_47_ab",
+      "from": "station_133",
+      "to": "station_226",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Canestrini bis (bottom)",
+      "distance": 262,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_47_ba",
+      "from": "station_226",
+      "to": "station_133",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Rientro 1 (top)",
+      "distance": 262,
+      "duration": 5.2,
+      "difficulty": null
+    },
+    {
+      "id": "connector_48_ab",
+      "from": "station_52",
+      "to": "station_125",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Gran Sometta 3 (bottom)",
+      "distance": 330,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_48_ba",
+      "from": "station_125",
+      "to": "station_52",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Lago Goillet (bottom)",
+      "distance": 330,
+      "duration": 6.6,
+      "difficulty": null
+    },
+    {
+      "id": "connector_49_ab",
+      "from": "station_50",
+      "to": "station_159",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Tunnel (top)",
+      "distance": 370,
+      "duration": 7.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_49_ba",
+      "from": "station_159",
+      "to": "station_50",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Becca d'Aran (top)",
+      "distance": 370,
+      "duration": 7.4,
+      "difficulty": null
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "matterhorn",
+  "name": "Matterhorn Ski Paradise",
+  "bbox": {
+    "south": 45.88,
+    "west": 7.58,
+    "north": 46.05,
+    "east": 7.80
+  },
+  "center": [45.9369, 7.6292],
+  "subAreas": ["Cervinia", "Valtournenche", "Zermatt"],
+  "defaultZoom": 13,
+  "tileZoomRange": [11, 15]
+}
