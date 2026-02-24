@@ -270,6 +270,149 @@ def _bridge_connectivity_gaps(
     return new_edges
 
 
+def _filter_parallel_segments(members: list[dict], overlap_threshold: float = 0.5) -> list[dict]:
+    """Remove parallel duplicate segments, keeping only the longest per corridor.
+
+    Within a group of same-name segments, detects pairs whose bounding boxes
+    overlap by more than overlap_threshold in BOTH lat and lon dimensions.
+    Clusters overlapping segments via union-find and keeps only the longest
+    segment (by Euclidean path length) from each cluster.
+    """
+    if len(members) <= 1:
+        return members
+
+    n = len(members)
+
+    # Precompute bounding boxes and path lengths for each segment
+    bboxes = []  # (min_lat, max_lat, min_lon, max_lon)
+    lengths = []
+    for m in members:
+        coords = m["geometry"]["coordinates"]  # [[lon, lat], ...]
+        lats = [c[1] for c in coords]
+        lons = [c[0] for c in coords]
+        bboxes.append((min(lats), max(lats), min(lons), max(lons)))
+        # Euclidean path length (sum of segment distances in coord space)
+        path_len = 0.0
+        for i in range(len(coords) - 1):
+            dlat = coords[i + 1][1] - coords[i][1]
+            dlon = coords[i + 1][0] - coords[i][0]
+            path_len += math.sqrt(dlat * dlat + dlon * dlon)
+        lengths.append(path_len)
+
+    # Union-find
+    parent = list(range(n))
+
+    def find(x: int) -> int:
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+
+    def union(a: int, b: int) -> None:
+        ra, rb = find(a), find(b)
+        if ra != rb:
+            parent[ra] = rb
+
+    # Check all pairs for bounding-box overlap
+    for i in range(n):
+        for j in range(i + 1, n):
+            min_lat_i, max_lat_i, min_lon_i, max_lon_i = bboxes[i]
+            min_lat_j, max_lat_j, min_lon_j, max_lon_j = bboxes[j]
+
+            # Lat overlap
+            lat_overlap = max(0, min(max_lat_i, max_lat_j) - max(min_lat_i, min_lat_j))
+            lat_span_smaller = min(max_lat_i - min_lat_i, max_lat_j - min_lat_j)
+            if lat_span_smaller <= 0:
+                continue
+            lat_ratio = lat_overlap / lat_span_smaller
+
+            # Lon overlap
+            lon_overlap = max(0, min(max_lon_i, max_lon_j) - max(min_lon_i, min_lon_j))
+            lon_span_smaller = min(max_lon_i - min_lon_i, max_lon_j - min_lon_j)
+            if lon_span_smaller <= 0:
+                continue
+            lon_ratio = lon_overlap / lon_span_smaller
+
+            if lat_ratio > overlap_threshold and lon_ratio > overlap_threshold:
+                union(i, j)
+
+    # Group by cluster root, keep longest in each cluster
+    clusters: dict[int, list[int]] = defaultdict(list)
+    for i in range(n):
+        clusters[find(i)].append(i)
+
+    kept_indices = []
+    for indices in clusters.values():
+        best = max(indices, key=lambda i: lengths[i])
+        kept_indices.append(best)
+
+    kept_indices.sort()
+    removed = n - len(kept_indices)
+    if removed > 0:
+        name = members[0].get("properties", {}).get("name", "?")
+        print(f"  Dedup '{name}': {n} segments -> {len(kept_indices)} (removed {removed} parallel)")
+
+    return [members[i] for i in kept_indices]
+
+
+def _merge_geo_features(geo_features: list[dict]) -> list[dict]:
+    """Merge geo features that share the same name into MultiLineStrings.
+
+    Pistes group by (name, ref, "piste", difficulty).
+    Lifts group by (name, ref, "lift", liftType).
+    Features with empty/missing name are never merged.
+    """
+    groups: dict[tuple, list[dict]] = defaultdict(list)
+    ungrouped: list[dict] = []
+
+    for f in geo_features:
+        props = f.get("properties", {})
+        name = props.get("name", "")
+        if not name:
+            ungrouped.append(f)
+            continue
+
+        ftype = props.get("type", "")
+        if ftype == "piste":
+            # Group by name + difficulty only; ref varies across segments of same run
+            key = (name, "piste", props.get("difficulty", ""))
+        elif ftype == "lift":
+            # Group by name + liftType; different lift types at same station are different lifts
+            key = (name, "lift", props.get("liftType", ""))
+        else:
+            ungrouped.append(f)
+            continue
+
+        groups[key].append(f)
+
+    merged: list[dict] = list(ungrouped)
+    for key, members in groups.items():
+        # Filter out parallel duplicate segments before merging
+        members = _filter_parallel_segments(members)
+
+        if len(members) == 1:
+            merged.append(members[0])
+        else:
+            # Merge into MultiLineString; pick the best non-empty ref
+            base = dict(members[0])
+            base["properties"] = dict(base["properties"])
+            best_ref = ""
+            for m in members:
+                r = m["properties"].get("ref", "")
+                if r:
+                    best_ref = r
+                    break
+            base["properties"]["ref"] = best_ref
+            base["properties"]["id"] = [m["properties"]["id"] for m in members]
+            base["geometry"] = {
+                "type": "MultiLineString",
+                "coordinates": [m["geometry"]["coordinates"] for m in members],
+            }
+            merged.append(base)
+
+    return merged
+
+
 def load_area_config(area: str) -> dict | None:
     """Load area config JSON if it exists."""
     config_path = Path(__file__).parent / "areas" / f"{area}.json"
@@ -321,11 +464,13 @@ def build_graph(raw_data: dict, cluster_threshold: float = 200.0, area_config: d
         })
 
         # GeoJSON feature for the lift
+        ref = lift.get("tags", {}).get("ref", "")
         geo_features.append({
             "type": "Feature",
             "properties": {
                 "id": lift["id"],
                 "name": name,
+                "ref": ref,
                 "type": "lift",
                 "liftType": lift_type,
             },
@@ -367,13 +512,16 @@ def build_graph(raw_data: dict, cluster_threshold: float = 200.0, area_config: d
             "difficulty": difficulty,
         })
 
-        # GeoJSON feature
+        # GeoJSON feature — resolve ref from either "ref" or "piste:ref"
+        tags = piste.get("tags", {})
+        ref = tags.get("ref", "") or tags.get("piste:ref", "")
         color_map = {"blue": "#3b82f6", "red": "#ef4444", "black": "#1f2937"}
         geo_features.append({
             "type": "Feature",
             "properties": {
                 "id": piste["id"],
                 "name": name,
+                "ref": ref,
                 "type": "piste",
                 "difficulty": difficulty,
                 "color": color_map.get(difficulty, "#ef4444"),
@@ -404,6 +552,9 @@ def build_graph(raw_data: dict, cluster_threshold: float = 200.0, area_config: d
         "nodes": stations,
         "edges": edges,
     }
+
+    # Merge duplicate geo features (same name) into MultiLineStrings
+    geo_features = _merge_geo_features(geo_features)
 
     geo = {
         "type": "FeatureCollection",

@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+.station-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #1e40af;
+  white-space: nowrap;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  pointer-events: none;
+}
+
 :root {
   --ivory: #FFFFF0;
   --light-blue: #F5FAFF;

@@ -4,6 +4,8 @@ import type { Feature, GeoJsonProperties, Geometry } from 'geojson';
 import type { PathOptions } from 'leaflet';
 import type { RouteResult } from '../types/route';
 import { DIFFICULTY_ROUTE_COLORS } from '../data/difficultyMap';
+import { getLiftStyle } from '../data/liftStyles';
+import { useZoom } from '../hooks/useZoom';
 
 interface MapOverlaysProps {
   geo: GeoJSON.FeatureCollection | null;
@@ -18,18 +20,19 @@ function pisteStyle(feature: Feature<Geometry, GeoJsonProperties> | undefined): 
   const props = feature.properties ?? {};
 
   if (props.type === 'lift') {
+    const style = getLiftStyle(props.liftType);
     return {
-      color: '#6b7280',
-      weight: 2,
-      dashArray: '8 4',
-      opacity: 0.8,
+      color: style.color,
+      weight: style.weight,
+      dashArray: style.dashArray as string | undefined,
+      opacity: style.opacity,
     };
   }
 
   return {
     color: props.color || '#ef4444',
-    weight: 3,
-    opacity: 0.7,
+    weight: 4,
+    opacity: 0.85,
   };
 }
 
@@ -48,10 +51,22 @@ function makeStopIcon(index: number): L.DivIcon {
   });
 }
 
+function makeStationLabel(name: string, elevation: number): L.DivIcon {
+  return L.divIcon({
+    className: 'station-label',
+    html: `${name} <span style="opacity:0.7">${elevation}m</span>`,
+    iconSize: [0, 0],
+    iconAnchor: [-8, 4],
+  });
+}
+
 export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds }: MapOverlaysProps) {
+  const zoom = useZoom();
   if (!geo) return null;
 
-  const lines = geo.features.filter((f) => f.geometry.type === 'LineString');
+  const lines = geo.features.filter(
+    (f) => f.geometry.type === 'LineString' || f.geometry.type === 'MultiLineString',
+  );
   const stations = geo.features.filter(
     (f) => f.geometry.type === 'Point' && f.properties?.type === 'station',
   );
@@ -60,11 +75,22 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
   const linesByEdgeId = new Map<string, [number, number][]>();
   for (const f of lines) {
     const id = f.properties?.id;
-    if (id && f.geometry.type === 'LineString') {
+    if (!id) continue;
+    if (f.geometry.type === 'LineString') {
       linesByEdgeId.set(
         id,
         (f.geometry as GeoJSON.LineString).coordinates.map(([lon, lat]) => [lat, lon] as [number, number]),
       );
+    } else if (f.geometry.type === 'MultiLineString' && Array.isArray(id)) {
+      const multiCoords = (f.geometry as GeoJSON.MultiLineString).coordinates;
+      for (let i = 0; i < id.length; i++) {
+        if (multiCoords[i]) {
+          linesByEdgeId.set(
+            id[i],
+            multiCoords[i].map(([lon, lat]) => [lat, lon] as [number, number]),
+          );
+        }
+      }
     }
   }
 
@@ -202,6 +228,20 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
               {props.name} ({props.elevation}m)
             </Tooltip>
           </CircleMarker>
+        );
+      })}
+
+      {/* Permanent station labels at high zoom */}
+      {zoom >= 15 && stations.map((station) => {
+        const [lon, lat] = (station.geometry as GeoJSON.Point).coordinates;
+        const props = station.properties!;
+        return (
+          <Marker
+            key={`station-label-${props.id}`}
+            position={[lat, lon]}
+            icon={makeStationLabel(props.name, props.elevation)}
+            interactive={false}
+          />
         );
       })}
     </>

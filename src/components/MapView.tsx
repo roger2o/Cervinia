@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, CircleMarker, Circle, useMap } from 'react-lea
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapOverlays } from './MapOverlays';
+import { MapLabels } from './MapLabels';
 import { DailyActivityOverlay } from './DailyActivityOverlay';
 import type { RouteResult } from '../types/route';
 import type { GeoPosition } from '../hooks/useGeolocation';
@@ -123,9 +124,20 @@ export function MapView({
       zoomControl={false}
     >
       <TileLayer
-        attribution='Map data &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
-        url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
-        maxZoom={17}
+        attribution='Tiles &copy; Esri'
+        url="https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}"
+        maxZoom={18}
+      />
+      <TileLayer
+        attribution='&copy; <a href="https://carto.com">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
+        maxZoom={19}
+        opacity={0.35}
+      />
+      <TileLayer
+        url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
+        maxZoom={19}
+        pane="tooltipPane"
       />
       <MapOverlays
         geo={geo}
@@ -134,6 +146,7 @@ export function MapView({
         selectedStepIndex={selectedStepIndex}
         closedEdgeIds={closedEdgeIds}
       />
+      <MapLabels geo={geo} />
       <FlyToArea center={center} zoom={zoom} />
       <FlyToSegment route={route} selectedStepIndex={selectedStepIndex} />
 

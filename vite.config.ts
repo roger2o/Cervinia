@@ -19,10 +19,21 @@ export default defineConfig({
       workbox: {
         runtimeCaching: [
           {
-            urlPattern: /^https:\/\/[abc]\.tile\.opentopomap\.org\/.*/i,
+            urlPattern: /^https:\/\/server\.arcgisonline\.com\/ArcGIS\/rest\/services\/.*/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'ski-map-tiles',
+              cacheName: 'ski-hillshade-tiles',
+              expiration: {
+                maxEntries: 5000,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/[abcd]\.basemaps\.cartocdn\.com\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'ski-carto-tiles',
               expiration: {
                 maxEntries: 5000,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
