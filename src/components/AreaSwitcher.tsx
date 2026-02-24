@@ -48,7 +48,7 @@ export function AreaSwitcher({ currentAreaId, onSwitch, cachedAreaId }: AreaSwit
       />
 
       {open && (
-        <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+        <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-snowflake border border-gray-200 rounded-lg shadow-lg">
           {filtered.map((a) => (
             <button
               key={a.id}

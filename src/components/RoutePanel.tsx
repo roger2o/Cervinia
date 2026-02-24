@@ -15,14 +15,14 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
 
   if (route.steps.length === 0) {
     return (
-      <div className="bg-white rounded-xl shadow-lg p-4">
+      <div className="bg-snowflake rounded-xl shadow-lg p-4">
         <p className="text-sm text-gray-500">Start and end are the same station.</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-snowflake rounded-xl shadow-lg overflow-hidden">
       {/* Header */}
       <div className="px-4 py-3 bg-blue-800 text-white flex items-center justify-between">
         <div>
@@ -32,6 +32,7 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
           <div className="text-xs opacity-80">
             {(route.totalDistance / 1000).toFixed(1)} km &middot;{' '}
             {(route.skiingDistance / 1000).toFixed(1)} km skiing &middot;{' '}
+            {route.verticalDrop}m drop &middot;{' '}
             {Math.round(route.totalDuration)} min
             {route.maxDifficulty && (
               <span
@@ -114,6 +115,9 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
                 <div className="text-xs text-gray-400">
                   {(step.edge.distance / 1000).toFixed(1)} km &middot;{' '}
                   {Math.round(step.edge.duration)} min
+                  {step.edge.type === 'piste' && step.fromNode.elevation > step.toNode.elevation && (
+                    <span> &middot; {Math.round(step.fromNode.elevation - step.toNode.elevation)}m drop</span>
+                  )}
                 </div>
               </div>
             </div>

@@ -8,6 +8,7 @@ export interface HistoryEntry {
   toName: string;
   totalDistance: number;
   skiingDistance: number;
+  verticalDrop: number;
   totalDuration: number;
   maxDifficulty: Difficulty | null;
   stepCount: number;

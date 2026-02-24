@@ -3,8 +3,10 @@ import { MapContainer, TileLayer, CircleMarker, Circle, useMap } from 'react-lea
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapOverlays } from './MapOverlays';
+import { DailyActivityOverlay } from './DailyActivityOverlay';
 import type { RouteResult } from '../types/route';
 import type { GeoPosition } from '../hooks/useGeolocation';
+import type { TrackSegment, TrackPoint } from '../hooks/useDailyActivity';
 
 interface MapViewProps {
   center: [number, number];
@@ -18,6 +20,11 @@ interface MapViewProps {
   gpsActive: boolean;
   onGpsToggle: () => void;
   gpsError: string | null;
+  dailyTrack?: TrackPoint[];
+  dailySegments?: TrackSegment[];
+  showDailyTrack?: boolean;
+  replayPlaying?: boolean;
+  replayIndex?: number;
 }
 
 function FlyToSegment({ route, selectedStepIndex }: { route: RouteResult | null; selectedStepIndex: number | null }) {
@@ -92,6 +99,11 @@ export function MapView({
   gpsActive,
   onGpsToggle,
   gpsError,
+  dailyTrack = [],
+  dailySegments = [],
+  showDailyTrack = false,
+  replayPlaying = false,
+  replayIndex = 0,
 }: MapViewProps) {
   return (
     <MapContainer
@@ -139,6 +151,16 @@ export function MapView({
           />
           <FlyToPosition position={gpsPosition} />
         </>
+      )}
+
+      {/* Daily activity track overlay */}
+      {showDailyTrack && dailySegments.length > 0 && (
+        <DailyActivityOverlay
+          segments={dailySegments}
+          track={dailyTrack}
+          replayPlaying={replayPlaying}
+          replayIndex={replayIndex}
+        />
       )}
 
       {/* Locate button (rendered outside MapContainer via portal would be ideal, but positioning works here) */}

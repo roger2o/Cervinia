@@ -11,6 +11,7 @@ export interface RouteResult {
   steps: RouteStep[];
   totalDistance: number;
   skiingDistance: number;
+  verticalDrop: number;
   totalDuration: number;
   maxDifficulty: Difficulty | null;
   warnings: string[];

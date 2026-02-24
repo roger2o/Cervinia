@@ -9,7 +9,7 @@ interface HistoryPanelProps {
 
 export function HistoryPanel({ entries, onDelete, onClose }: HistoryPanelProps) {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="bg-snowflake rounded-xl shadow-lg overflow-hidden">
       <div className="px-4 py-3 bg-blue-800 text-white flex items-center justify-between">
         <div className="text-sm font-bold">Run History</div>
         <button
@@ -45,6 +45,7 @@ export function HistoryPanel({ entries, onDelete, onClose }: HistoryPanelProps) 
                   {new Date(entry.timestamp).toLocaleDateString()} &middot;{' '}
                   {(entry.totalDistance / 1000).toFixed(1)} km &middot;{' '}
                   {(entry.skiingDistance / 1000).toFixed(1)} km skiing &middot;{' '}
+                  {entry.verticalDrop ?? 0}m drop &middot;{' '}
                   {Math.round(entry.totalDuration)} min &middot;{' '}
                   {entry.stepCount} steps
                 </div>

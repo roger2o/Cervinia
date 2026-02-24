@@ -27,6 +27,7 @@ export function useHistory(areaId: string) {
         toName: route.steps[route.steps.length - 1].toNode.name,
         totalDistance: route.totalDistance,
         skiingDistance: route.skiingDistance,
+        verticalDrop: route.verticalDrop,
         totalDuration: route.totalDuration,
         maxDifficulty: route.maxDifficulty,
         stepCount: route.steps.length,

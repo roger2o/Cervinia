@@ -1,6 +1,6 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 import { MapView } from './components/MapView';
-import { StationPicker } from './components/StationPicker';
+import { WaypointList } from './components/WaypointList';
 import { DifficultySelector } from './components/DifficultySelector';
 import { RoutePanel } from './components/RoutePanel';
 import { MobileMenu } from './components/MobileMenu';
@@ -11,6 +11,7 @@ import { useAreaCache } from './hooks/useAreaCache';
 import { useHistory } from './hooks/useHistory';
 import { useStatus } from './hooks/useStatus';
 import { useGeolocation } from './hooks/useGeolocation';
+import { useDailyActivity } from './hooks/useDailyActivity';
 import { useWeather } from './hooks/useWeather';
 import { DEFAULT_AREA } from './data/areaRegistry';
 import { getArea } from './data/areaRegistry';
@@ -21,10 +22,8 @@ import { PREFERENCE_LABELS } from './data/difficultyMap';
 
 function App() {
   const [areaId, setAreaId] = useState(DEFAULT_AREA);
-  const [fromId, setFromId] = useState<string | null>(null);
-  const [toId, setToId] = useState<string | null>(null);
+  const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
-  const [pickingTarget, setPickingTarget] = useState<'from' | 'to'>('from');
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
 
   // Restore route from URL query params (for shared links)
@@ -32,17 +31,26 @@ function App() {
   useEffect(() => {
     if (sharedParamsApplied) return;
     const params = new URLSearchParams(window.location.search);
-    const sharedFrom = params.get('from');
-    const sharedTo = params.get('to');
     const sharedDiff = params.get('diff') as DifficultyPreference | null;
     const sharedArea = params.get('area');
 
-    if (sharedFrom && sharedTo) {
+    // Support new multi-stop format (?stops=id1,id2,id3)
+    const sharedStops = params.get('stops');
+    // Also support legacy two-stop format (?from=X&to=Y)
+    const sharedFrom = params.get('from');
+    const sharedTo = params.get('to');
+
+    let restoredWaypoints: string[] = [];
+    if (sharedStops) {
+      restoredWaypoints = sharedStops.split(',').filter(Boolean);
+    } else if (sharedFrom && sharedTo) {
+      restoredWaypoints = [sharedFrom, sharedTo];
+    }
+
+    if (restoredWaypoints.length >= 2) {
       if (sharedArea) setAreaId(sharedArea);
       if (sharedDiff && PREFERENCE_ORDER.includes(sharedDiff)) setDifficultyPref(sharedDiff);
-      setFromId(sharedFrom);
-      setToId(sharedTo);
-      setPickingTarget('from');
+      setWaypoints(restoredWaypoints);
       // Clean URL without reloading
       window.history.replaceState({}, '', window.location.pathname);
     }
@@ -56,12 +64,17 @@ function App() {
   const closedEdgeIdsKey = useMemo(() => [...closedEdgeIds].sort().join(','), [closedEdgeIds]);
   const stableClosedEdgeIds = useMemo(() => closedEdgeIds, [closedEdgeIdsKey]);
 
+  // Stabilize waypoints array reference for useMemo dependency
+  const waypointsKey = waypoints.join(',');
+  const stableWaypoints = useMemo(() => waypoints, [waypointsKey]);
+
   const { maxDifficulty, preferEasier } = resolvePreference(difficultyPref);
-  const route = useRoute(adjacency, fromId, toId, maxDifficulty, stableClosedEdgeIds, preferEasier);
+  const { route, failedLeg } = useRoute(adjacency, stableWaypoints, maxDifficulty, stableClosedEdgeIds, preferEasier);
   const { bannerVisible, checkOnline } = useOffline();
   const { cachedAreaId, switchArea } = useAreaCache();
   const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId);
   const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps } = useGeolocation();
+  const activity = useDailyActivity(gpsPosition, gpsActive);
 
   const area = getArea(areaId);
   const weatherCenter = area?.center ?? [45.9369, 7.6292] as [number, number];
@@ -70,21 +83,38 @@ function App() {
 
   const handleStationClick = useCallback(
     (stationId: string) => {
-      if (pickingTarget === 'from') {
-        setFromId(stationId);
-        setPickingTarget('to');
-      } else {
-        setToId(stationId);
-        setPickingTarget('from');
-      }
+      setWaypoints((prev) => [...prev, stationId]);
     },
-    [pickingTarget],
+    [],
   );
 
   const handleClearRoute = useCallback(() => {
-    setFromId(null);
-    setToId(null);
-    setPickingTarget('from');
+    setWaypoints([]);
+    setSelectedStepIndex(null);
+  }, []);
+
+  const handleWaypointRemove = useCallback((index: number) => {
+    setWaypoints((prev) => prev.filter((_, i) => i !== index));
+    setSelectedStepIndex(null);
+  }, []);
+
+  const handleWaypointMoveUp = useCallback((index: number) => {
+    if (index === 0) return;
+    setWaypoints((prev) => {
+      const next = [...prev];
+      [next[index - 1], next[index]] = [next[index], next[index - 1]];
+      return next;
+    });
+    setSelectedStepIndex(null);
+  }, []);
+
+  const handleWaypointMoveDown = useCallback((index: number) => {
+    setWaypoints((prev) => {
+      if (index >= prev.length - 1) return prev;
+      const next = [...prev];
+      [next[index], next[index + 1]] = [next[index + 1], next[index]];
+      return next;
+    });
     setSelectedStepIndex(null);
   }, []);
 
@@ -112,7 +142,7 @@ function App() {
 
   const handleShare = useCallback(() => {
     if (!checkOnline()) return;
-    if (!route || !fromId || !toId || route.steps.length === 0) return;
+    if (!route || waypoints.length < 2 || route.steps.length === 0) return;
 
     const fromName = route.steps[0].fromNode.name;
     const toName = route.steps[route.steps.length - 1].toNode.name;
@@ -122,23 +152,38 @@ function App() {
 
     const params = new URLSearchParams({
       area: areaId,
-      from: fromId,
-      to: toId,
+      stops: waypoints.join(','),
       diff: difficultyPref,
     });
     const shareUrl = `${window.location.origin}${window.location.pathname}?${params}`;
 
+    const drop = route.verticalDrop;
+    const stopsLabel = waypoints.length > 2 ? ` (${waypoints.length} stops)` : '';
+
     const text =
-      `Ski Route: ${fromName} → ${toName}\n` +
-      `${dist} km (${ski} km skiing) | ${mins} min | ${route.steps.length} steps\n\n` +
+      `Ski Route: ${fromName} → ${toName}${stopsLabel}\n` +
+      `${dist} km (${ski} km skiing) | ${drop}m drop | ${mins} min | ${route.steps.length} steps\n\n` +
       shareUrl;
 
     const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank');
-  }, [route, fromId, toId, areaId, difficultyPref, checkOnline]);
+  }, [route, waypoints, areaId, difficultyPref, checkOnline]);
+
+  // Build "no route" error message
+  const noRouteMessage = useMemo(() => {
+    if (waypoints.length < 2 || route) return null;
+    if (failedLeg !== null) {
+      const fromNode = nodes.find((n) => n.id === waypoints[failedLeg]);
+      const toNode = nodes.find((n) => n.id === waypoints[failedLeg + 1]);
+      const fromName = fromNode?.name ?? `Stop ${failedLeg + 1}`;
+      const toName = toNode?.name ?? `Stop ${failedLeg + 2}`;
+      return `No route found from ${fromName} to ${toName} at ${PREFERENCE_LABELS[difficultyPref]} level. Try a higher difficulty.`;
+    }
+    return `No route found at ${PREFERENCE_LABELS[difficultyPref]} level. Try a higher difficulty.`;
+  }, [waypoints, route, failedLeg, nodes, difficultyPref]);
 
   return (
-    <div className="h-screen w-screen flex flex-col overflow-hidden bg-gray-100">
+    <div className="h-screen w-screen flex flex-col overflow-hidden bg-[#F5FAFF]">
       {/* Offline banner (auto-dismisses after 2s) */}
       {bannerVisible && (
         <div className="bg-amber-500 text-white text-center text-xs py-1 px-2">
@@ -147,7 +192,7 @@ function App() {
       )}
 
       {/* Top controls */}
-      <div className="flex-shrink-0 p-3 space-y-2 bg-white shadow-md z-10">
+      <div className="flex-shrink-0 p-3 space-y-2 bg-snowflake shadow-md z-[10000] relative">
         <div className="flex items-center justify-between">
           <h1 className="text-lg font-bold text-blue-900">Ski Route Planner</h1>
           <div className="flex items-center gap-2">
@@ -156,6 +201,7 @@ function App() {
             )}
             <MobileMenu
               areaId={areaId}
+              area={area}
               onAreaSwitch={handleAreaSwitch}
               cachedAreaId={cachedAreaId}
               historyEntries={historyEntries}
@@ -167,38 +213,39 @@ function App() {
               weatherError={weatherError}
               onRefreshWeather={refreshWeather}
               checkOnline={checkOnline}
+              activityRecording={activity.recording}
+              activityTrack={activity.track}
+              activityMaxSpeed={activity.maxSpeed}
+              activityTotalDistance={activity.totalDistance}
+              activityShowOnMap={activity.showOnMap}
+              activityReplayPlaying={activity.replayPlaying}
+              activityReplaySpeed={activity.replaySpeed}
+              onActivityStart={activity.start}
+              onActivityStop={activity.stop}
+              onActivityReset={activity.reset}
+              onActivityStartReplay={activity.startReplay}
+              onActivityStopReplay={activity.stopReplay}
+              onActivitySetReplaySpeed={activity.setReplaySpeed}
+              onActivityToggleShowOnMap={activity.toggleShowOnMap}
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
-          <StationPicker
-            label={`From ${pickingTarget === 'from' ? '(selecting)' : ''}`}
-            nodes={nodes}
-            selectedId={fromId}
-            onSelect={(id) => {
-              setFromId(id);
-              setPickingTarget('to');
-            }}
-            subAreas={area?.subAreas ?? []}
-          />
-          <StationPicker
-            label={`To ${pickingTarget === 'to' ? '(selecting)' : ''}`}
-            nodes={nodes}
-            selectedId={toId}
-            onSelect={(id) => {
-              setToId(id);
-              setPickingTarget('from');
-            }}
-            subAreas={area?.subAreas ?? []}
-          />
-        </div>
+        <WaypointList
+          waypoints={waypoints}
+          nodes={nodes}
+          subAreas={area?.subAreas ?? []}
+          onAdd={handleStationClick}
+          onRemove={handleWaypointRemove}
+          onMoveUp={handleWaypointMoveUp}
+          onMoveDown={handleWaypointMoveDown}
+        />
 
         <DifficultySelector value={difficultyPref} onChange={setDifficultyPref} />
 
-        {fromId && toId && !route && (
+        {noRouteMessage && (
           <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
-            No route found at {PREFERENCE_LABELS[difficultyPref]} level. Try a higher difficulty.
+            {noRouteMessage}
           </div>
         )}
       </div>
@@ -227,6 +274,11 @@ function App() {
           gpsActive={gpsActive}
           onGpsToggle={toggleGps}
           gpsError={gpsError}
+          dailyTrack={activity.track}
+          dailySegments={activity.segments}
+          showDailyTrack={activity.showOnMap}
+          replayPlaying={activity.replayPlaying}
+          replayIndex={activity.replayIndex}
         />
       </div>
 

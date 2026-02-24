@@ -53,7 +53,7 @@ export function WeatherPanel({ weather, loading, error, onRefresh, onClose }: We
       {weather && (
         <div className="max-h-80 overflow-y-auto">
           {/* Current conditions */}
-          <div className="px-4 py-3 bg-blue-50 border-b border-blue-100">
+          <div className="px-4 py-3 bg-[#E0F0FF] border-b border-[#B8D8F8]">
             <div className="flex items-center justify-between">
               <div>
                 <div className="text-lg font-bold text-blue-900">

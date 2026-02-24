@@ -16,6 +16,21 @@ export default defineConfig({
         short_name: 'SkiRoute',
         theme_color: '#1e40af',
       },
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/[abc]\.tile\.opentopomap\.org\/.*/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'ski-map-tiles',
+              expiration: {
+                maxEntries: 5000,
+                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
+              },
+            },
+          },
+        ],
+      },
     }),
   ],
   test: {

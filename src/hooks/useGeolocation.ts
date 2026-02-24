@@ -3,6 +3,7 @@ import { useState, useEffect, useCallback } from 'react';
 export interface GeoPosition {
   lat: number;
   lon: number;
+  altitude: number | null;
   accuracy: number;
   timestamp: number;
 }
@@ -41,6 +42,7 @@ export function useGeolocation() {
         setPosition({
           lat: pos.coords.latitude,
           lon: pos.coords.longitude,
+          altitude: pos.coords.altitude,
           accuracy: pos.coords.accuracy,
           timestamp: pos.timestamp,
         });

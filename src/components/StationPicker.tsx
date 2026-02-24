@@ -81,7 +81,7 @@ export function StationPicker({ label, nodes, selectedId, onSelect, subAreas }: 
       />
 
       {open && (
-        <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-white border border-gray-200 rounded-lg shadow-lg">
+        <div className="absolute z-50 mt-1 w-full max-h-60 overflow-y-auto bg-snowflake border border-gray-200 rounded-lg shadow-lg">
           {Array.from(filtered).map(([area, groupNodes]) => (
             <div key={area}>
               <div className="px-3 py-1 text-xs font-bold text-gray-400 bg-gray-50 sticky top-0">

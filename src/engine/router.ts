@@ -23,7 +23,7 @@ export function findRoute(
   }
 
   if (fromId === toId) {
-    return { steps: [], totalDistance: 0, skiingDistance: 0, totalDuration: 0, maxDifficulty: null, warnings: [] };
+    return { steps: [], totalDistance: 0, skiingDistance: 0, verticalDrop: 0, totalDuration: 0, maxDifficulty: null, warnings: [] };
   }
 
   // Dijkstra's algorithm
@@ -85,6 +85,7 @@ export function findRoute(
   const warnings: string[] = [];
   let totalDistance = 0;
   let skiingDistance = 0;
+  let verticalDrop = 0;
   let totalDuration = 0;
   let maxDiff: Difficulty | null = null;
 
@@ -116,6 +117,8 @@ export function findRoute(
     totalDistance += edge.distance;
     if (edge.type === 'piste') {
       skiingDistance += edge.distance;
+      const drop = fromNode.elevation - toNode.elevation;
+      if (drop > 0) verticalDrop += drop;
     }
     totalDuration += edge.duration;
 
@@ -130,6 +133,7 @@ export function findRoute(
     steps,
     totalDistance,
     skiingDistance,
+    verticalDrop: Math.round(verticalDrop),
     totalDuration,
     maxDifficulty: maxDiff,
     warnings,
