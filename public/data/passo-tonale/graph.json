@@ -2,46 +2,62 @@
   "nodes": [
     {
       "id": "station_0",
+      "name": "Roccolo Ventura (bottom)",
+      "lat": 46.246482,
+      "lon": 10.472844,
+      "elevation": 3732,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_1",
+      "name": "Roccolo Ventura (top)",
+      "lat": 46.238762,
+      "lon": 10.48984,
+      "elevation": 3694,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_2",
       "name": "Bleis (bottom)",
       "lat": 46.263708,
       "lon": 10.568095,
       "elevation": 3819,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_1",
+      "id": "station_3",
       "name": "Bleis (top)",
       "lat": 46.277496,
       "lon": 10.558144,
       "elevation": 3887,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_2",
+      "id": "station_4",
       "name": "Ghiacciaio Presena (bottom)",
       "lat": 46.228476,
       "lon": 10.58053,
       "elevation": 3642,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_3",
+      "id": "station_5",
       "name": "Ghiacciaio Presena (top)",
       "lat": 46.22036,
       "lon": 10.584407,
       "elevation": 3602,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_4",
+      "id": "station_6",
       "name": "Colonia Vigili - Tonale (bottom)",
       "lat": 46.259854,
       "lon": 10.574492,
       "elevation": 3799,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_5",
+      "id": "station_7",
       "name": "Colonia Vigili - Tonale (top)",
       "lat": 46.251804,
       "lon": 10.544379,
@@ -49,23 +65,23 @@
       "subArea": "Passo Tonale"
     },
     {
-      "id": "station_6",
+      "id": "station_8",
       "name": "Sozzine (bottom)",
       "lat": 46.248915,
       "lon": 10.528218,
       "elevation": 3745,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_7",
+      "id": "station_9",
       "name": "Sozzine (top)",
       "lat": 46.246921,
       "lon": 10.514403,
       "elevation": 3735,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_8",
+      "id": "station_10",
       "name": "Valbiolo (bottom)",
       "lat": 46.263083,
       "lon": 10.590667,
@@ -73,255 +89,271 @@
       "subArea": "Presena"
     },
     {
-      "id": "station_9",
+      "id": "station_11",
       "name": "Valbiolo (top)",
       "lat": 46.280955,
       "lon": 10.581002,
       "elevation": 3905,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_10",
+      "id": "station_12",
       "name": "Cad\u00ec Sit (bottom)",
       "lat": 46.258423,
       "lon": 10.577467,
       "elevation": 3792,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_11",
+      "id": "station_13",
       "name": "Cad\u00ec Sit (top)",
       "lat": 46.26398,
       "lon": 10.574367,
       "elevation": 3820,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_12",
+      "id": "station_14",
       "name": "Serodine (top)",
       "lat": 46.268478,
       "lon": 10.57115,
       "elevation": 3842,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_13",
+      "id": "station_15",
       "name": "Scoiattolo (top)",
       "lat": 46.261335,
       "lon": 10.578254,
       "elevation": 3807,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_14",
+      "id": "station_16",
       "name": "Vittoria (bottom)",
       "lat": 46.259546,
       "lon": 10.581876,
       "elevation": 3798,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_15",
+      "id": "station_17",
       "name": "Vittoria (top)",
       "lat": 46.265446,
       "lon": 10.578431,
       "elevation": 3827,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_16",
+      "id": "station_18",
       "name": "Alpe Alta (top)",
       "lat": 46.270851,
       "lon": 10.578007,
       "elevation": 3854,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_17",
+      "id": "station_19",
       "name": "Valena (top)",
       "lat": 46.266277,
       "lon": 10.583845,
       "elevation": 3831,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_18",
+      "id": "station_20",
       "name": "Nigritella (bottom)",
       "lat": 46.257338,
       "lon": 10.564829,
       "elevation": 3787,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_19",
+      "id": "station_21",
       "name": "Seggiovia Malga Valbiolo (top)",
       "lat": 46.279075,
       "lon": 10.57016,
       "elevation": 3895,
-      "subArea": "Presena"
-    },
-    {
-      "id": "station_20",
-      "name": "Seggiovia Passo Contrabbandieri (top)",
-      "lat": 46.291612,
-      "lon": 10.574371,
-      "elevation": 3958,
-      "subArea": "Presena"
-    },
-    {
-      "id": "station_21",
-      "name": "Valbione (bottom)",
-      "lat": 46.254521,
-      "lon": 10.51115,
-      "elevation": 3773,
       "subArea": "Passo Tonale"
     },
     {
       "id": "station_22",
-      "name": "Valbione (top)",
-      "lat": 46.248584,
-      "lon": 10.506595,
-      "elevation": 3743,
+      "name": "Seggiovia Passo Contrabbandieri (top)",
+      "lat": 46.291612,
+      "lon": 10.574371,
+      "elevation": 3958,
       "subArea": "Passo Tonale"
     },
     {
       "id": "station_23",
-      "name": "Doss delle Pertiche (bottom)",
-      "lat": 46.242737,
-      "lon": 10.493272,
-      "elevation": 3714,
-      "subArea": "Passo Tonale"
+      "name": "Valbione (bottom)",
+      "lat": 46.254521,
+      "lon": 10.51115,
+      "elevation": 3773,
+      "subArea": "Ponte di Legno"
     },
     {
       "id": "station_24",
+      "name": "Valbione (top)",
+      "lat": 46.248584,
+      "lon": 10.506595,
+      "elevation": 3743,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_25",
+      "name": "Doss delle Pertiche (bottom)",
+      "lat": 46.242765,
+      "lon": 10.493182,
+      "elevation": 3714,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_26",
       "name": "Doss delle Pertiche (top)",
       "lat": 46.239597,
       "lon": 10.503299,
       "elevation": 3698,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_25",
+      "id": "station_27",
+      "name": "Santa Giulia (top)",
+      "lat": 46.235511,
+      "lon": 10.495808,
+      "elevation": 3678,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_28",
+      "name": "La Croce (bottom)",
+      "lat": 46.24318,
+      "lon": 10.483492,
+      "elevation": 3716,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_29",
       "name": "Angelo (bottom)",
       "lat": 46.241346,
       "lon": 10.519182,
       "elevation": 3707,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_26",
+      "id": "station_30",
       "name": "Angelo (top)",
       "lat": 46.235189,
       "lon": 10.523714,
       "elevation": 3676,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_27",
+      "id": "station_31",
       "name": "Ghiacciaio Presena (bottom)",
       "lat": 46.238425,
       "lon": 10.580801,
       "elevation": 3692,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_28",
+      "id": "station_32",
       "name": "Paradiso (bottom)",
       "lat": 46.256951,
       "lon": 10.571795,
       "elevation": 3785,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_29",
+      "id": "station_33",
       "name": "Progetto Cabinovia (top)",
       "lat": 46.282964,
       "lon": 10.559727,
       "elevation": 3915,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_30",
+      "id": "station_34",
       "name": "Alpino (bottom)",
       "lat": 46.263933,
       "lon": 10.556408,
       "elevation": 3820,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_31",
+      "id": "station_35",
       "name": "Paradiso (bottom)",
       "lat": 46.254441,
       "lon": 10.57333,
       "elevation": 3772,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_32",
+      "id": "station_36",
       "name": "Variante Presena Paradiso (top)",
       "lat": 46.232558,
       "lon": 10.58288,
       "elevation": 3663,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_33",
+      "id": "station_37",
       "name": "Variante Presena Paradiso (bottom)",
       "lat": 46.235487,
       "lon": 10.580556,
       "elevation": 3677,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_34",
+      "id": "station_38",
       "name": "Alpino (top)",
       "lat": 46.259064,
       "lon": 10.559685,
       "elevation": 3795,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_35",
+      "id": "station_39",
       "name": "Alpino (top)",
       "lat": 46.259736,
       "lon": 10.55578,
       "elevation": 3799,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_36",
+      "id": "station_40",
       "name": "Variante Paradiso (top)",
       "lat": 46.250496,
       "lon": 10.572057,
       "elevation": 3752,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_37",
+      "id": "station_41",
       "name": "Variante Paradiso (bottom)",
       "lat": 46.255294,
       "lon": 10.557643,
       "elevation": 3776,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_38",
+      "id": "station_42",
       "name": "Piste 206988311 (top)",
       "lat": 46.267941,
       "lon": 10.585727,
       "elevation": 3840,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_39",
+      "id": "station_43",
       "name": "Contrabbandieri (top)",
       "lat": 46.290101,
       "lon": 10.576656,
       "elevation": 3951,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_40",
+      "id": "station_44",
       "name": "Pegr\u00e0 (top)",
       "lat": 46.252486,
       "lon": 10.547261,
@@ -329,7 +361,15 @@
       "subArea": "Passo Tonale"
     },
     {
-      "id": "station_41",
+      "id": "station_45",
+      "name": "Casola Skiweg (top)",
+      "lat": 46.240112,
+      "lon": 10.495623,
+      "elevation": 3701,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_46",
       "name": "Pegr\u00e0 (top)",
       "lat": 46.247678,
       "lon": 10.541551,
@@ -337,83 +377,102 @@
       "subArea": "Passo Tonale"
     },
     {
-      "id": "station_42",
+      "id": "station_47",
       "name": "( (bottom)",
       "lat": 46.265539,
       "lon": 10.566687,
       "elevation": 3828,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_43",
+      "id": "station_48",
+      "name": "Roccolo Ventura I (top)",
+      "lat": 46.237569,
+      "lon": 10.493902,
+      "elevation": 3688,
+      "subArea": "Ponte di Legno"
+    },
+    {
+      "id": "station_49",
       "name": "Vittoria (bottom)",
       "lat": 46.26145,
       "lon": 10.580554,
       "elevation": 3807,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_44",
+      "id": "station_50",
       "name": "Piste 767865150 (top)",
       "lat": 46.248958,
       "lon": 10.510852,
       "elevation": 3745,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_45",
+      "id": "station_51",
       "name": "Valbione II (bottom)",
       "lat": 46.251881,
       "lon": 10.508248,
       "elevation": 3759,
-      "subArea": "Passo Tonale"
+      "subArea": "Ponte di Legno"
     },
     {
-      "id": "station_46",
+      "id": "station_52",
       "name": "Contrabbandieri (top)",
       "lat": 46.284038,
       "lon": 10.577996,
       "elevation": 3920,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_47",
+      "id": "station_53",
       "name": "Piste 1260642572 (bottom)",
       "lat": 46.264956,
       "lon": 10.588389,
       "elevation": 3825,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_48",
+      "id": "station_54",
       "name": "Piste 1260642574 (top)",
       "lat": 46.269454,
       "lon": 10.574663,
       "elevation": 3847,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_49",
+      "id": "station_55",
       "name": "Piste 1260642581 (bottom)",
       "lat": 46.261553,
       "lon": 10.573174,
       "elevation": 3808,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     },
     {
-      "id": "station_50",
+      "id": "station_56",
       "name": "Piste 1260642582 (top)",
       "lat": 46.263113,
       "lon": 10.571514,
       "elevation": 3816,
-      "subArea": "Presena"
+      "subArea": "Passo Tonale"
     }
   ],
   "edges": [
     {
-      "id": "lift_32873520",
+      "id": "lift_30669037",
       "from": "station_0",
       "to": "station_1",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Roccolo Ventura",
+      "distance": 1555,
+      "duration": 12.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_32873520",
+      "from": "station_2",
+      "to": "station_3",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Bleis",
@@ -423,8 +482,8 @@
     },
     {
       "id": "lift_32873521",
-      "from": "station_2",
-      "to": "station_3",
+      "from": "station_4",
+      "to": "station_5",
       "type": "lift",
       "liftType": "gondola",
       "name": "Ghiacciaio Presena",
@@ -434,8 +493,8 @@
     },
     {
       "id": "lift_52057885",
-      "from": "station_4",
-      "to": "station_5",
+      "from": "station_6",
+      "to": "station_7",
       "type": "lift",
       "liftType": "gondola",
       "name": "Colonia Vigili - Tonale",
@@ -445,8 +504,8 @@
     },
     {
       "id": "lift_52057886",
-      "from": "station_6",
-      "to": "station_7",
+      "from": "station_8",
+      "to": "station_9",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Sozzine",
@@ -456,8 +515,8 @@
     },
     {
       "id": "lift_52057887",
-      "from": "station_8",
-      "to": "station_9",
+      "from": "station_10",
+      "to": "station_11",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Valbiolo",
@@ -467,8 +526,8 @@
     },
     {
       "id": "lift_52057888",
-      "from": "station_10",
-      "to": "station_11",
+      "from": "station_12",
+      "to": "station_13",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Cad\u00ec Sit",
@@ -478,8 +537,8 @@
     },
     {
       "id": "lift_52057889",
-      "from": "station_10",
-      "to": "station_4",
+      "from": "station_12",
+      "to": "station_6",
       "type": "lift",
       "liftType": "platter",
       "name": "Tre Larici",
@@ -489,8 +548,8 @@
     },
     {
       "id": "lift_52057890",
-      "from": "station_10",
-      "to": "station_12",
+      "from": "station_12",
+      "to": "station_14",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Serodine",
@@ -500,8 +559,8 @@
     },
     {
       "id": "lift_52057891",
-      "from": "station_10",
-      "to": "station_13",
+      "from": "station_12",
+      "to": "station_15",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Scoiattolo",
@@ -511,8 +570,8 @@
     },
     {
       "id": "lift_52057892",
-      "from": "station_14",
-      "to": "station_15",
+      "from": "station_16",
+      "to": "station_17",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Vittoria",
@@ -522,8 +581,8 @@
     },
     {
       "id": "lift_52057893",
-      "from": "station_14",
-      "to": "station_16",
+      "from": "station_16",
+      "to": "station_18",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Alpe Alta",
@@ -533,8 +592,8 @@
     },
     {
       "id": "lift_52057894",
-      "from": "station_14",
-      "to": "station_17",
+      "from": "station_16",
+      "to": "station_19",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Valena",
@@ -544,8 +603,8 @@
     },
     {
       "id": "lift_52057895",
-      "from": "station_18",
-      "to": "station_0",
+      "from": "station_20",
+      "to": "station_2",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Nigritella",
@@ -555,8 +614,8 @@
     },
     {
       "id": "lift_52057896",
-      "from": "station_9",
-      "to": "station_19",
+      "from": "station_11",
+      "to": "station_21",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Seggiovia Malga Valbiolo",
@@ -566,8 +625,8 @@
     },
     {
       "id": "lift_52057897",
-      "from": "station_9",
-      "to": "station_20",
+      "from": "station_11",
+      "to": "station_22",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Seggiovia Passo Contrabbandieri",
@@ -577,8 +636,8 @@
     },
     {
       "id": "lift_52072649",
-      "from": "station_21",
-      "to": "station_22",
+      "from": "station_23",
+      "to": "station_24",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Valbione",
@@ -588,8 +647,8 @@
     },
     {
       "id": "lift_52072650",
-      "from": "station_23",
-      "to": "station_24",
+      "from": "station_25",
+      "to": "station_26",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Doss delle Pertiche",
@@ -598,9 +657,31 @@
       "difficulty": null
     },
     {
-      "id": "lift_52072653",
+      "id": "lift_52072651",
       "from": "station_25",
-      "to": "station_26",
+      "to": "station_27",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "Santa Giulia",
+      "distance": 924,
+      "duration": 7.4,
+      "difficulty": null
+    },
+    {
+      "id": "lift_52072652",
+      "from": "station_28",
+      "to": "station_27",
+      "type": "lift",
+      "liftType": "chair_lift",
+      "name": "La Croce",
+      "distance": 1350,
+      "duration": 10.8,
+      "difficulty": null
+    },
+    {
+      "id": "lift_52072653",
+      "from": "station_29",
+      "to": "station_30",
       "type": "lift",
       "liftType": "platter",
       "name": "Angelo",
@@ -610,8 +691,8 @@
     },
     {
       "id": "lift_52072654",
-      "from": "station_22",
-      "to": "station_25",
+      "from": "station_24",
+      "to": "station_29",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Corno d'Aola",
@@ -621,8 +702,8 @@
     },
     {
       "id": "lift_52072655",
-      "from": "station_22",
-      "to": "station_24",
+      "from": "station_24",
+      "to": "station_26",
       "type": "lift",
       "liftType": "chair_lift",
       "name": "Casola",
@@ -632,8 +713,8 @@
     },
     {
       "id": "lift_52302203",
-      "from": "station_5",
-      "to": "station_21",
+      "from": "station_7",
+      "to": "station_23",
       "type": "lift",
       "liftType": "gondola",
       "name": "Ponte di Legno - Colonia Vigili",
@@ -643,8 +724,8 @@
     },
     {
       "id": "lift_52302204",
-      "from": "station_27",
-      "to": "station_2",
+      "from": "station_31",
+      "to": "station_4",
       "type": "lift",
       "liftType": "gondola",
       "name": "Ghiacciaio Presena",
@@ -654,8 +735,8 @@
     },
     {
       "id": "lift_52302205",
-      "from": "station_28",
-      "to": "station_27",
+      "from": "station_32",
+      "to": "station_31",
       "type": "lift",
       "liftType": "gondola",
       "name": "Paradiso",
@@ -665,8 +746,8 @@
     },
     {
       "id": "lift_1260632429",
-      "from": "station_14",
-      "to": "station_13",
+      "from": "station_16",
+      "to": "station_15",
       "type": "lift",
       "liftType": "platter",
       "name": "Presanella",
@@ -676,8 +757,8 @@
     },
     {
       "id": "lift_1389963379",
-      "from": "station_5",
-      "to": "station_29",
+      "from": "station_7",
+      "to": "station_33",
       "type": "lift",
       "liftType": "gondola",
       "name": "Progetto Cabinovia",
@@ -687,8 +768,8 @@
     },
     {
       "id": "lift_1389964260",
-      "from": "station_28",
-      "to": "station_4",
+      "from": "station_32",
+      "to": "station_6",
       "type": "lift",
       "liftType": "yes",
       "name": "Progetto Funicolare",
@@ -698,8 +779,8 @@
     },
     {
       "id": "lift_1414004559",
-      "from": "station_9",
-      "to": "station_29",
+      "from": "station_11",
+      "to": "station_33",
       "type": "lift",
       "liftType": "gondola",
       "name": "Progetto",
@@ -709,8 +790,8 @@
     },
     {
       "id": "piste_41135337",
-      "from": "station_1",
-      "to": "station_30",
+      "from": "station_3",
+      "to": "station_34",
       "type": "piste",
       "name": "Alpino",
       "distance": 1581,
@@ -719,8 +800,8 @@
     },
     {
       "id": "piste_59204384",
-      "from": "station_2",
-      "to": "station_27",
+      "from": "station_4",
+      "to": "station_31",
       "type": "piste",
       "name": "Variante Presena Paradiso",
       "distance": 1039,
@@ -729,8 +810,8 @@
     },
     {
       "id": "piste_59204387",
-      "from": "station_3",
-      "to": "station_2",
+      "from": "station_5",
+      "to": "station_4",
       "type": "piste",
       "name": "Ghiacciaio Presena",
       "distance": 1021,
@@ -739,8 +820,8 @@
     },
     {
       "id": "piste_59204388",
-      "from": "station_27",
-      "to": "station_31",
+      "from": "station_31",
+      "to": "station_35",
       "type": "piste",
       "name": "Paradiso",
       "distance": 2254,
@@ -749,8 +830,8 @@
     },
     {
       "id": "piste_160916072",
-      "from": "station_32",
-      "to": "station_33",
+      "from": "station_36",
+      "to": "station_37",
       "type": "piste",
       "name": "Variante Presena Paradiso",
       "distance": 396,
@@ -759,8 +840,8 @@
     },
     {
       "id": "piste_206976075",
-      "from": "station_34",
-      "to": "station_18",
+      "from": "station_38",
+      "to": "station_20",
       "type": "piste",
       "name": "Alpino",
       "distance": 463,
@@ -769,8 +850,8 @@
     },
     {
       "id": "piste_206976077",
-      "from": "station_35",
-      "to": "station_34",
+      "from": "station_39",
+      "to": "station_38",
       "type": "piste",
       "name": "Alpino",
       "distance": 364,
@@ -779,8 +860,8 @@
     },
     {
       "id": "piste_206976078",
-      "from": "station_30",
-      "to": "station_35",
+      "from": "station_34",
+      "to": "station_39",
       "type": "piste",
       "name": "Alpino",
       "distance": 484,
@@ -789,8 +870,8 @@
     },
     {
       "id": "piste_206978158",
-      "from": "station_1",
-      "to": "station_0",
+      "from": "station_3",
+      "to": "station_2",
       "type": "piste",
       "name": "Bleis",
       "distance": 1994,
@@ -799,8 +880,8 @@
     },
     {
       "id": "piste_206980290",
-      "from": "station_11",
-      "to": "station_10",
+      "from": "station_13",
+      "to": "station_12",
       "type": "piste",
       "name": "Cad\u00ec Sit",
       "distance": 877,
@@ -809,8 +890,8 @@
     },
     {
       "id": "piste_206980295",
-      "from": "station_0",
-      "to": "station_18",
+      "from": "station_2",
+      "to": "station_20",
       "type": "piste",
       "name": "Guiliana",
       "distance": 1522,
@@ -819,8 +900,8 @@
     },
     {
       "id": "piste_206980296",
-      "from": "station_12",
-      "to": "station_11",
+      "from": "station_14",
+      "to": "station_13",
       "type": "piste",
       "name": "Serodine I",
       "distance": 698,
@@ -829,8 +910,8 @@
     },
     {
       "id": "piste_206980300",
-      "from": "station_12",
-      "to": "station_13",
+      "from": "station_14",
+      "to": "station_15",
       "type": "piste",
       "name": "Sarodine II",
       "distance": 1084,
@@ -839,8 +920,8 @@
     },
     {
       "id": "piste_206982299",
-      "from": "station_4",
-      "to": "station_5",
+      "from": "station_6",
+      "to": "station_7",
       "type": "piste",
       "name": "Tonalina",
       "distance": 2654,
@@ -849,8 +930,8 @@
     },
     {
       "id": "piste_206984692",
-      "from": "station_36",
-      "to": "station_37",
+      "from": "station_40",
+      "to": "station_41",
       "type": "piste",
       "name": "Variante Paradiso",
       "distance": 1298,
@@ -859,8 +940,8 @@
     },
     {
       "id": "piste_206984693",
-      "from": "station_2",
-      "to": "station_32",
+      "from": "station_4",
+      "to": "station_36",
       "type": "piste",
       "name": "Variante Presena Paradiso",
       "distance": 374,
@@ -869,8 +950,8 @@
     },
     {
       "id": "piste_206985805",
-      "from": "station_16",
-      "to": "station_17",
+      "from": "station_18",
+      "to": "station_19",
       "type": "piste",
       "name": "Cad\u00ec Carosello",
       "distance": 743,
@@ -879,8 +960,8 @@
     },
     {
       "id": "piste_206985806",
-      "from": "station_17",
-      "to": "station_14",
+      "from": "station_19",
+      "to": "station_16",
       "type": "piste",
       "name": "Valena",
       "distance": 687,
@@ -889,8 +970,8 @@
     },
     {
       "id": "piste_206985807",
-      "from": "station_13",
-      "to": "station_10",
+      "from": "station_15",
+      "to": "station_12",
       "type": "piste",
       "name": "Scoiatollo",
       "distance": 505,
@@ -899,8 +980,8 @@
     },
     {
       "id": "piste_206988310",
-      "from": "station_17",
-      "to": "station_14",
+      "from": "station_19",
+      "to": "station_16",
       "type": "piste",
       "name": "Valena",
       "distance": 1092,
@@ -909,8 +990,8 @@
     },
     {
       "id": "piste_206988311",
-      "from": "station_38",
-      "to": "station_17",
+      "from": "station_42",
+      "to": "station_19",
       "type": "piste",
       "name": "Piste 206988311",
       "distance": 170,
@@ -919,8 +1000,8 @@
     },
     {
       "id": "piste_206988313",
-      "from": "station_19",
-      "to": "station_9",
+      "from": "station_21",
+      "to": "station_11",
       "type": "piste",
       "name": "Tonale Occidentale",
       "distance": 1004,
@@ -929,8 +1010,8 @@
     },
     {
       "id": "piste_206988314",
-      "from": "station_9",
-      "to": "station_8",
+      "from": "station_11",
+      "to": "station_10",
       "type": "piste",
       "name": "Valbiolo",
       "distance": 2278,
@@ -939,8 +1020,8 @@
     },
     {
       "id": "piste_206988315",
-      "from": "station_39",
-      "to": "station_9",
+      "from": "station_43",
+      "to": "station_11",
       "type": "piste",
       "name": "Contrabbandieri",
       "distance": 1325,
@@ -949,8 +1030,8 @@
     },
     {
       "id": "piste_206989808",
-      "from": "station_40",
-      "to": "station_5",
+      "from": "station_44",
+      "to": "station_7",
       "type": "piste",
       "name": "Pegr\u00e0",
       "distance": 347,
@@ -959,8 +1040,8 @@
     },
     {
       "id": "piste_207001574",
-      "from": "station_24",
-      "to": "station_22",
+      "from": "station_26",
+      "to": "station_24",
       "type": "piste",
       "name": "Casola I",
       "distance": 1430,
@@ -969,8 +1050,8 @@
     },
     {
       "id": "piste_207001577",
-      "from": "station_24",
-      "to": "station_23",
+      "from": "station_26",
+      "to": "station_25",
       "type": "piste",
       "name": "Doss delle Pertiche",
       "distance": 993,
@@ -979,8 +1060,8 @@
     },
     {
       "id": "piste_207001578",
-      "from": "station_24",
-      "to": "station_22",
+      "from": "station_26",
+      "to": "station_24",
       "type": "piste",
       "name": "Casola II",
       "distance": 1087,
@@ -989,8 +1070,8 @@
     },
     {
       "id": "piste_207001579",
-      "from": "station_7",
-      "to": "station_22",
+      "from": "station_9",
+      "to": "station_24",
       "type": "piste",
       "name": "Variante Corno d'Aola",
       "distance": 914,
@@ -999,8 +1080,8 @@
     },
     {
       "id": "piste_207001580",
-      "from": "station_22",
-      "to": "station_21",
+      "from": "station_24",
+      "to": "station_23",
       "type": "piste",
       "name": "Valbione I",
       "distance": 1013,
@@ -1009,8 +1090,8 @@
     },
     {
       "id": "piste_207001581",
-      "from": "station_25",
-      "to": "station_21",
+      "from": "station_29",
+      "to": "station_23",
       "type": "piste",
       "name": "Corno d'Aola",
       "distance": 2007,
@@ -1019,8 +1100,8 @@
     },
     {
       "id": "piste_207001583",
-      "from": "station_26",
-      "to": "station_25",
+      "from": "station_30",
+      "to": "station_29",
       "type": "piste",
       "name": "Angelo",
       "distance": 792,
@@ -1028,9 +1109,59 @@
       "difficulty": "red"
     },
     {
+      "id": "piste_207002761",
+      "from": "station_1",
+      "to": "station_25",
+      "type": "piste",
+      "name": "Roccolo Sartori",
+      "distance": 603,
+      "duration": 0.9,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_207002763",
+      "from": "station_27",
+      "to": "station_28",
+      "type": "piste",
+      "name": "La Croce",
+      "distance": 1545,
+      "duration": 2.3,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_207002764",
+      "from": "station_27",
+      "to": "station_25",
+      "type": "piste",
+      "name": "Santa Giulia",
+      "distance": 1093,
+      "duration": 1.6,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_207002765",
+      "from": "station_45",
+      "to": "station_1",
+      "type": "piste",
+      "name": "Casola Skiweg",
+      "distance": 534,
+      "duration": 1.1,
+      "difficulty": "blue"
+    },
+    {
+      "id": "piste_207002766",
+      "from": "station_28",
+      "to": "station_0",
+      "type": "piste",
+      "name": "Tem\u00f9",
+      "distance": 1198,
+      "duration": 1.2,
+      "difficulty": "black"
+    },
+    {
       "id": "piste_265409884",
-      "from": "station_41",
-      "to": "station_6",
+      "from": "station_46",
+      "to": "station_8",
       "type": "piste",
       "name": "Pegr\u00e0",
       "distance": 1514,
@@ -1039,8 +1170,8 @@
     },
     {
       "id": "piste_320483518",
-      "from": "station_12",
-      "to": "station_42",
+      "from": "station_14",
+      "to": "station_47",
       "type": "piste",
       "name": "(",
       "distance": 405,
@@ -1048,9 +1179,29 @@
       "difficulty": "red"
     },
     {
+      "id": "piste_473888285",
+      "from": "station_1",
+      "to": "station_28",
+      "type": "piste",
+      "name": "Roccolo Ventura II",
+      "distance": 772,
+      "duration": 1.2,
+      "difficulty": "red"
+    },
+    {
+      "id": "piste_473888287",
+      "from": "station_48",
+      "to": "station_1",
+      "type": "piste",
+      "name": "Roccolo Ventura I",
+      "distance": 413,
+      "duration": 0.6,
+      "difficulty": "red"
+    },
+    {
       "id": "piste_473894031",
-      "from": "station_4",
-      "to": "station_10",
+      "from": "station_6",
+      "to": "station_12",
       "type": "piste",
       "name": "(23) Tre Larici",
       "distance": 413,
@@ -1059,8 +1210,8 @@
     },
     {
       "id": "piste_473894039",
-      "from": "station_15",
-      "to": "station_43",
+      "from": "station_17",
+      "to": "station_49",
       "type": "piste",
       "name": "Vittoria",
       "distance": 564,
@@ -1069,8 +1220,8 @@
     },
     {
       "id": "piste_473894042",
-      "from": "station_16",
-      "to": "station_15",
+      "from": "station_18",
+      "to": "station_17",
       "type": "piste",
       "name": "(31) Alpe Alta",
       "distance": 868,
@@ -1079,8 +1230,8 @@
     },
     {
       "id": "piste_473904706",
-      "from": "station_15",
-      "to": "station_14",
+      "from": "station_17",
+      "to": "station_16",
       "type": "piste",
       "name": "Vittoria",
       "distance": 829,
@@ -1089,8 +1240,8 @@
     },
     {
       "id": "piste_473904707",
-      "from": "station_16",
-      "to": "station_15",
+      "from": "station_18",
+      "to": "station_17",
       "type": "piste",
       "name": "Cinque Dossi",
       "distance": 709,
@@ -1099,8 +1250,8 @@
     },
     {
       "id": "piste_767865147",
-      "from": "station_16",
-      "to": "station_17",
+      "from": "station_18",
+      "to": "station_19",
       "type": "piste",
       "name": "Cad\u00ec Carosello",
       "distance": 674,
@@ -1109,8 +1260,8 @@
     },
     {
       "id": "piste_767865148",
-      "from": "station_13",
-      "to": "station_4",
+      "from": "station_15",
+      "to": "station_6",
       "type": "piste",
       "name": "Piste 767865148",
       "distance": 174,
@@ -1119,8 +1270,8 @@
     },
     {
       "id": "piste_767865149",
-      "from": "station_38",
-      "to": "station_17",
+      "from": "station_42",
+      "to": "station_19",
       "type": "piste",
       "name": "Piste 767865149",
       "distance": 211,
@@ -1129,8 +1280,8 @@
     },
     {
       "id": "piste_1085416743",
-      "from": "station_31",
-      "to": "station_28",
+      "from": "station_35",
+      "to": "station_32",
       "type": "piste",
       "name": "Paradiso",
       "distance": 303,
@@ -1139,8 +1290,8 @@
     },
     {
       "id": "piste_1132929248",
-      "from": "station_22",
-      "to": "station_45",
+      "from": "station_24",
+      "to": "station_51",
       "type": "piste",
       "name": "Valbione II",
       "distance": 575,
@@ -1149,8 +1300,8 @@
     },
     {
       "id": "piste_1143699299",
-      "from": "station_33",
-      "to": "station_27",
+      "from": "station_37",
+      "to": "station_31",
       "type": "piste",
       "name": "Variante Presena Paradiso",
       "distance": 210,
@@ -1159,8 +1310,8 @@
     },
     {
       "id": "piste_1260631060",
-      "from": "station_43",
-      "to": "station_10",
+      "from": "station_49",
+      "to": "station_12",
       "type": "piste",
       "name": "Piste 1260631060",
       "distance": 462,
@@ -1169,8 +1320,8 @@
     },
     {
       "id": "piste_1260632427",
-      "from": "station_43",
-      "to": "station_14",
+      "from": "station_49",
+      "to": "station_16",
       "type": "piste",
       "name": "Vittoria",
       "distance": 105,
@@ -1179,8 +1330,8 @@
     },
     {
       "id": "piste_1260632428",
-      "from": "station_13",
-      "to": "station_14",
+      "from": "station_15",
+      "to": "station_16",
       "type": "piste",
       "name": "Piste 1260632428",
       "distance": 378,
@@ -1189,8 +1340,8 @@
     },
     {
       "id": "piste_1260642569",
-      "from": "station_20",
-      "to": "station_39",
+      "from": "station_22",
+      "to": "station_43",
       "type": "piste",
       "name": "Contrabbandieri",
       "distance": 249,
@@ -1199,8 +1350,8 @@
     },
     {
       "id": "piste_1260642571",
-      "from": "station_46",
-      "to": "station_9",
+      "from": "station_52",
+      "to": "station_11",
       "type": "piste",
       "name": "Contrabbandieri",
       "distance": 342,
@@ -1209,8 +1360,8 @@
     },
     {
       "id": "piste_1260642572",
-      "from": "station_17",
-      "to": "station_47",
+      "from": "station_19",
+      "to": "station_53",
       "type": "piste",
       "name": "Piste 1260642572",
       "distance": 235,
@@ -1219,8 +1370,8 @@
     },
     {
       "id": "piste_1260642574",
-      "from": "station_48",
-      "to": "station_12",
+      "from": "station_54",
+      "to": "station_14",
       "type": "piste",
       "name": "Piste 1260642574",
       "distance": 274,
@@ -1229,8 +1380,8 @@
     },
     {
       "id": "piste_1260642575",
-      "from": "station_12",
-      "to": "station_11",
+      "from": "station_14",
+      "to": "station_13",
       "type": "piste",
       "name": "Piste 1260642575",
       "distance": 489,
@@ -1239,8 +1390,8 @@
     },
     {
       "id": "piste_1260642577",
-      "from": "station_10",
-      "to": "station_14",
+      "from": "station_12",
+      "to": "station_16",
       "type": "piste",
       "name": "Piste 1260642577",
       "distance": 176,
@@ -1249,8 +1400,8 @@
     },
     {
       "id": "piste_1260642579",
-      "from": "station_4",
-      "to": "station_10",
+      "from": "station_6",
+      "to": "station_12",
       "type": "piste",
       "name": "Piste 1260642579",
       "distance": 182,
@@ -1259,8 +1410,8 @@
     },
     {
       "id": "piste_1260642581",
-      "from": "station_11",
-      "to": "station_49",
+      "from": "station_13",
+      "to": "station_55",
       "type": "piste",
       "name": "Piste 1260642581",
       "distance": 231,
@@ -1269,8 +1420,8 @@
     },
     {
       "id": "piste_1260642582",
-      "from": "station_50",
-      "to": "station_11",
+      "from": "station_56",
+      "to": "station_13",
       "type": "piste",
       "name": "Piste 1260642582",
       "distance": 150,
@@ -1279,8 +1430,8 @@
     },
     {
       "id": "piste_1359790205",
-      "from": "station_5",
-      "to": "station_41",
+      "from": "station_7",
+      "to": "station_46",
       "type": "piste",
       "name": "Pegr\u00e0",
       "distance": 536,
@@ -1289,8 +1440,8 @@
     },
     {
       "id": "connector_0_ab",
-      "from": "station_4",
-      "to": "station_28",
+      "from": "station_6",
+      "to": "station_32",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Paradiso (bottom)",
@@ -1300,8 +1451,8 @@
     },
     {
       "id": "connector_0_ba",
-      "from": "station_28",
-      "to": "station_4",
+      "from": "station_32",
+      "to": "station_6",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Colonia Vigili - Tonale (bottom)",
@@ -1311,8 +1462,8 @@
     },
     {
       "id": "connector_1_ab",
-      "from": "station_49",
-      "to": "station_50",
+      "from": "station_55",
+      "to": "station_56",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 1260642582 (top)",
@@ -1322,8 +1473,8 @@
     },
     {
       "id": "connector_1_ba",
-      "from": "station_50",
-      "to": "station_49",
+      "from": "station_56",
+      "to": "station_55",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 1260642581 (bottom)",
@@ -1333,8 +1484,8 @@
     },
     {
       "id": "connector_2_ab",
-      "from": "station_38",
-      "to": "station_47",
+      "from": "station_42",
+      "to": "station_53",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 1260642572 (bottom)",
@@ -1344,8 +1495,8 @@
     },
     {
       "id": "connector_2_ba",
-      "from": "station_47",
-      "to": "station_38",
+      "from": "station_53",
+      "to": "station_42",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 206988311 (top)",
@@ -1355,8 +1506,8 @@
     },
     {
       "id": "connector_3_ab",
-      "from": "station_42",
-      "to": "station_50",
+      "from": "station_47",
+      "to": "station_56",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 1260642582 (top)",
@@ -1366,8 +1517,8 @@
     },
     {
       "id": "connector_3_ba",
-      "from": "station_50",
-      "to": "station_42",
+      "from": "station_56",
+      "to": "station_47",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to ( (bottom)",
@@ -1377,8 +1528,8 @@
     },
     {
       "id": "connector_4_ab",
-      "from": "station_12",
-      "to": "station_48",
+      "from": "station_14",
+      "to": "station_54",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 1260642574 (top)",
@@ -1388,8 +1539,8 @@
     },
     {
       "id": "connector_4_ba",
-      "from": "station_48",
-      "to": "station_12",
+      "from": "station_54",
+      "to": "station_14",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Serodine (top)",
@@ -1399,74 +1550,74 @@
     },
     {
       "id": "connector_5_ab",
-      "from": "station_0",
-      "to": "station_42",
+      "from": "station_27",
+      "to": "station_48",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to ( (bottom)",
-      "distance": 231,
-      "duration": 4.6,
+      "name": "Transfer to Roccolo Ventura I (top)",
+      "distance": 272,
+      "duration": 5.4,
       "difficulty": null
     },
     {
       "id": "connector_5_ba",
-      "from": "station_42",
-      "to": "station_0",
+      "from": "station_48",
+      "to": "station_27",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Bleis (bottom)",
-      "distance": 231,
-      "duration": 4.6,
+      "name": "Transfer to Santa Giulia (top)",
+      "distance": 272,
+      "duration": 5.4,
       "difficulty": null
     },
     {
       "id": "connector_6_ab",
-      "from": "station_8",
-      "to": "station_47",
+      "from": "station_45",
+      "to": "station_48",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Piste 1260642572 (bottom)",
-      "distance": 272,
-      "duration": 5.4,
+      "name": "Transfer to Roccolo Ventura I (top)",
+      "distance": 312,
+      "duration": 6.2,
       "difficulty": null
     },
     {
       "id": "connector_6_ba",
-      "from": "station_47",
-      "to": "station_8",
+      "from": "station_48",
+      "to": "station_45",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Valbiolo (bottom)",
-      "distance": 272,
-      "duration": 5.4,
+      "name": "Transfer to Casola Skiweg (top)",
+      "distance": 312,
+      "duration": 6.2,
       "difficulty": null
     },
     {
       "id": "connector_7_ab",
-      "from": "station_9",
-      "to": "station_46",
+      "from": "station_23",
+      "to": "station_51",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Contrabbandieri (top)",
-      "distance": 413,
-      "duration": 8.3,
+      "name": "Transfer to Valbione II (bottom)",
+      "distance": 369,
+      "duration": 7.4,
       "difficulty": null
     },
     {
       "id": "connector_7_ba",
-      "from": "station_46",
-      "to": "station_9",
+      "from": "station_51",
+      "to": "station_23",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Valbiolo (top)",
-      "distance": 413,
-      "duration": 8.3,
+      "name": "Transfer to Valbione (bottom)",
+      "distance": 369,
+      "duration": 7.4,
       "difficulty": null
     },
     {
       "id": "connector_8_ab",
-      "from": "station_5",
-      "to": "station_40",
+      "from": "station_7",
+      "to": "station_44",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Pegr\u00e0 (top)",
@@ -1476,8 +1627,8 @@
     },
     {
       "id": "connector_8_ba",
-      "from": "station_40",
-      "to": "station_5",
+      "from": "station_44",
+      "to": "station_7",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Colonia Vigili - Tonale (top)",
@@ -1487,30 +1638,74 @@
     },
     {
       "id": "connector_9_ab",
-      "from": "station_21",
-      "to": "station_45",
+      "from": "station_2",
+      "to": "station_47",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Valbione II (bottom)",
-      "distance": 369,
-      "duration": 7.4,
+      "name": "Transfer to ( (bottom)",
+      "distance": 231,
+      "duration": 4.6,
       "difficulty": null
     },
     {
       "id": "connector_9_ba",
-      "from": "station_45",
-      "to": "station_21",
+      "from": "station_47",
+      "to": "station_2",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Valbione (bottom)",
-      "distance": 369,
-      "duration": 7.4,
+      "name": "Transfer to Bleis (bottom)",
+      "distance": 231,
+      "duration": 4.6,
       "difficulty": null
     },
     {
       "id": "connector_10_ab",
-      "from": "station_34",
-      "to": "station_37",
+      "from": "station_10",
+      "to": "station_53",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Piste 1260642572 (bottom)",
+      "distance": 272,
+      "duration": 5.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_10_ba",
+      "from": "station_53",
+      "to": "station_10",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Valbiolo (bottom)",
+      "distance": 272,
+      "duration": 5.4,
+      "difficulty": null
+    },
+    {
+      "id": "connector_11_ab",
+      "from": "station_11",
+      "to": "station_52",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Contrabbandieri (top)",
+      "distance": 413,
+      "duration": 8.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_11_ba",
+      "from": "station_52",
+      "to": "station_11",
+      "type": "lift",
+      "liftType": "connector",
+      "name": "Transfer to Valbiolo (top)",
+      "distance": 413,
+      "duration": 8.3,
+      "difficulty": null
+    },
+    {
+      "id": "connector_12_ab",
+      "from": "station_38",
+      "to": "station_41",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Variante Paradiso (bottom)",
@@ -1519,9 +1714,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_10_ba",
-      "from": "station_37",
-      "to": "station_34",
+      "id": "connector_12_ba",
+      "from": "station_41",
+      "to": "station_38",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Alpino (top)",
@@ -1530,9 +1725,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_11_ab",
-      "from": "station_31",
-      "to": "station_36",
+      "id": "connector_13_ab",
+      "from": "station_35",
+      "to": "station_40",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Variante Paradiso (top)",
@@ -1541,9 +1736,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_11_ba",
-      "from": "station_36",
-      "to": "station_31",
+      "id": "connector_13_ba",
+      "from": "station_40",
+      "to": "station_35",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Paradiso (bottom)",
@@ -1552,9 +1747,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_12_ab",
-      "from": "station_22",
-      "to": "station_44",
+      "id": "connector_14_ab",
+      "from": "station_24",
+      "to": "station_50",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 767865150 (top)",
@@ -1563,9 +1758,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_12_ba",
-      "from": "station_44",
-      "to": "station_22",
+      "id": "connector_14_ba",
+      "from": "station_50",
+      "to": "station_24",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Valbione (top)",
@@ -1574,9 +1769,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_13_ab",
-      "from": "station_7",
-      "to": "station_44",
+      "id": "connector_15_ab",
+      "from": "station_9",
+      "to": "station_50",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Piste 767865150 (top)",
@@ -1585,9 +1780,9 @@
       "difficulty": null
     },
     {
-      "id": "connector_13_ba",
-      "from": "station_44",
-      "to": "station_7",
+      "id": "connector_15_ba",
+      "from": "station_50",
+      "to": "station_9",
       "type": "lift",
       "liftType": "connector",
       "name": "Transfer to Sozzine (top)",

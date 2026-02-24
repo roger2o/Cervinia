@@ -1,29 +1,29 @@
 {
   "id": "passo-tonale",
-  "name": "Passo Tonale",
+  "name": "Pontedilegno-Tonale",
   "bbox": {
     "south": 46.22,
-    "west": 10.5,
+    "west": 10.47,
     "north": 46.3,
     "east": 10.65
   },
   "center": [
     46.26,
-    10.58
+    10.56
   ],
   "subAreas": [
+    "Ponte di Legno",
     "Passo Tonale",
-    "Presena",
-    "Ponte di Legno"
+    "Presena"
   ],
   "stats": {
-    "stations": 51,
-    "lifts": 55,
-    "pistes": 58,
-    "bluePistes": 19,
-    "redPistes": 31,
-    "blackPistes": 8
+    "stations": 57,
+    "lifts": 62,
+    "pistes": 65,
+    "bluePistes": 20,
+    "redPistes": 36,
+    "blackPistes": 9
   },
-  "fetchedAt": "2026-02-24T10:34:11Z",
-  "builtAt": "2026-02-24T10:34:14Z"
+  "fetchedAt": "2026-02-24T11:34:42Z",
+  "builtAt": "2026-02-24T11:34:48Z"
 }

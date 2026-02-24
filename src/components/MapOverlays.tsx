@@ -123,7 +123,7 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
     <>
       {/* Base pistes and lifts */}
       <GeoJSON
-        key="base-geo"
+        key={`base-geo-${lines.length}-${lines[0]?.properties?.id ?? ''}`}
         data={{ type: 'FeatureCollection', features: lines } as GeoJSON.FeatureCollection}
         style={pisteStyle}
       />

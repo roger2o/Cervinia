@@ -1,14 +1,14 @@
 {
   "id": "passo-tonale",
-  "name": "Passo Tonale",
+  "name": "Pontedilegno-Tonale",
   "bbox": {
     "south": 46.22,
-    "west": 10.50,
+    "west": 10.47,
     "north": 46.30,
     "east": 10.65
   },
-  "center": [46.26, 10.58],
-  "subAreas": ["Passo Tonale", "Presena", "Ponte di Legno"],
+  "center": [46.26, 10.56],
+  "subAreas": ["Ponte di Legno", "Passo Tonale", "Presena"],
   "defaultZoom": 14,
   "tileZoomRange": [12, 16]
 }

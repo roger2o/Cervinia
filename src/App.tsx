@@ -13,6 +13,7 @@ import { useStatus } from './hooks/useStatus';
 import { useGeolocation } from './hooks/useGeolocation';
 import { useDailyActivity } from './hooks/useDailyActivity';
 import { useWeather } from './hooks/useWeather';
+import { useDragSheet } from './hooks/useDragSheet';
 import { DEFAULT_AREA } from './data/areaRegistry';
 import { getArea } from './data/areaRegistry';
 import type { DifficultyPreference } from './types/graph';
@@ -75,6 +76,7 @@ function App() {
   const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId);
   const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps } = useGeolocation();
   const activity = useDailyActivity(gpsPosition, gpsActive);
+  const dragSheet = useDragSheet({ resetDep: route });
 
   const area = getArea(areaId);
   const weatherCenter = area?.center ?? [45.9369, 7.6292] as [number, number];
@@ -284,7 +286,7 @@ function App() {
 
       {/* Route panel (bottom sheet) */}
       {route && (
-        <div className="flex-shrink-0 max-h-[40vh] overflow-y-auto">
+        <div className="flex-shrink-0 overflow-hidden">
           <RoutePanel
             route={route}
             onClear={handleClearRoute}
@@ -292,6 +294,14 @@ function App() {
             onShare={handleShare}
             selectedStepIndex={selectedStepIndex}
             onStepClick={handleStepClick}
+            panelState={dragSheet.panelState}
+            onPointerDown={dragSheet.onPointerDown}
+            onPointerMove={dragSheet.onPointerMove}
+            onPointerUp={dragSheet.onPointerUp}
+            onHeaderTap={dragSheet.onHeaderTap}
+            handleRef={dragSheet.handleRef}
+            panelRef={dragSheet.panelRef}
+            transitioning={dragSheet.transitioning}
           />
         </div>
       )}

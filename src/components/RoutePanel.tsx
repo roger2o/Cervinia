@@ -1,5 +1,6 @@
 import type { RouteResult } from '../types/route';
 import { DIFFICULTY_COLORS } from '../data/difficultyMap';
+import type { PanelState } from '../hooks/useDragSheet';
 
 interface RoutePanelProps {
   route: RouteResult | null;
@@ -8,9 +9,38 @@ interface RoutePanelProps {
   onShare?: () => void;
   selectedStepIndex: number | null;
   onStepClick: (index: number) => void;
+  panelState?: PanelState;
+  onPointerDown?: (e: React.PointerEvent) => void;
+  onPointerMove?: (e: React.PointerEvent) => void;
+  onPointerUp?: () => void;
+  onHeaderTap?: () => void;
+  handleRef?: React.RefObject<HTMLDivElement | null>;
+  panelRef?: React.RefObject<HTMLDivElement | null>;
+  transitioning?: boolean;
 }
 
-export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIndex, onStepClick }: RoutePanelProps) {
+const stepsMaxHeight: Record<PanelState, string> = {
+  collapsed: 'max-h-0',
+  half: 'max-h-64',
+  full: 'max-h-[60vh]',
+};
+
+export function RoutePanel({
+  route,
+  onClear,
+  onMarkDone,
+  onShare,
+  selectedStepIndex,
+  onStepClick,
+  panelState = 'half',
+  onPointerDown,
+  onPointerMove,
+  onPointerUp,
+  onHeaderTap,
+  handleRef,
+  panelRef,
+  transitioning,
+}: RoutePanelProps) {
   if (!route) return null;
 
   if (route.steps.length === 0) {
@@ -21,10 +51,34 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
     );
   }
 
+  const isCollapsed = panelState === 'collapsed';
+
   return (
-    <div className="bg-snowflake rounded-xl shadow-lg overflow-hidden">
+    <div
+      ref={panelRef}
+      className={`bg-snowflake rounded-t-xl shadow-lg overflow-hidden ${transitioning ? 'transition-transform duration-300 ease-out' : ''}`}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+    >
+      {/* Drag handle */}
+      <div
+        ref={handleRef}
+        className="flex justify-center py-2 cursor-grab active:cursor-grabbing"
+        style={{ touchAction: 'none' }}
+        onPointerDown={onPointerDown}
+      >
+        <div className="w-8 h-1 rounded-full bg-gray-300" />
+      </div>
+
       {/* Header */}
-      <div className="px-4 py-3 bg-blue-800 text-white flex items-center justify-between">
+      <div
+        className="px-4 py-3 bg-blue-800 text-white flex items-center justify-between"
+        onClick={(e) => {
+          // Only expand on header tap, not button clicks
+          if ((e.target as HTMLElement).closest('button')) return;
+          onHeaderTap?.();
+        }}
+      >
         <div>
           <div className="text-sm font-bold">
             {route.steps.length} step{route.steps.length !== 1 ? 's' : ''}
@@ -70,7 +124,7 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
       </div>
 
       {/* Warnings */}
-      {route.warnings.length > 0 && (
+      {!isCollapsed && route.warnings.length > 0 && (
         <div className="px-4 py-2 bg-amber-50 border-b border-amber-200">
           {route.warnings.map((w, i) => (
             <div key={i} className="text-xs text-amber-700">
@@ -81,49 +135,51 @@ export function RoutePanel({ route, onClear, onMarkDone, onShare, selectedStepIn
       )}
 
       {/* Steps */}
-      <div className="max-h-64 overflow-y-auto">
-        {route.steps.map((step, i) => {
-          const isSelected = selectedStepIndex === i;
-          return (
-            <div
-              key={i}
-              onClick={() => onStepClick(i)}
-              className={`px-4 py-2 border-b border-gray-100 flex items-start gap-3 cursor-pointer transition-colors ${
-                isSelected ? 'bg-blue-50 border-l-4 border-l-blue-600' : 'hover:bg-gray-50'
-              }`}
-            >
-              <div className="flex-shrink-0 mt-0.5">
-                {step.edge.type === 'lift' ? (
-                  <div className="w-5 h-5 rounded bg-gray-500 text-white text-[10px] flex items-center justify-center font-bold">
-                    L
-                  </div>
-                ) : (
-                  <div
-                    className="w-5 h-5 rounded text-white text-[10px] flex items-center justify-center font-bold"
-                    style={{
-                      backgroundColor: step.edge.difficulty
-                        ? DIFFICULTY_COLORS[step.edge.difficulty]
-                        : '#6b7280',
-                    }}
-                  >
-                    {i + 1}
-                  </div>
-                )}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-sm">{step.instruction}</div>
-                <div className="text-xs text-gray-400">
-                  {(step.edge.distance / 1000).toFixed(1)} km &middot;{' '}
-                  {Math.round(step.edge.duration)} min
-                  {step.edge.type === 'piste' && step.fromNode.elevation > step.toNode.elevation && (
-                    <span> &middot; {Math.round(step.fromNode.elevation - step.toNode.elevation)}m drop</span>
+      {!isCollapsed && (
+        <div className={`${stepsMaxHeight[panelState]} overflow-y-auto`}>
+          {route.steps.map((step, i) => {
+            const isSelected = selectedStepIndex === i;
+            return (
+              <div
+                key={i}
+                onClick={() => onStepClick(i)}
+                className={`px-4 py-2 border-b border-gray-100 flex items-start gap-3 cursor-pointer transition-colors ${
+                  isSelected ? 'bg-blue-50 border-l-4 border-l-blue-600' : 'hover:bg-gray-50'
+                }`}
+              >
+                <div className="flex-shrink-0 mt-0.5">
+                  {step.edge.type === 'lift' ? (
+                    <div className="w-5 h-5 rounded bg-gray-500 text-white text-[10px] flex items-center justify-center font-bold">
+                      L
+                    </div>
+                  ) : (
+                    <div
+                      className="w-5 h-5 rounded text-white text-[10px] flex items-center justify-center font-bold"
+                      style={{
+                        backgroundColor: step.edge.difficulty
+                          ? DIFFICULTY_COLORS[step.edge.difficulty]
+                          : '#6b7280',
+                      }}
+                    >
+                      {i + 1}
+                    </div>
                   )}
                 </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-sm">{step.instruction}</div>
+                  <div className="text-xs text-gray-400">
+                    {(step.edge.distance / 1000).toFixed(1)} km &middot;{' '}
+                    {Math.round(step.edge.duration)} min
+                    {step.edge.type === 'piste' && step.fromNode.elevation > step.toNode.elevation && (
+                      <span> &middot; {Math.round(step.fromNode.elevation - step.toNode.elevation)}m drop</span>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }

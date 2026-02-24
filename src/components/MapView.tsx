@@ -27,6 +27,16 @@ interface MapViewProps {
   replayIndex?: number;
 }
 
+function FlyToArea({ center, zoom }: { center: [number, number]; zoom: number }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.flyTo(center, zoom, { duration: 1.0 });
+  }, [map, center[0], center[1], zoom]);
+
+  return null;
+}
+
 function FlyToSegment({ route, selectedStepIndex }: { route: RouteResult | null; selectedStepIndex: number | null }) {
   const map = useMap();
 
@@ -124,6 +134,7 @@ export function MapView({
         selectedStepIndex={selectedStepIndex}
         closedEdgeIds={closedEdgeIds}
       />
+      <FlyToArea center={center} zoom={zoom} />
       <FlyToSegment route={route} selectedStepIndex={selectedStepIndex} />
 
       {/* GPS position */}
