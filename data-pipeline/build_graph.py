@@ -104,15 +104,36 @@ class StationClusterer:
         return result
 
 
-def assign_sub_area(lat: float, lon: float) -> str:
-    """Assign a station to a sub-area based on rough geographic boundaries."""
-    # Zermatt is generally north/northwest, Cervinia south, Valtournenche southeast
-    if lat > 45.98:
-        return "Zermatt"
-    elif lon < 7.63:
-        return "Valtournenche"
-    else:
-        return "Cervinia"
+def assign_sub_area(lat: float, lon: float, area_config: dict | None = None) -> str:
+    """Assign a station to a sub-area based on geographic boundaries.
+
+    For Matterhorn, uses the original hardcoded boundaries.
+    For other areas, assigns to the nearest sub-area by dividing the bbox
+    into equal longitudinal sectors.
+    """
+    if area_config is None or area_config.get("id") == "matterhorn":
+        # Original Matterhorn logic
+        if lat > 45.98:
+            return "Zermatt"
+        elif lon < 7.63:
+            return "Valtournenche"
+        else:
+            return "Cervinia"
+
+    sub_areas = area_config.get("subAreas", [])
+    if not sub_areas:
+        return "Unknown"
+    if len(sub_areas) == 1:
+        return sub_areas[0]
+
+    # Divide the bbox into equal longitudinal sectors
+    bbox = area_config["bbox"]
+    west = bbox["west"]
+    east = bbox["east"]
+    sector_width = (east - west) / len(sub_areas)
+    index = int((lon - west) / sector_width)
+    index = max(0, min(index, len(sub_areas) - 1))
+    return sub_areas[index]
 
 
 def _directed_reachable(adj_out: dict, start: str) -> set[str]:
@@ -249,7 +270,15 @@ def _bridge_connectivity_gaps(
     return new_edges
 
 
-def build_graph(raw_data: dict, cluster_threshold: float = 200.0) -> tuple[dict, dict, dict]:
+def load_area_config(area: str) -> dict | None:
+    """Load area config JSON if it exists."""
+    config_path = Path(__file__).parent / "areas" / f"{area}.json"
+    if config_path.exists():
+        return json.loads(config_path.read_text())
+    return None
+
+
+def build_graph(raw_data: dict, cluster_threshold: float = 200.0, area_config: dict | None = None) -> tuple[dict, dict, dict]:
     """Build graph.json, geo.json, and meta.json from raw OSM data.
 
     Returns (graph, geo, meta) dicts.
@@ -361,7 +390,7 @@ def build_graph(raw_data: dict, cluster_threshold: float = 200.0) -> tuple[dict,
         station["elevation"] = round(estimate_elevation(
             station["lat"], station["lon"], []
         ))
-        station["subArea"] = assign_sub_area(station["lat"], station["lon"])
+        station["subArea"] = assign_sub_area(station["lat"], station["lon"], area_config)
 
     # Post-clustering: bridge gaps in OSM data by adding connector edges
     # between nearby stations that aren't reachable from each other.
@@ -400,13 +429,16 @@ def build_graph(raw_data: dict, cluster_threshold: float = 200.0) -> tuple[dict,
 
     meta = {
         "id": raw_data["area"],
-        "name": "Matterhorn Ski Paradise",
+        "name": area_config["name"] if area_config else "Matterhorn Ski Paradise",
         "bbox": raw_data["bbox"],
-        "center": [
+        "center": area_config.get("center", [
+            (raw_data["bbox"]["south"] + raw_data["bbox"]["north"]) / 2,
+            (raw_data["bbox"]["west"] + raw_data["bbox"]["east"]) / 2,
+        ]) if area_config else [
             (raw_data["bbox"]["south"] + raw_data["bbox"]["north"]) / 2,
             (raw_data["bbox"]["west"] + raw_data["bbox"]["east"]) / 2,
         ],
-        "subAreas": ["Cervinia", "Valtournenche", "Zermatt"],
+        "subAreas": area_config.get("subAreas", []) if area_config else ["Cervinia", "Valtournenche", "Zermatt"],
         "stats": {
             "stations": len(stations),
             "lifts": sum(1 for e in edges if e["type"] == "lift"),
@@ -483,7 +515,8 @@ def main():
     print(f"Loaded raw data: {len(raw_data['pistes'])} pistes, {len(raw_data['lifts'])} lifts")
     print(f"Clustering threshold: {args.threshold}m")
 
-    graph, geo, meta = build_graph(raw_data, cluster_threshold=args.threshold)
+    area_config = load_area_config(args.area)
+    graph, geo, meta = build_graph(raw_data, cluster_threshold=args.threshold, area_config=area_config)
 
     # Validate
     warnings = validate_graph(graph)

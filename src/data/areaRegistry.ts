@@ -11,6 +11,16 @@ export const areas: AreaConfig[] = [
     defaultZoom: 13,
     tileZoomRange: [11, 15],
   },
+  {
+    id: 'passo-tonale',
+    name: 'Passo Tonale',
+    bbox: { south: 46.22, west: 10.50, north: 46.30, east: 10.65 },
+    center: [46.26, 10.58],
+    subAreas: ['Passo Tonale', 'Presena', 'Ponte di Legno'],
+    dataUrl: '/data/passo-tonale',
+    defaultZoom: 14,
+    tileZoomRange: [12, 16],
+  },
 ];
 
 export function getArea(id: string): AreaConfig | undefined {
