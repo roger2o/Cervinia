@@ -22,10 +22,18 @@ import { resolvePreference } from './types/graph';
 import { PREFERENCE_LABELS } from './data/difficultyMap';
 
 function App() {
-  const [areaId, setAreaId] = useState(DEFAULT_AREA);
+  const [areaId, setAreaId] = useState(() => {
+    const saved = localStorage.getItem('lastAreaId');
+    return saved && getArea(saved) ? saved : DEFAULT_AREA;
+  });
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+
+  // Persist selected area so it survives app restarts
+  useEffect(() => {
+    localStorage.setItem('lastAreaId', areaId);
+  }, [areaId]);
 
   // Restore route from URL query params (for shared links)
   const [sharedParamsApplied, setSharedParamsApplied] = useState(false);
