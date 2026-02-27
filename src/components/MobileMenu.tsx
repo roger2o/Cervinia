@@ -208,10 +208,25 @@ export function MobileMenu({
               </button>
               <button
                 onClick={() => setView('site')}
-                className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between"
+                className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-100"
               >
                 <span className="font-medium">Ski Site</span>
                 <span className="text-xs text-gray-400 truncate ml-2">{areaId}</span>
+              </button>
+              <button
+                onClick={async () => {
+                  const regs = await navigator.serviceWorker?.getRegistrations();
+                  if (regs) {
+                    for (const reg of regs) await reg.unregister();
+                  }
+                  const keys = await caches.keys();
+                  for (const key of keys) await caches.delete(key);
+                  window.location.reload();
+                }}
+                className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between text-red-600"
+              >
+                <span className="font-medium">Refresh App Data</span>
+                <span className="text-xs text-gray-400">Clear cache</span>
               </button>
             </div>
           )}
