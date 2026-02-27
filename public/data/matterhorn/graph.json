@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "station_0",
-      "name": "Zermatt\u2013Sunnegga funicular (bottom)",
+      "name": "Zermatt–Sunnegga funicular (bottom)",
       "lat": 46.022027,
       "lon": 7.753642,
       "elevation": 2610,
@@ -10,7 +10,7 @@
     },
     {
       "id": "station_1",
-      "name": "Zermatt\u2013Sunnegga funicular (top)",
+      "name": "Zermatt–Sunnegga funicular (top)",
       "lat": 46.016936,
       "lon": 7.769593,
       "elevation": 2585,
@@ -58,7 +58,7 @@
     },
     {
       "id": "station_7",
-      "name": "Gant - Hoht\u00e4lli (top)",
+      "name": "Gant - Hohtälli (top)",
       "lat": 45.989023,
       "lon": 7.802177,
       "elevation": 2445,
@@ -298,7 +298,7 @@
     },
     {
       "id": "station_37",
-      "name": "Bec Carr\u00e9 (bottom)",
+      "name": "Bec Carré (bottom)",
       "lat": 45.905759,
       "lon": 7.652597,
       "elevation": 2029,
@@ -306,7 +306,7 @@
     },
     {
       "id": "station_38",
-      "name": "Bec Carr\u00e9 (top)",
+      "name": "Bec Carré (top)",
       "lat": 45.909558,
       "lon": 7.677391,
       "elevation": 2048,
@@ -778,7 +778,7 @@
     },
     {
       "id": "station_97",
-      "name": "H\u00f6rnli (top)",
+      "name": "Hörnli (top)",
       "lat": 45.997085,
       "lon": 7.6991,
       "elevation": 2485,
@@ -786,7 +786,7 @@
     },
     {
       "id": "station_98",
-      "name": "H\u00f6rnli (bottom)",
+      "name": "Hörnli (bottom)",
       "lat": 46.001254,
       "lon": 7.701782,
       "elevation": 2506,
@@ -874,7 +874,7 @@
     },
     {
       "id": "station_109",
-      "name": "Hoht\u00e4lli (top)",
+      "name": "Hohtälli (top)",
       "lat": 45.983338,
       "lon": 7.778767,
       "elevation": 2417,
@@ -1234,7 +1234,7 @@
     },
     {
       "id": "station_154",
-      "name": "Gr\u00fcnsee (bottom)",
+      "name": "Grünsee (bottom)",
       "lat": 46.004421,
       "lon": 7.780393,
       "elevation": 2522,
@@ -1466,7 +1466,7 @@
     },
     {
       "id": "station_183",
-      "name": "Gr\u00fcnsee (top)",
+      "name": "Grünsee (top)",
       "lat": 46.008259,
       "lon": 7.782803,
       "elevation": 2541,
@@ -1872,7 +1872,7 @@
       "to": "station_1",
       "type": "lift",
       "liftType": "funicular",
-      "name": "Zermatt\u2013Sunnegga funicular",
+      "name": "A1 Zermatt–Sunnegga funicular",
       "distance": 1409,
       "duration": 11.3,
       "difficulty": null
@@ -1883,7 +1883,7 @@
       "to": "station_3",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Patrullarve",
+      "name": "D Patrullarve",
       "distance": 1965,
       "duration": 15.7,
       "difficulty": null
@@ -1894,7 +1894,7 @@
       "to": "station_3",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Hublot-Express (Gant - Blauherd)",
+      "name": "F Hublot-Express (Gant - Blauherd)",
       "distance": 897,
       "duration": 7.2,
       "difficulty": null
@@ -1905,7 +1905,7 @@
       "to": "station_6",
       "type": "lift",
       "liftType": "cable_car",
-      "name": "Blauherd - Rothorn",
+      "name": "A3 Blauherd - Rothorn",
       "distance": 1026,
       "duration": 5.1,
       "difficulty": null
@@ -1916,7 +1916,7 @@
       "to": "station_7",
       "type": "lift",
       "liftType": "cable_car",
-      "name": "Gant - Hoht\u00e4lli",
+      "name": "G Gant - Hohtälli",
       "distance": 2493,
       "duration": 12.5,
       "difficulty": null
@@ -1927,7 +1927,7 @@
       "to": "station_9",
       "type": "lift",
       "liftType": "gondola",
-      "name": "Riffelberg-Express",
+      "name": "Q Riffelberg-Express",
       "distance": 1932,
       "duration": 9.7,
       "difficulty": null
@@ -1960,7 +1960,7 @@
       "to": "station_12",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Gifthittli",
+      "name": "M Gifthittli",
       "distance": 1803,
       "duration": 14.4,
       "difficulty": null
@@ -1971,7 +1971,7 @@
       "to": "station_14",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Furgg - Sandiger Boden",
+      "name": "U1 Furgg - Sandiger Boden",
       "distance": 1249,
       "duration": 10.0,
       "difficulty": null
@@ -1982,7 +1982,7 @@
       "to": "station_15",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Furggsattel Gletscherbahn",
+      "name": "V Furggsattel Gletscherbahn",
       "distance": 2538,
       "duration": 20.3,
       "difficulty": null
@@ -2004,7 +2004,7 @@
       "to": "station_18",
       "type": "lift",
       "liftType": "cable_car",
-      "name": "Funivia del Plateau Rosa",
+      "name": "F Funivia del Plateau Rosa",
       "distance": 2152,
       "duration": 10.8,
       "difficulty": null
@@ -2015,7 +2015,7 @@
       "to": "station_20",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Plan Maison",
+      "name": "N Plan Maison",
       "distance": 2225,
       "duration": 17.8,
       "difficulty": null
@@ -2026,7 +2026,7 @@
       "to": "station_21",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Fornet",
+      "name": "O Fornet",
       "distance": 906,
       "duration": 7.3,
       "difficulty": null
@@ -2037,7 +2037,7 @@
       "to": "station_22",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Bontadini",
+      "name": "P Bontadini",
       "distance": 1095,
       "duration": 8.8,
       "difficulty": null
@@ -2048,7 +2048,7 @@
       "to": "station_24",
       "type": "lift",
       "liftType": "cable_car",
-      "name": "Plan Maison",
+      "name": "B Plan Maison",
       "distance": 1716,
       "duration": 8.6,
       "difficulty": null
@@ -2059,7 +2059,7 @@
       "to": "station_26",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Cretaz",
+      "name": "E Cretaz",
       "distance": 1635,
       "duration": 13.1,
       "difficulty": null
@@ -2070,7 +2070,7 @@
       "to": "station_1",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Eisfluh",
+      "name": "B Eisfluh",
       "distance": 354,
       "duration": 2.8,
       "difficulty": null
@@ -2081,7 +2081,7 @@
       "to": "station_29",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Findelbahn (Eja-Breitenboden)",
+      "name": "C2 Findelbahn (Eja-Breitenboden)",
       "distance": 928,
       "duration": 7.4,
       "difficulty": null
@@ -2092,7 +2092,7 @@
       "to": "station_30",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Campetto",
+      "name": "H Campetto",
       "distance": 440,
       "duration": 3.5,
       "difficulty": null
@@ -2103,7 +2103,7 @@
       "to": "station_31",
       "type": "lift",
       "liftType": "platter",
-      "name": "Baby La Vieille",
+      "name": "L Baby La Vieille",
       "distance": 476,
       "duration": 3.8,
       "difficulty": null
@@ -2114,7 +2114,7 @@
       "to": "station_33",
       "type": "lift",
       "liftType": "t-bar",
-      "name": "Plateau Rosa 2",
+      "name": "X5 Plateau Rosa 2",
       "distance": 1465,
       "duration": 11.7,
       "difficulty": null
@@ -2125,7 +2125,7 @@
       "to": "station_35",
       "type": "lift",
       "liftType": "gondola",
-      "name": "Salette",
+      "name": "(d) Salette",
       "distance": 1884,
       "duration": 9.4,
       "difficulty": null
@@ -2136,7 +2136,7 @@
       "to": "station_36",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Motta",
+      "name": "(e) Motta",
       "distance": 1176,
       "duration": 9.4,
       "difficulty": null
@@ -2147,7 +2147,7 @@
       "to": "station_38",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Bec Carr\u00e9",
+      "name": "(f) Bec Carré",
       "distance": 1979,
       "duration": 15.8,
       "difficulty": null
@@ -2158,7 +2158,7 @@
       "to": "station_38",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Du Col",
+      "name": "(g) Du Col",
       "distance": 209,
       "duration": 1.7,
       "difficulty": null
@@ -2169,7 +2169,7 @@
       "to": "station_40",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Gran Sometta",
+      "name": "(h) Gran Sometta",
       "distance": 1174,
       "duration": 9.4,
       "difficulty": null
@@ -2180,7 +2180,7 @@
       "to": "station_41",
       "type": "lift",
       "liftType": "t-bar",
-      "name": "Plateau Rosa 3",
+      "name": "X3 Plateau Rosa 3",
       "distance": 654,
       "duration": 5.2,
       "difficulty": null
@@ -2191,7 +2191,7 @@
       "to": "station_33",
       "type": "lift",
       "liftType": "t-bar",
-      "name": "Plateau Rosa 1",
+      "name": "X4 Plateau Rosa 1",
       "distance": 1483,
       "duration": 11.9,
       "difficulty": null
@@ -2213,7 +2213,7 @@
       "to": "station_44",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Pancheron",
+      "name": "C Pancheron",
       "distance": 1805,
       "duration": 14.4,
       "difficulty": null
@@ -2235,7 +2235,7 @@
       "to": "station_48",
       "type": "lift",
       "liftType": "platter",
-      "name": "Plateau Breithorn",
+      "name": "X7 Plateau Breithorn",
       "distance": 554,
       "duration": 4.4,
       "difficulty": null
@@ -2246,7 +2246,7 @@
       "to": "station_50",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Becca d'Aran",
+      "name": "(c) Becca d'Aran",
       "distance": 847,
       "duration": 6.8,
       "difficulty": null
@@ -2268,7 +2268,7 @@
       "to": "station_40",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Lago Goillet",
+      "name": "Z Lago Goillet",
       "distance": 1397,
       "duration": 11.2,
       "difficulty": null
@@ -2279,7 +2279,7 @@
       "to": "station_24",
       "type": "lift",
       "liftType": "gondola",
-      "name": "Plan Maison",
+      "name": "A Plan Maison",
       "distance": 1744,
       "duration": 8.7,
       "difficulty": null
@@ -2290,7 +2290,7 @@
       "to": "station_18",
       "type": "lift",
       "liftType": "t-bar",
-      "name": "Testa",
+      "name": "X2 Testa",
       "distance": 1248,
       "duration": 10.0,
       "difficulty": null
@@ -2301,7 +2301,7 @@
       "to": "station_1",
       "type": "lift",
       "liftType": "chair_lift",
-      "name": "Findelbahn (Eja-Sunnegga)",
+      "name": "C1 Findelbahn (Eja-Sunnegga)",
       "distance": 806,
       "duration": 6.4,
       "difficulty": null
@@ -2312,7 +2312,7 @@
       "to": "station_5",
       "type": "lift",
       "liftType": "mixed_lift",
-      "name": "Sunnegga-Blauherd",
+      "name": "A2 Sunnegga-Blauherd",
       "distance": 1184,
       "duration": 9.5,
       "difficulty": null
@@ -2323,7 +2323,7 @@
       "to": "station_17",
       "type": "lift",
       "liftType": "gondola",
-      "name": "Cime Bianche Laghi",
+      "name": "T Cime Bianche Laghi",
       "distance": 2247,
       "duration": 11.2,
       "difficulty": null
@@ -2433,7 +2433,7 @@
       "to": "station_65",
       "type": "lift",
       "liftType": "platter",
-      "name": "Plateau Breithorn",
+      "name": "X7 Plateau Breithorn",
       "distance": 700,
       "duration": 5.6,
       "difficulty": null
@@ -2466,7 +2466,7 @@
       "to": "station_64",
       "type": "lift",
       "liftType": "platter",
-      "name": "Plateau Breithorn",
+      "name": "X7 Plateau Breithorn",
       "distance": 291,
       "duration": 2.3,
       "difficulty": null
@@ -2509,7 +2509,7 @@
       "from": "station_69",
       "to": "station_3",
       "type": "piste",
-      "name": "Rotweng",
+      "name": "11 Rotweng",
       "distance": 2263,
       "duration": 3.4,
       "difficulty": "red"
@@ -2519,7 +2519,7 @@
       "from": "station_3",
       "to": "station_1",
       "type": "piste",
-      "name": "Standard",
+      "name": "7 Standard",
       "distance": 1440,
       "duration": 2.9,
       "difficulty": "blue"
@@ -2529,7 +2529,7 @@
       "from": "station_6",
       "to": "station_63",
       "type": "piste",
-      "name": "Kumme",
+      "name": "14 Kumme",
       "distance": 2733,
       "duration": 4.1,
       "difficulty": "red"
@@ -2539,7 +2539,7 @@
       "from": "station_2",
       "to": "station_71",
       "type": "piste",
-      "name": "Untere National",
+      "name": "1 Untere National",
       "distance": 548,
       "duration": 0.8,
       "difficulty": "red"
@@ -2549,7 +2549,7 @@
       "from": "station_1",
       "to": "station_2",
       "type": "piste",
-      "name": "Brunnjeschbord",
+      "name": "4 Brunnjeschbord",
       "distance": 1192,
       "duration": 1.8,
       "difficulty": "red"
@@ -2559,7 +2559,7 @@
       "from": "station_72",
       "to": "station_4",
       "type": "piste",
-      "name": "Fluhalp",
+      "name": "19 Fluhalp",
       "distance": 3003,
       "duration": 4.5,
       "difficulty": "red"
@@ -2569,7 +2569,7 @@
       "from": "station_12",
       "to": "station_9",
       "type": "piste",
-      "name": "Gornergrat",
+      "name": "36 Gornergrat",
       "distance": 2010,
       "duration": 4.0,
       "difficulty": "blue"
@@ -2579,7 +2579,7 @@
       "from": "station_12",
       "to": "station_73",
       "type": "piste",
-      "name": "Kelle",
+      "name": "29 Kelle",
       "distance": 1010,
       "duration": 1.5,
       "difficulty": "red"
@@ -2589,7 +2589,7 @@
       "from": "station_74",
       "to": "station_75",
       "type": "piste",
-      "name": "Gifthittli",
+      "name": "35 Gifthittli",
       "distance": 881,
       "duration": 1.3,
       "difficulty": "red"
@@ -2599,7 +2599,7 @@
       "from": "station_76",
       "to": "station_9",
       "type": "piste",
-      "name": "Riffelhorn",
+      "name": "37 Riffelhorn",
       "distance": 1752,
       "duration": 3.5,
       "difficulty": "blue"
@@ -2609,7 +2609,7 @@
       "from": "station_7",
       "to": "station_74",
       "type": "piste",
-      "name": "Hoht\u00e4lli",
+      "name": "44 Hohtälli",
       "distance": 2504,
       "duration": 3.8,
       "difficulty": "red"
@@ -2619,7 +2619,7 @@
       "from": "station_9",
       "to": "station_77",
       "type": "piste",
-      "name": "Riffelalp",
+      "name": "39 Riffelalp",
       "distance": 1885,
       "duration": 2.8,
       "difficulty": "red"
@@ -2629,7 +2629,7 @@
       "from": "station_13",
       "to": "station_66",
       "type": "piste",
-      "name": "Furgg - Furi",
+      "name": "62 Furgg – Furi",
       "distance": 2600,
       "duration": 2.6,
       "difficulty": "black"
@@ -2639,7 +2639,7 @@
       "from": "station_42",
       "to": "station_13",
       "type": "piste",
-      "name": "Skiweg",
+      "name": "61 Skiweg",
       "distance": 1277,
       "duration": 1.9,
       "difficulty": "red"
@@ -2649,7 +2649,7 @@
       "from": "station_78",
       "to": "station_13",
       "type": "piste",
-      "name": "Garten",
+      "name": "64 Garten",
       "distance": 875,
       "duration": 1.3,
       "difficulty": "red"
@@ -2659,7 +2659,7 @@
       "from": "station_79",
       "to": "station_78",
       "type": "piste",
-      "name": "Schusspiste",
+      "name": "70 Schusspiste",
       "distance": 812,
       "duration": 1.2,
       "difficulty": "red"
@@ -2669,7 +2669,7 @@
       "from": "station_15",
       "to": "station_80",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 2236,
       "duration": 3.4,
       "difficulty": "red"
@@ -2679,7 +2679,7 @@
       "from": "station_18",
       "to": "station_81",
       "type": "piste",
-      "name": "Testa Grigia",
+      "name": "80 Testa Grigia",
       "distance": 345,
       "duration": 0.5,
       "difficulty": "red"
@@ -2689,7 +2689,7 @@
       "from": "station_41",
       "to": "station_18",
       "type": "piste",
-      "name": "Testa II",
+      "name": "88 Testa II",
       "distance": 758,
       "duration": 1.5,
       "difficulty": "blue"
@@ -2699,7 +2699,7 @@
       "from": "station_18",
       "to": "station_17",
       "type": "piste",
-      "name": "Ventina Ghiacciaio",
+      "name": "7 Ventina Ghiacciaio",
       "distance": 3092,
       "duration": 4.6,
       "difficulty": "red"
@@ -2709,7 +2709,7 @@
       "from": "station_82",
       "to": "station_83",
       "type": "piste",
-      "name": "Ventina-Cieloalto",
+      "name": "13 Ventina-Cieloalto",
       "distance": 357,
       "duration": 0.5,
       "difficulty": "red"
@@ -2719,7 +2719,7 @@
       "from": "station_84",
       "to": "station_85",
       "type": "piste",
-      "name": "Ventina-Cieloalto",
+      "name": "13 Ventina-Cieloalto",
       "distance": 330,
       "duration": 0.5,
       "difficulty": "red"
@@ -2729,7 +2729,7 @@
       "from": "station_86",
       "to": "station_87",
       "type": "piste",
-      "name": "Alpe Giomein 1",
+      "name": "29Bis Alpe Giomein 1",
       "distance": 635,
       "duration": 1.0,
       "difficulty": "red"
@@ -2739,7 +2739,7 @@
       "from": "station_20",
       "to": "station_19",
       "type": "piste",
-      "name": "Plan Maison 1",
+      "name": "6.00 Plan Maison",
       "distance": 2522,
       "duration": 5.0,
       "difficulty": "blue"
@@ -2749,7 +2749,7 @@
       "from": "station_10",
       "to": "station_14",
       "type": "piste",
-      "name": "Theodulsee",
+      "name": "66 Theodulsee",
       "distance": 955,
       "duration": 1.4,
       "difficulty": "red"
@@ -2759,7 +2759,7 @@
       "from": "station_14",
       "to": "station_88",
       "type": "piste",
-      "name": "Rennstrecke",
+      "name": "65 Rennstrecke",
       "distance": 450,
       "duration": 0.7,
       "difficulty": "red"
@@ -2769,7 +2769,7 @@
       "from": "station_88",
       "to": "station_13",
       "type": "piste",
-      "name": "Sandiger Boden",
+      "name": "63 Sandiger Boden",
       "distance": 831,
       "duration": 1.2,
       "difficulty": "red"
@@ -2779,7 +2779,7 @@
       "from": "station_21",
       "to": "station_20",
       "type": "piste",
-      "name": "Fornet 1",
+      "name": "6.0 Fornet 1",
       "distance": 833,
       "duration": 1.2,
       "difficulty": "red"
@@ -2789,7 +2789,7 @@
       "from": "station_22",
       "to": "station_89",
       "type": "piste",
-      "name": "Plateau Rosa - Bontadini",
+      "name": "6 Plateau Rosa-Bontadini",
       "distance": 476,
       "duration": 0.7,
       "difficulty": "red"
@@ -2799,7 +2799,7 @@
       "from": "station_1",
       "to": "station_27",
       "type": "piste",
-      "name": "Eisfluh",
+      "name": "5 Eisfluh",
       "distance": 718,
       "duration": 1.4,
       "difficulty": "blue"
@@ -2809,7 +2809,7 @@
       "from": "station_1",
       "to": "station_28",
       "type": "piste",
-      "name": "Easy Run",
+      "name": "6 Easy run",
       "distance": 1692,
       "duration": 3.4,
       "difficulty": "blue"
@@ -2829,7 +2829,7 @@
       "from": "station_75",
       "to": "station_92",
       "type": "piste",
-      "name": "Iglupiste",
+      "name": "45 Iglupiste",
       "distance": 900,
       "duration": 1.8,
       "difficulty": "blue"
@@ -2839,7 +2839,7 @@
       "from": "station_93",
       "to": "station_9",
       "type": "piste",
-      "name": "Rotenboden",
+      "name": "38 Rotenboden",
       "distance": 1718,
       "duration": 3.4,
       "difficulty": "blue"
@@ -2849,7 +2849,7 @@
       "from": "station_42",
       "to": "station_94",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 706,
       "duration": 1.4,
       "difficulty": "blue"
@@ -2859,7 +2859,7 @@
       "from": "station_95",
       "to": "station_32",
       "type": "piste",
-      "name": "Plateau Rosa",
+      "name": "83 Plateau Rosa",
       "distance": 926,
       "duration": 1.4,
       "difficulty": "red"
@@ -2869,7 +2869,7 @@
       "from": "station_94",
       "to": "station_96",
       "type": "piste",
-      "name": "Weisse Perle",
+      "name": "51 Weisse Perle",
       "distance": 1079,
       "duration": 1.6,
       "difficulty": "red"
@@ -2879,7 +2879,7 @@
       "from": "station_97",
       "to": "station_98",
       "type": "piste",
-      "name": "H\u00f6rnli",
+      "name": "54 Hörnli",
       "distance": 644,
       "duration": 1.0,
       "difficulty": "red"
@@ -2889,7 +2889,7 @@
       "from": "station_96",
       "to": "station_99",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 321,
       "duration": 0.5,
       "difficulty": "red"
@@ -2899,7 +2899,7 @@
       "from": "station_100",
       "to": "station_25",
       "type": "piste",
-      "name": "Pirovano-Cervinia",
+      "name": "3.00 Pirovano-Cervinia",
       "distance": 552,
       "duration": 0.8,
       "difficulty": "red"
@@ -2909,7 +2909,7 @@
       "from": "station_100",
       "to": "station_23",
       "type": "piste",
-      "name": "Falliniere",
+      "name": "3Bis Falliniere",
       "distance": 1048,
       "duration": 1.6,
       "difficulty": "red"
@@ -2919,7 +2919,7 @@
       "from": "station_19",
       "to": "station_101",
       "type": "piste",
-      "name": "Plan Maison-Cervinia",
+      "name": "5 Plan Maison-Cervinia",
       "distance": 228,
       "duration": 0.5,
       "difficulty": "blue"
@@ -2929,7 +2929,7 @@
       "from": "station_43",
       "to": "station_102",
       "type": "piste",
-      "name": "Gran Roc-Pre de Veau",
+      "name": "11 Gran Roc-Pre de Veau",
       "distance": 551,
       "duration": 0.8,
       "difficulty": "red"
@@ -2939,7 +2939,7 @@
       "from": "station_21",
       "to": "station_103",
       "type": "piste",
-      "name": "Theodulo - Plan Maison",
+      "name": "6Bis Theodulo-Plan Maison",
       "distance": 2499,
       "duration": 3.7,
       "difficulty": "red"
@@ -2949,7 +2949,7 @@
       "from": "station_30",
       "to": "station_25",
       "type": "piste",
-      "name": "Cretaz",
+      "name": "2 Cretaz",
       "distance": 667,
       "duration": 1.3,
       "difficulty": "blue"
@@ -2959,7 +2959,7 @@
       "from": "station_87",
       "to": "station_19",
       "type": "piste",
-      "name": "Alpe Giomein 2",
+      "name": "10 Alpe Giomein 2",
       "distance": 505,
       "duration": 1.0,
       "difficulty": "blue"
@@ -2969,7 +2969,7 @@
       "from": "station_31",
       "to": "station_19",
       "type": "piste",
-      "name": "Baby La Vieille 1",
+      "name": "8 Baby La Vieille 1",
       "distance": 545,
       "duration": 1.1,
       "difficulty": "blue"
@@ -2979,7 +2979,7 @@
       "from": "station_83",
       "to": "station_104",
       "type": "piste",
-      "name": "Ventina-Cieloalto",
+      "name": "13 Ventina-Cieloalto",
       "distance": 256,
       "duration": 0.4,
       "difficulty": "red"
@@ -2989,7 +2989,7 @@
       "from": "station_105",
       "to": "station_2",
       "type": "piste",
-      "name": "Obere National",
+      "name": "8 Obere National",
       "distance": 1383,
       "duration": 1.4,
       "difficulty": "black"
@@ -2999,7 +2999,7 @@
       "from": "station_106",
       "to": "station_70",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 1423,
       "duration": 2.1,
       "difficulty": "red"
@@ -3009,7 +3009,7 @@
       "from": "station_6",
       "to": "station_107",
       "type": "piste",
-      "name": "Downhill",
+      "name": "13 Downhill",
       "distance": 862,
       "duration": 0.9,
       "difficulty": "black"
@@ -3019,7 +3019,7 @@
       "from": "station_6",
       "to": "station_107",
       "type": "piste",
-      "name": "Schneehuhn",
+      "name": "12 Schneehuhn",
       "distance": 1140,
       "duration": 1.7,
       "difficulty": "red"
@@ -3029,7 +3029,7 @@
       "from": "station_108",
       "to": "station_12",
       "type": "piste",
-      "name": "Gornergrat",
+      "name": "36 Gornergrat",
       "distance": 691,
       "duration": 1.4,
       "difficulty": "blue"
@@ -3039,7 +3039,7 @@
       "from": "station_109",
       "to": "station_74",
       "type": "piste",
-      "name": "Hoht\u00e4lli",
+      "name": "44 Hohtälli",
       "distance": 491,
       "duration": 0.7,
       "difficulty": "red"
@@ -3059,7 +3059,7 @@
       "from": "station_110",
       "to": "station_9",
       "type": "piste",
-      "name": "Gifthittli",
+      "name": "35 Gifthittli",
       "distance": 1390,
       "duration": 2.1,
       "difficulty": "red"
@@ -3069,7 +3069,7 @@
       "from": "station_111",
       "to": "station_112",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 778,
       "duration": 1.2,
       "difficulty": "red"
@@ -3099,7 +3099,7 @@
       "from": "station_33",
       "to": "station_32",
       "type": "piste",
-      "name": "Ventina Glacier",
+      "name": "84 Ventina Glacier",
       "distance": 1453,
       "duration": 2.2,
       "difficulty": "red"
@@ -3109,7 +3109,7 @@
       "from": "station_38",
       "to": "station_39",
       "type": "piste",
-      "name": "Du Col",
+      "name": "10 Du Col",
       "distance": 314,
       "duration": 0.6,
       "difficulty": "blue"
@@ -3119,7 +3119,7 @@
       "from": "station_38",
       "to": "station_115",
       "type": "piste",
-      "name": "Reine Bianche",
+      "name": "1 Reine Blanche",
       "distance": 1015,
       "duration": 1.5,
       "difficulty": "red"
@@ -3129,7 +3129,7 @@
       "from": "station_116",
       "to": "station_36",
       "type": "piste",
-      "name": "E. Noussan",
+      "name": "15 E. Noussan",
       "distance": 1713,
       "duration": 2.6,
       "difficulty": "red"
@@ -3139,7 +3139,7 @@
       "from": "station_117",
       "to": "station_40",
       "type": "piste",
-      "name": "Ventina - Colle Cime Bianche",
+      "name": "35 Ventina-Colle Cime Bianche",
       "distance": 752,
       "duration": 1.1,
       "difficulty": "red"
@@ -3149,7 +3149,7 @@
       "from": "station_40",
       "to": "station_39",
       "type": "piste",
-      "name": "Gran Sometta",
+      "name": "11 Gran Sometta",
       "distance": 1504,
       "duration": 3.0,
       "difficulty": "blue"
@@ -3159,7 +3159,7 @@
       "from": "station_118",
       "to": "station_119",
       "type": "piste",
-      "name": "Gran Pista di Valtournenche",
+      "name": "1 Reine Blanche",
       "distance": 702,
       "duration": 1.1,
       "difficulty": "red"
@@ -3169,7 +3169,7 @@
       "from": "station_119",
       "to": "station_34",
       "type": "piste",
-      "name": "Gran Pista di Valtournenche",
+      "name": "1 Reine Blanche",
       "distance": 369,
       "duration": 0.6,
       "difficulty": "red"
@@ -3179,7 +3179,7 @@
       "from": "station_17",
       "to": "station_82",
       "type": "piste",
-      "name": "Ventina Goillet",
+      "name": "7.0 Ventina Goillet",
       "distance": 2537,
       "duration": 3.8,
       "difficulty": "red"
@@ -3189,7 +3189,7 @@
       "from": "station_81",
       "to": "station_22",
       "type": "piste",
-      "name": "Plateau Rosa - Bontadini",
+      "name": "6 Plateau Rosa-Bontadini",
       "distance": 607,
       "duration": 0.9,
       "difficulty": "red"
@@ -3199,7 +3199,7 @@
       "from": "station_121",
       "to": "station_122",
       "type": "piste",
-      "name": "Pancheron",
+      "name": "24 Pancheron",
       "distance": 499,
       "duration": 0.7,
       "difficulty": "red"
@@ -3209,7 +3209,7 @@
       "from": "station_123",
       "to": "station_30",
       "type": "piste",
-      "name": "Muro Europa",
+      "name": "12 Muro Europa",
       "distance": 326,
       "duration": 0.3,
       "difficulty": "black"
@@ -3219,7 +3219,7 @@
       "from": "station_40",
       "to": "station_124",
       "type": "piste",
-      "name": "Gran Sometta 2",
+      "name": "38 Gran Sometta 2",
       "distance": 665,
       "duration": 1.0,
       "difficulty": "red"
@@ -3229,7 +3229,7 @@
       "from": "station_40",
       "to": "station_125",
       "type": "piste",
-      "name": "Gran Sometta 3",
+      "name": "37 Gran Sometta 3",
       "distance": 1665,
       "duration": 2.5,
       "difficulty": "red"
@@ -3239,7 +3239,7 @@
       "from": "station_82",
       "to": "station_126",
       "type": "piste",
-      "name": "Ventina Bardoney 1",
+      "name": "7.00 Ventina Bardoney 1",
       "distance": 1858,
       "duration": 2.8,
       "difficulty": "red"
@@ -3249,7 +3249,7 @@
       "from": "station_127",
       "to": "station_128",
       "type": "piste",
-      "name": "Ried",
+      "name": "2 Ried",
       "distance": 235,
       "duration": 0.4,
       "difficulty": "red"
@@ -3259,7 +3259,7 @@
       "from": "station_3",
       "to": "station_106",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 158,
       "duration": 0.2,
       "difficulty": "red"
@@ -3279,7 +3279,7 @@
       "from": "station_22",
       "to": "station_89",
       "type": "piste",
-      "name": "Bontadini",
+      "name": "46 Bontadini 2",
       "distance": 545,
       "duration": 0.8,
       "difficulty": "red"
@@ -3289,7 +3289,7 @@
       "from": "station_31",
       "to": "station_19",
       "type": "piste",
-      "name": "Baby La Vieille 2",
+      "name": "8Bis Baby La Vieille 2",
       "distance": 524,
       "duration": 1.0,
       "difficulty": "blue"
@@ -3299,7 +3299,7 @@
       "from": "station_18",
       "to": "station_32",
       "type": "piste",
-      "name": "Verbindungspiste",
+      "name": "87 Verbindungspiste",
       "distance": 622,
       "duration": 1.2,
       "difficulty": "blue"
@@ -3319,7 +3319,7 @@
       "from": "station_65",
       "to": "station_47",
       "type": "piste",
-      "name": "Gobba di Rollin",
+      "name": "86 Gobba di Rollin",
       "distance": 930,
       "duration": 1.9,
       "difficulty": "blue"
@@ -3329,7 +3329,7 @@
       "from": "station_33",
       "to": "station_114",
       "type": "piste",
-      "name": "Plateau Rosa",
+      "name": "83 Plateau Rosa",
       "distance": 373,
       "duration": 0.6,
       "difficulty": "red"
@@ -3349,7 +3349,7 @@
       "from": "station_83",
       "to": "station_130",
       "type": "piste",
-      "name": "Bardoney",
+      "name": "33 Bardoney",
       "distance": 845,
       "duration": 1.3,
       "difficulty": "red"
@@ -3359,7 +3359,7 @@
       "from": "station_124",
       "to": "station_131",
       "type": "piste",
-      "name": "Gaspard",
+      "name": "39 Gaspard",
       "distance": 789,
       "duration": 1.2,
       "difficulty": "red"
@@ -3369,7 +3369,7 @@
       "from": "station_133",
       "to": "station_36",
       "type": "piste",
-      "name": "Rientro 1",
+      "name": "7 Rientro 1",
       "distance": 700,
       "duration": 1.4,
       "difficulty": "blue"
@@ -3379,7 +3379,7 @@
       "from": "station_38",
       "to": "station_36",
       "type": "piste",
-      "name": "S. Canestrini",
+      "name": "5 S. Canestrini",
       "distance": 1851,
       "duration": 2.8,
       "difficulty": "red"
@@ -3389,7 +3389,7 @@
       "from": "station_87",
       "to": "station_26",
       "type": "piste",
-      "name": "Plan Torrette",
+      "name": "4 Plan Torrette",
       "distance": 801,
       "duration": 1.6,
       "difficulty": "blue"
@@ -3399,7 +3399,7 @@
       "from": "station_89",
       "to": "station_21",
       "type": "piste",
-      "name": "Plateau Rosa - Bontadini",
+      "name": "6 Plateau Rosa-Bontadini",
       "distance": 623,
       "duration": 0.9,
       "difficulty": "red"
@@ -3409,7 +3409,7 @@
       "from": "station_89",
       "to": "station_21",
       "type": "piste",
-      "name": "Bontadini 2",
+      "name": "46 Bontadini 2",
       "distance": 815,
       "duration": 1.2,
       "difficulty": "red"
@@ -3419,7 +3419,7 @@
       "from": "station_83",
       "to": "station_84",
       "type": "piste",
-      "name": "Ventina-Cieloalto",
+      "name": "13 Ventina-Cieloalto",
       "distance": 1157,
       "duration": 1.7,
       "difficulty": "red"
@@ -3429,7 +3429,7 @@
       "from": "station_46",
       "to": "station_84",
       "type": "piste",
-      "name": "Cieloalto 1",
+      "name": "21 Cieloalto 1",
       "distance": 907,
       "duration": 0.9,
       "difficulty": "black"
@@ -3439,7 +3439,7 @@
       "from": "station_45",
       "to": "station_135",
       "type": "piste",
-      "name": "Cieloalto-Cervinia",
+      "name": "16 Cieloalto-Cervinia",
       "distance": 441,
       "duration": 0.7,
       "difficulty": "red"
@@ -3449,7 +3449,7 @@
       "from": "station_136",
       "to": "station_84",
       "type": "piste",
-      "name": "Cieloalto 2",
+      "name": "22 Cieloalto 2",
       "distance": 522,
       "duration": 0.5,
       "difficulty": "black"
@@ -3459,7 +3459,7 @@
       "from": "station_21",
       "to": "station_20",
       "type": "piste",
-      "name": "Fornet 2",
+      "name": "47 Fornet 2",
       "distance": 820,
       "duration": 1.2,
       "difficulty": "red"
@@ -3469,7 +3469,7 @@
       "from": "station_70",
       "to": "station_139",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 270,
       "duration": 0.4,
       "difficulty": "red"
@@ -3479,7 +3479,7 @@
       "from": "station_1",
       "to": "station_137",
       "type": "piste",
-      "name": "Easy Run via Paradies",
+      "name": "6a Easy run",
       "distance": 871,
       "duration": 1.3,
       "difficulty": "red"
@@ -3489,7 +3489,7 @@
       "from": "station_73",
       "to": "station_140",
       "type": "piste",
-      "name": "Kelle",
+      "name": "29 Kelle",
       "distance": 572,
       "duration": 0.6,
       "difficulty": "black"
@@ -3499,7 +3499,7 @@
       "from": "station_94",
       "to": "station_141",
       "type": "piste",
-      "name": "Kuhbodmen",
+      "name": "56 Kuhbodmen",
       "distance": 1398,
       "duration": 2.8,
       "difficulty": "blue"
@@ -3509,7 +3509,7 @@
       "from": "station_94",
       "to": "station_97",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 454,
       "duration": 0.7,
       "difficulty": "red"
@@ -3519,7 +3519,7 @@
       "from": "station_142",
       "to": "station_23",
       "type": "piste",
-      "name": "Pirovano - Cervinia",
+      "name": "3.00 Pirovano-Cervinia",
       "distance": 201,
       "duration": 0.3,
       "difficulty": "red"
@@ -3529,7 +3529,7 @@
       "from": "station_30",
       "to": "station_25",
       "type": "piste",
-      "name": "Pirovano - Cervinia",
+      "name": "3.00 Pirovano-Cervinia",
       "distance": 401,
       "duration": 0.6,
       "difficulty": "red"
@@ -3539,7 +3539,7 @@
       "from": "station_44",
       "to": "station_121",
       "type": "piste",
-      "name": "Rocce Nere 1",
+      "name": "26 Rocce Nere 1",
       "distance": 513,
       "duration": 1.0,
       "difficulty": "blue"
@@ -3549,7 +3549,7 @@
       "from": "station_143",
       "to": "station_21",
       "type": "piste",
-      "name": "Theodulo - Plan Maison",
+      "name": "6Bis Theodulo-Plan Maison",
       "distance": 300,
       "duration": 0.4,
       "difficulty": "red"
@@ -3559,7 +3559,7 @@
       "from": "station_144",
       "to": "station_133",
       "type": "piste",
-      "name": "Canalino",
+      "name": "6 Canalino",
       "distance": 850,
       "duration": 1.3,
       "difficulty": "red"
@@ -3579,7 +3579,7 @@
       "from": "station_145",
       "to": "station_146",
       "type": "piste",
-      "name": "Marmotte",
+      "name": "17 Marmotte",
       "distance": 1666,
       "duration": 1.7,
       "difficulty": "black"
@@ -3589,7 +3589,7 @@
       "from": "station_147",
       "to": "station_62",
       "type": "piste",
-      "name": "Arbzug",
+      "name": "18 Arbzug",
       "distance": 825,
       "duration": 0.8,
       "difficulty": "black"
@@ -3599,7 +3599,7 @@
       "from": "station_148",
       "to": "station_149",
       "type": "piste",
-      "name": "Chamois",
+      "name": "16 Chamois",
       "distance": 1295,
       "duration": 1.3,
       "difficulty": "black"
@@ -3609,7 +3609,7 @@
       "from": "station_150",
       "to": "station_151",
       "type": "piste",
-      "name": "Moosstrasse",
+      "name": "43 Moosstrasse",
       "distance": 1097,
       "duration": 1.1,
       "difficulty": "black"
@@ -3619,7 +3619,7 @@
       "from": "station_111",
       "to": "station_60",
       "type": "piste",
-      "name": "Matterhorn",
+      "name": "69 Matterhorn",
       "distance": 5361,
       "duration": 8.0,
       "difficulty": "red"
@@ -3629,7 +3629,7 @@
       "from": "station_53",
       "to": "station_152",
       "type": "piste",
-      "name": "Gandegg",
+      "name": "73 Gandegg",
       "distance": 1986,
       "duration": 3.0,
       "difficulty": "red"
@@ -3639,7 +3639,7 @@
       "from": "station_43",
       "to": "station_30",
       "type": "piste",
-      "name": "Plan Maison - Cervinia",
+      "name": "5 Plan Maison-Cervinia",
       "distance": 2584,
       "duration": 5.2,
       "difficulty": "blue"
@@ -3659,7 +3659,7 @@
       "from": "station_121",
       "to": "station_31",
       "type": "piste",
-      "name": "Rocce Nere 1",
+      "name": "26 Rocce Nere 1",
       "distance": 1477,
       "duration": 3.0,
       "difficulty": "blue"
@@ -3669,7 +3669,7 @@
       "from": "station_15",
       "to": "station_152",
       "type": "piste",
-      "name": "Furggsattel",
+      "name": "72 Furggsattel",
       "distance": 1735,
       "duration": 2.6,
       "difficulty": "red"
@@ -3679,7 +3679,7 @@
       "from": "station_29",
       "to": "station_154",
       "type": "piste",
-      "name": "Gr\u00fcnsee",
+      "name": "26 Grünsee",
       "distance": 866,
       "duration": 1.3,
       "difficulty": "red"
@@ -3689,7 +3689,7 @@
       "from": "station_121",
       "to": "station_43",
       "type": "piste",
-      "name": "Rocce Bianche",
+      "name": "29 Rocce Bianche",
       "distance": 1838,
       "duration": 2.8,
       "difficulty": "red"
@@ -3699,7 +3699,7 @@
       "from": "station_155",
       "to": "station_156",
       "type": "piste",
-      "name": "Pancheron",
+      "name": "24 Pancheron",
       "distance": 261,
       "duration": 0.4,
       "difficulty": "red"
@@ -3709,7 +3709,7 @@
       "from": "station_122",
       "to": "station_155",
       "type": "piste",
-      "name": "Variante Pancheron",
+      "name": "24Bis Variante Pancheron",
       "distance": 560,
       "duration": 0.6,
       "difficulty": "black"
@@ -3719,7 +3719,7 @@
       "from": "station_44",
       "to": "station_121",
       "type": "piste",
-      "name": "Pancheron",
+      "name": "24 Pancheron",
       "distance": 308,
       "duration": 0.5,
       "difficulty": "red"
@@ -3729,7 +3729,7 @@
       "from": "station_157",
       "to": "station_49",
       "type": "piste",
-      "name": "Gran Pista di Valtournenche",
+      "name": "1 Reine Blanche",
       "distance": 1777,
       "duration": 2.7,
       "difficulty": "red"
@@ -3739,7 +3739,7 @@
       "from": "station_50",
       "to": "station_158",
       "type": "piste",
-      "name": "Baracon",
+      "name": "9 Baracon",
       "distance": 1012,
       "duration": 2.0,
       "difficulty": "blue"
@@ -3749,7 +3749,7 @@
       "from": "station_36",
       "to": "station_35",
       "type": "piste",
-      "name": "Rientro 1",
+      "name": "7 Rientro 1",
       "distance": 1210,
       "duration": 2.4,
       "difficulty": "blue"
@@ -3759,7 +3759,7 @@
       "from": "station_159",
       "to": "station_160",
       "type": "piste",
-      "name": "Tunnel",
+      "name": "14 Tunnel",
       "distance": 586,
       "duration": 1.2,
       "difficulty": "blue"
@@ -3769,7 +3769,7 @@
       "from": "station_49",
       "to": "station_118",
       "type": "piste",
-      "name": "Gran Pista di Valtournenche",
+      "name": "1 Reine Blanche",
       "distance": 2159,
       "duration": 3.2,
       "difficulty": "red"
@@ -3779,7 +3779,7 @@
       "from": "station_36",
       "to": "station_161",
       "type": "piste",
-      "name": "Motta",
+      "name": "4 Motta",
       "distance": 192,
       "duration": 0.4,
       "difficulty": "blue"
@@ -3789,7 +3789,7 @@
       "from": "station_35",
       "to": "station_49",
       "type": "piste",
-      "name": "Salette",
+      "name": "8b Salette",
       "distance": 383,
       "duration": 0.6,
       "difficulty": "red"
@@ -3799,7 +3799,7 @@
       "from": "station_116",
       "to": "station_115",
       "type": "piste",
-      "name": "Chateau",
+      "name": "1a Chateau",
       "distance": 753,
       "duration": 1.1,
       "difficulty": "red"
@@ -3809,7 +3809,7 @@
       "from": "station_163",
       "to": "station_35",
       "type": "piste",
-      "name": "Campetto",
+      "name": "2 Campetto",
       "distance": 459,
       "duration": 0.9,
       "difficulty": "blue"
@@ -3819,7 +3819,7 @@
       "from": "station_115",
       "to": "station_164",
       "type": "piste",
-      "name": "Gran Collet",
+      "name": "16 Gran Collet",
       "distance": 974,
       "duration": 1.5,
       "difficulty": "red"
@@ -3829,7 +3829,7 @@
       "from": "station_36",
       "to": "station_165",
       "type": "piste",
-      "name": "Crot",
+      "name": "3 Crot",
       "distance": 529,
       "duration": 1.1,
       "difficulty": "blue"
@@ -3839,7 +3839,7 @@
       "from": "station_50",
       "to": "station_51",
       "type": "piste",
-      "name": "Roisette",
+      "name": "8 Roisette",
       "distance": 612,
       "duration": 1.2,
       "difficulty": "blue"
@@ -3849,7 +3849,7 @@
       "from": "station_50",
       "to": "station_49",
       "type": "piste",
-      "name": "Becca d'Aran",
+      "name": "8a Becca d'Aran",
       "distance": 809,
       "duration": 1.2,
       "difficulty": "red"
@@ -3859,7 +3859,7 @@
       "from": "station_40",
       "to": "station_39",
       "type": "piste",
-      "name": "Gran Lago",
+      "name": "12 Gran Lago",
       "distance": 1130,
       "duration": 1.7,
       "difficulty": "red"
@@ -3869,7 +3869,7 @@
       "from": "station_168",
       "to": "station_130",
       "type": "piste",
-      "name": "Bardoney",
+      "name": "33 Bardoney",
       "distance": 341,
       "duration": 0.5,
       "difficulty": "red"
@@ -3879,7 +3879,7 @@
       "from": "station_169",
       "to": "station_43",
       "type": "piste",
-      "name": "Pancheron",
+      "name": "24 Pancheron",
       "distance": 1199,
       "duration": 1.8,
       "difficulty": "red"
@@ -3889,7 +3889,7 @@
       "from": "station_44",
       "to": "station_170",
       "type": "piste",
-      "name": "Pista Nera del Cervino",
+      "name": "59 Pista Nera del Cervino",
       "distance": 842,
       "duration": 0.8,
       "difficulty": "black"
@@ -3909,7 +3909,7 @@
       "from": "station_97",
       "to": "station_172",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 1424,
       "duration": 2.1,
       "difficulty": "red"
@@ -3919,7 +3919,7 @@
       "from": "station_56",
       "to": "station_11",
       "type": "piste",
-      "name": "Zen Steckenstrasse",
+      "name": "50 Zen Steckenstrasse",
       "distance": 210,
       "duration": 0.3,
       "difficulty": "red"
@@ -3929,7 +3929,7 @@
       "from": "station_8",
       "to": "station_56",
       "type": "piste",
-      "name": "Blatten",
+      "name": "50 Blatten",
       "distance": 1573,
       "duration": 2.4,
       "difficulty": "red"
@@ -3939,7 +3939,7 @@
       "from": "station_175",
       "to": "station_28",
       "type": "piste",
-      "name": "Berter",
+      "name": "25 Berter",
       "distance": 866,
       "duration": 0.9,
       "difficulty": "black"
@@ -3949,7 +3949,7 @@
       "from": "station_61",
       "to": "station_176",
       "type": "piste",
-      "name": "Hirli",
+      "name": "55 Hirli",
       "distance": 575,
       "duration": 0.9,
       "difficulty": "red"
@@ -3959,7 +3959,7 @@
       "from": "station_177",
       "to": "station_60",
       "type": "piste",
-      "name": "Tumigu",
+      "name": "68 Tumigu",
       "distance": 886,
       "duration": 0.9,
       "difficulty": "black"
@@ -3969,7 +3969,7 @@
       "from": "station_80",
       "to": "station_79",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 564,
       "duration": 0.8,
       "difficulty": "red"
@@ -3979,7 +3979,7 @@
       "from": "station_174",
       "to": "station_178",
       "type": "piste",
-      "name": "Riffelboden",
+      "name": "40 Riffelboden",
       "distance": 824,
       "duration": 1.2,
       "difficulty": "red"
@@ -3989,7 +3989,7 @@
       "from": "station_42",
       "to": "station_141",
       "type": "piste",
-      "name": "Aroleid",
+      "name": "57 Aroleid",
       "distance": 1003,
       "duration": 1.5,
       "difficulty": "red"
@@ -4009,7 +4009,7 @@
       "from": "station_139",
       "to": "station_2",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 1457,
       "duration": 2.2,
       "difficulty": "red"
@@ -4019,7 +4019,7 @@
       "from": "station_70",
       "to": "station_139",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 265,
       "duration": 0.4,
       "difficulty": "red"
@@ -4029,7 +4029,7 @@
       "from": "station_128",
       "to": "station_184",
       "type": "piste",
-      "name": "Riedweg",
+      "name": "2a Riedweg",
       "distance": 458,
       "duration": 0.7,
       "difficulty": "red"
@@ -4039,7 +4039,7 @@
       "from": "station_185",
       "to": "station_178",
       "type": "piste",
-      "name": "Balmbrunnen",
+      "name": "27 Balmbrunnen",
       "distance": 252,
       "duration": 0.4,
       "difficulty": "red"
@@ -4049,7 +4049,7 @@
       "from": "station_175",
       "to": "station_183",
       "type": "piste",
-      "name": "Gr\u00fcnsee",
+      "name": "26 Grünsee",
       "distance": 382,
       "duration": 0.6,
       "difficulty": "red"
@@ -4059,7 +4059,7 @@
       "from": "station_183",
       "to": "station_4",
       "type": "piste",
-      "name": "Gr\u00fcnsee",
+      "name": "26 Grünsee",
       "distance": 394,
       "duration": 0.6,
       "difficulty": "red"
@@ -4079,7 +4079,7 @@
       "from": "station_99",
       "to": "station_54",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 632,
       "duration": 0.9,
       "difficulty": "red"
@@ -4089,7 +4089,7 @@
       "from": "station_59",
       "to": "station_8",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 2873,
       "duration": 4.3,
       "difficulty": "red"
@@ -4099,7 +4099,7 @@
       "from": "station_180",
       "to": "station_188",
       "type": "piste",
-      "name": "Momatt",
+      "name": "60 Momatt",
       "distance": 1208,
       "duration": 1.2,
       "difficulty": "black"
@@ -4109,7 +4109,7 @@
       "from": "station_180",
       "to": "station_189",
       "type": "piste",
-      "name": "Tiefbach",
+      "name": "59 Tiefbach",
       "distance": 1167,
       "duration": 1.2,
       "difficulty": "black"
@@ -4119,7 +4119,7 @@
       "from": "station_141",
       "to": "station_66",
       "type": "piste",
-      "name": "Hermetje",
+      "name": "58 Hermetje",
       "distance": 1019,
       "duration": 1.0,
       "difficulty": "black"
@@ -4129,7 +4129,7 @@
       "from": "station_156",
       "to": "station_190",
       "type": "piste",
-      "name": "Gran Roc",
+      "name": "62 Gran Roc",
       "distance": 888,
       "duration": 0.9,
       "difficulty": "black"
@@ -4139,7 +4139,7 @@
       "from": "station_191",
       "to": "station_192",
       "type": "piste",
-      "name": "Vallone 5bis",
+      "name": "5Bis Vallone 5",
       "distance": 731,
       "duration": 0.7,
       "difficulty": "black"
@@ -4149,7 +4149,7 @@
       "from": "station_115",
       "to": "station_157",
       "type": "piste",
-      "name": "Chateau",
+      "name": "1a Chateau",
       "distance": 698,
       "duration": 1.0,
       "difficulty": "red"
@@ -4159,7 +4159,7 @@
       "from": "station_115",
       "to": "station_157",
       "type": "piste",
-      "name": "Reine Bianche",
+      "name": "1 Reine Blanche",
       "distance": 647,
       "duration": 1.0,
       "difficulty": "red"
@@ -4169,7 +4169,7 @@
       "from": "station_36",
       "to": "station_35",
       "type": "piste",
-      "name": "Motta",
+      "name": "4 Motta",
       "distance": 1251,
       "duration": 2.5,
       "difficulty": "blue"
@@ -4179,7 +4179,7 @@
       "from": "station_151",
       "to": "station_56",
       "type": "piste",
-      "name": "Moos",
+      "name": "43 Moos",
       "distance": 436,
       "duration": 0.4,
       "difficulty": "black"
@@ -4189,7 +4189,7 @@
       "from": "station_193",
       "to": "station_194",
       "type": "piste",
-      "name": "White Hare",
+      "name": "28 White Hare",
       "distance": 2346,
       "duration": 3.5,
       "difficulty": "red"
@@ -4199,7 +4199,7 @@
       "from": "station_195",
       "to": "station_185",
       "type": "piste",
-      "name": "Balmbrunnen",
+      "name": "27 Balmbrunnen",
       "distance": 690,
       "duration": 1.0,
       "difficulty": "red"
@@ -4209,7 +4209,7 @@
       "from": "station_196",
       "to": "station_59",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 584,
       "duration": 0.9,
       "difficulty": "red"
@@ -4219,7 +4219,7 @@
       "from": "station_155",
       "to": "station_190",
       "type": "piste",
-      "name": "Morene del Furggen",
+      "name": "9Bis Morene del Furggen",
       "distance": 1221,
       "duration": 1.8,
       "difficulty": "red"
@@ -4229,7 +4229,7 @@
       "from": "station_197",
       "to": "station_155",
       "type": "piste",
-      "name": "Pista Nera del Cervino",
+      "name": "59 Pista Nera del Cervino",
       "distance": 643,
       "duration": 0.6,
       "difficulty": "black"
@@ -4239,7 +4239,7 @@
       "from": "station_198",
       "to": "station_103",
       "type": "piste",
-      "name": "Plan Maison 1",
+      "name": "6.00 Plan Maison",
       "distance": 353,
       "duration": 0.7,
       "difficulty": "blue"
@@ -4249,7 +4249,7 @@
       "from": "station_61",
       "to": "station_200",
       "type": "piste",
-      "name": "Oberer Tiefbach",
+      "name": "53 Oberer Tiefbach",
       "distance": 1173,
       "duration": 1.8,
       "difficulty": "red"
@@ -4269,7 +4269,7 @@
       "from": "station_61",
       "to": "station_97",
       "type": "piste",
-      "name": "H\u00f6rnli",
+      "name": "54 Hörnli",
       "distance": 850,
       "duration": 0.9,
       "difficulty": "black"
@@ -4279,7 +4279,7 @@
       "from": "station_2",
       "to": "station_201",
       "type": "piste",
-      "name": "Ried",
+      "name": "2 Ried",
       "distance": 789,
       "duration": 1.2,
       "difficulty": "red"
@@ -4289,7 +4289,7 @@
       "from": "station_73",
       "to": "station_29",
       "type": "piste",
-      "name": "Kelle",
+      "name": "29 Kelle",
       "distance": 2023,
       "duration": 3.0,
       "difficulty": "red"
@@ -4299,7 +4299,7 @@
       "from": "station_26",
       "to": "station_102",
       "type": "piste",
-      "name": "Plan Torrette-Pre de Veau",
+      "name": "3 Plan Torrette-Pre de Veau",
       "distance": 517,
       "duration": 0.8,
       "difficulty": "red"
@@ -4309,7 +4309,7 @@
       "from": "station_102",
       "to": "station_202",
       "type": "piste",
-      "name": "Plan Torrette-Pre de Veau",
+      "name": "3 Plan Torrette-Pre de Veau",
       "distance": 277,
       "duration": 0.4,
       "difficulty": "red"
@@ -4319,7 +4319,7 @@
       "from": "station_202",
       "to": "station_100",
       "type": "piste",
-      "name": "Plan Torrette-Pre de Veau",
+      "name": "3 Plan Torrette-Pre de Veau",
       "distance": 436,
       "duration": 0.7,
       "difficulty": "red"
@@ -4329,7 +4329,7 @@
       "from": "station_19",
       "to": "station_43",
       "type": "piste",
-      "name": "Plan Maison-Cervinia",
+      "name": "5 Plan Maison-Cervinia",
       "distance": 962,
       "duration": 1.9,
       "difficulty": "blue"
@@ -4419,7 +4419,7 @@
       "from": "station_16",
       "to": "station_47",
       "type": "piste",
-      "name": "Gobba di Rollin",
+      "name": "86 Gobba di Rollin",
       "distance": 562,
       "duration": 1.1,
       "difficulty": "blue"
@@ -4429,7 +4429,7 @@
       "from": "station_212",
       "to": "station_50",
       "type": "piste",
-      "name": "Trecar",
+      "name": "1b Trecar",
       "distance": 832,
       "duration": 0.8,
       "difficulty": "black"
@@ -4439,7 +4439,7 @@
       "from": "station_71",
       "to": "station_127",
       "type": "piste",
-      "name": "Ried",
+      "name": "2 Ried",
       "distance": 286,
       "duration": 0.4,
       "difficulty": "red"
@@ -4449,7 +4449,7 @@
       "from": "station_147",
       "to": "station_213",
       "type": "piste",
-      "name": "Tufternkumme",
+      "name": "15 Tufternkumme",
       "distance": 386,
       "duration": 0.6,
       "difficulty": "red"
@@ -4459,7 +4459,7 @@
       "from": "station_63",
       "to": "station_146",
       "type": "piste",
-      "name": "Tufternkumme",
+      "name": "15 Tufternkumme",
       "distance": 1371,
       "duration": 2.1,
       "difficulty": "red"
@@ -4469,7 +4469,7 @@
       "from": "station_146",
       "to": "station_70",
       "type": "piste",
-      "name": "Tufternkumme",
+      "name": "15 Tufternkumme",
       "distance": 589,
       "duration": 0.9,
       "difficulty": "red"
@@ -4479,7 +4479,7 @@
       "from": "station_3",
       "to": "station_214",
       "type": "piste",
-      "name": "Tuftern",
+      "name": "9 Tuftern",
       "distance": 384,
       "duration": 0.6,
       "difficulty": "red"
@@ -4489,7 +4489,7 @@
       "from": "station_105",
       "to": "station_215",
       "type": "piste",
-      "name": "Standard",
+      "name": "7 Standard",
       "distance": 291,
       "duration": 0.6,
       "difficulty": "blue"
@@ -4499,7 +4499,7 @@
       "from": "station_216",
       "to": "station_217",
       "type": "piste",
-      "name": "Easy Run",
+      "name": "6 Easy run",
       "distance": 507,
       "duration": 1.0,
       "difficulty": "blue"
@@ -4509,7 +4509,7 @@
       "from": "station_29",
       "to": "station_195",
       "type": "piste",
-      "name": "Balmbrunnen",
+      "name": "27 Balmbrunnen",
       "distance": 260,
       "duration": 0.4,
       "difficulty": "red"
@@ -4519,7 +4519,7 @@
       "from": "station_154",
       "to": "station_175",
       "type": "piste",
-      "name": "Gr\u00fcnsee",
+      "name": "26 Grünsee",
       "distance": 222,
       "duration": 0.3,
       "difficulty": "red"
@@ -4529,7 +4529,7 @@
       "from": "station_172",
       "to": "station_196",
       "type": "piste",
-      "name": "Stafelalp",
+      "name": "52 Stafelalp",
       "distance": 132,
       "duration": 0.2,
       "difficulty": "red"
@@ -4539,7 +4539,7 @@
       "from": "station_71",
       "to": "station_218",
       "type": "piste",
-      "name": "Untere National",
+      "name": "1 Untere National",
       "distance": 350,
       "duration": 0.5,
       "difficulty": "red"
@@ -4549,7 +4549,7 @@
       "from": "station_218",
       "to": "station_184",
       "type": "piste",
-      "name": "Untere National",
+      "name": "1 Untere National",
       "distance": 161,
       "duration": 0.2,
       "difficulty": "red"
@@ -4559,7 +4559,7 @@
       "from": "station_184",
       "to": "station_219",
       "type": "piste",
-      "name": "Riedweg",
+      "name": "2a Riedweg",
       "distance": 160,
       "duration": 0.2,
       "difficulty": "red"
@@ -4569,7 +4569,7 @@
       "from": "station_201",
       "to": "station_71",
       "type": "piste",
-      "name": "Ried",
+      "name": "2 Ried",
       "distance": 275,
       "duration": 0.4,
       "difficulty": "red"
@@ -4579,7 +4579,7 @@
       "from": "station_220",
       "to": "station_221",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 872,
       "duration": 1.3,
       "difficulty": "red"
@@ -4589,7 +4589,7 @@
       "from": "station_1",
       "to": "station_27",
       "type": "piste",
-      "name": "Eisfluh",
+      "name": "5 Eisfluh",
       "distance": 362,
       "duration": 0.7,
       "difficulty": "blue"
@@ -4599,7 +4599,7 @@
       "from": "station_122",
       "to": "station_155",
       "type": "piste",
-      "name": "Pancheron",
+      "name": "24 Pancheron",
       "distance": 536,
       "duration": 0.8,
       "difficulty": "red"
@@ -4609,7 +4609,7 @@
       "from": "station_46",
       "to": "station_136",
       "type": "piste",
-      "name": "Cieloalto 2",
+      "name": "22 Cieloalto 2",
       "distance": 410,
       "duration": 0.4,
       "difficulty": "black"
@@ -4619,7 +4619,7 @@
       "from": "station_222",
       "to": "station_126",
       "type": "piste",
-      "name": "Raccordo Cieloalto-Bardoney",
+      "name": "34 Raccordo Cieloalto-Bardoney",
       "distance": 1236,
       "duration": 1.9,
       "difficulty": "red"
@@ -4629,7 +4629,7 @@
       "from": "station_22",
       "to": "station_53",
       "type": "piste",
-      "name": "Plateau Rosa - Bontadini",
+      "name": "6 Plateau Rosa-Bontadini",
       "distance": 301,
       "duration": 0.5,
       "difficulty": "red"
@@ -4639,7 +4639,7 @@
       "from": "station_91",
       "to": "station_223",
       "type": "piste",
-      "name": "Landtunnel",
+      "name": "41 Landtunnel",
       "distance": 52,
       "duration": 0.1,
       "difficulty": "red"
@@ -4649,7 +4649,7 @@
       "from": "station_224",
       "to": "station_225",
       "type": "piste",
-      "name": "Bielti",
+      "name": "49 Bielti",
       "distance": 650,
       "duration": 0.7,
       "difficulty": "black"
@@ -4659,7 +4659,7 @@
       "from": "station_135",
       "to": "station_23",
       "type": "piste",
-      "name": "Cieloalto-Cervinia",
+      "name": "16 Cieloalto-Cervinia",
       "distance": 212,
       "duration": 0.3,
       "difficulty": "red"
@@ -4669,7 +4669,7 @@
       "from": "station_116",
       "to": "station_226",
       "type": "piste",
-      "name": "Canestrini bis",
+      "name": "5Bis S. Canestrini",
       "distance": 647,
       "duration": 1.0,
       "difficulty": "red"
@@ -4679,7 +4679,7 @@
       "from": "station_160",
       "to": "station_35",
       "type": "piste",
-      "name": "Tunnel",
+      "name": "14 Tunnel",
       "distance": 517,
       "duration": 1.0,
       "difficulty": "blue"
@@ -4689,7 +4689,7 @@
       "from": "station_132",
       "to": "station_227",
       "type": "piste",
-      "name": "Plan Torrette",
+      "name": "4 Plan Torrette",
       "distance": 570,
       "duration": 1.1,
       "difficulty": "blue"
@@ -4699,7 +4699,7 @@
       "from": "station_103",
       "to": "station_87",
       "type": "piste",
-      "name": "Plan Torrette",
+      "name": "4 Plan Torrette",
       "distance": 302,
       "duration": 0.6,
       "difficulty": "blue"
@@ -4709,7 +4709,7 @@
       "from": "station_99",
       "to": "station_59",
       "type": "piste",
-      "name": "Weisse Perle Traverse",
+      "name": "51 Weisse Perle Traverse",
       "distance": 336,
       "duration": 0.5,
       "difficulty": "red"
@@ -4729,7 +4729,7 @@
       "from": "station_32",
       "to": "station_228",
       "type": "piste",
-      "name": "Fiererpiste",
+      "name": "81 Fiererpiste",
       "distance": 1304,
       "duration": 2.0,
       "difficulty": "red"
@@ -4739,7 +4739,7 @@
       "from": "station_152",
       "to": "station_10",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 863,
       "duration": 1.3,
       "difficulty": "red"
@@ -4749,7 +4749,7 @@
       "from": "station_152",
       "to": "station_10",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 990,
       "duration": 1.5,
       "difficulty": "red"
@@ -4759,7 +4759,7 @@
       "from": "station_220",
       "to": "station_187",
       "type": "piste",
-      "name": "Theodulgletscher",
+      "name": "71 Theodulgletscher",
       "distance": 294,
       "duration": 0.4,
       "difficulty": "red"
@@ -4769,7 +4769,7 @@
       "from": "station_18",
       "to": "station_53",
       "type": "piste",
-      "name": "Testa Grigia",
+      "name": "80 Testa Grigia",
       "distance": 1127,
       "duration": 1.7,
       "difficulty": "red"
@@ -4779,7 +4779,7 @@
       "from": "station_151",
       "to": "station_229",
       "type": "piste",
-      "name": "Moosstrasse",
+      "name": "43 Moosstrasse",
       "distance": 653,
       "duration": 1.3,
       "difficulty": "blue"
@@ -4789,7 +4789,7 @@
       "from": "station_77",
       "to": "station_91",
       "type": "piste",
-      "name": "Landtunnel",
+      "name": "41 Landtunnel",
       "distance": 835,
       "duration": 1.3,
       "difficulty": "red"
@@ -4799,7 +4799,7 @@
       "from": "station_91",
       "to": "station_150",
       "type": "piste",
-      "name": "Schweigmatten",
+      "name": "42 Schweigmatten",
       "distance": 1187,
       "duration": 1.8,
       "difficulty": "red"
@@ -4809,7 +4809,7 @@
       "from": "station_230",
       "to": "station_4",
       "type": "piste",
-      "name": "Grieschumme",
+      "name": "32 Grieschumme",
       "distance": 1933,
       "duration": 1.9,
       "difficulty": "black"
@@ -4829,7 +4829,7 @@
       "from": "station_219",
       "to": "station_0",
       "type": "piste",
-      "name": "Riedweg",
+      "name": "2a Riedweg",
       "distance": 179,
       "duration": 0.3,
       "difficulty": "red"
@@ -4849,7 +4849,7 @@
       "from": "station_48",
       "to": "station_95",
       "type": "piste",
-      "name": "85",
+      "name": "85 Matterhorn Glacier Paradise",
       "distance": 1392,
       "duration": 2.1,
       "difficulty": "red"
@@ -5262,7 +5262,7 @@
       "to": "station_98",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to H\u00f6rnli (bottom)",
+      "name": "Transfer to Hörnli (bottom)",
       "distance": 238,
       "duration": 4.8,
       "difficulty": null
@@ -5658,7 +5658,7 @@
       "to": "station_109",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Hoht\u00e4lli (top)",
+      "name": "Transfer to Hohtälli (top)",
       "distance": 409,
       "duration": 8.2,
       "difficulty": null
@@ -5680,7 +5680,7 @@
       "to": "station_109",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Hoht\u00e4lli (top)",
+      "name": "Transfer to Hohtälli (top)",
       "distance": 221,
       "duration": 4.4,
       "difficulty": null
@@ -5779,7 +5779,7 @@
       "to": "station_37",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Bec Carr\u00e9 (bottom)",
+      "name": "Transfer to Bec Carré (bottom)",
       "distance": 330,
       "duration": 6.6,
       "difficulty": null
@@ -5801,7 +5801,7 @@
       "to": "station_38",
       "type": "lift",
       "liftType": "connector",
-      "name": "Transfer to Bec Carr\u00e9 (top)",
+      "name": "Transfer to Bec Carré (top)",
       "distance": 306,
       "duration": 6.1,
       "difficulty": null
