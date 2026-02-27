@@ -17,6 +17,8 @@ export default defineConfig({
         theme_color: '#1e40af',
       },
       workbox: {
+        skipWaiting: true,
+        clientsClaim: true,
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/server\.arcgisonline\.com\/ArcGIS\/rest\/services\/.*/i,
