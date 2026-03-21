@@ -560,7 +560,7 @@ export async function buildGraph(
   onProgress?.({ stage: 'bridging', message: 'Bridging connectivity gaps...' });
 
   // Bridge connectivity gaps
-  let finalEdges = bridgeConnectivityGaps(stations, edges, 500, 50);
+  let finalEdges = bridgeConnectivityGaps(stations, edges, 800, 100);
 
   // Remove self-loops
   finalEdges = finalEdges.filter((e) => e.from !== e.to);

@@ -18,7 +18,6 @@ import { getArea, registerDynamicArea } from './data/areaRegistry';
 import type { DifficultyPreference } from './types/graph';
 import { PREFERENCE_ORDER } from './data/difficultyMap';
 import { resolvePreference } from './types/graph';
-import { PREFERENCE_LABELS } from './data/difficultyMap';
 
 function App() {
   const [areaId, setAreaId] = useState<string | null>(() => {
@@ -212,9 +211,15 @@ function App() {
       const toNode = nodes.find((n) => n.id === waypoints[failedLeg + 1]);
       const fromName = fromNode?.name ?? `Stop ${failedLeg + 1}`;
       const toName = toNode?.name ?? `Stop ${failedLeg + 2}`;
-      return `No route found from ${fromName} to ${toName} at ${PREFERENCE_LABELS[difficultyPref]} level. Try a higher difficulty.`;
+      const hint = difficultyPref === 'black'
+        ? 'These stations may not be connected in the ski area data.'
+        : 'Try a higher difficulty or different stops.';
+      return `No route found from ${fromName} to ${toName}. ${hint}`;
     }
-    return `No route found at ${PREFERENCE_LABELS[difficultyPref]} level. Try a higher difficulty.`;
+    const hint = difficultyPref === 'black'
+      ? 'These stations may not be connected in the ski area data.'
+      : 'Try a higher difficulty or different stops.';
+    return `No route found. ${hint}`;
   }, [waypoints, route, failedLeg, nodes, difficultyPref]);
 
   return (

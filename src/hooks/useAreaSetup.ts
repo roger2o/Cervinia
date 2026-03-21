@@ -66,7 +66,7 @@ export function useAreaSetup(): AreaSetupResult {
 
       // Build graph
       setProgress({ stage: 'building', message: 'Building routing graph...' });
-      const result = await buildGraph(rawData, area.name, [], 200, (p: BuildProgress) => {
+      const result = await buildGraph(rawData, area.name, [], 300, (p: BuildProgress) => {
         setProgress({ stage: 'building', message: p.message });
       });
 
