@@ -27,6 +27,14 @@ function App() {
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+  const [labelSize, setLabelSize] = useState(() => {
+    const saved = localStorage.getItem('labelSize');
+    return saved ? Number(saved) : 12;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('labelSize', String(labelSize));
+  }, [labelSize]);
 
   // Persist selected area so it survives app restarts
   useEffect(() => {
@@ -253,6 +261,8 @@ function App() {
               onActivityStopReplay={activity.stopReplay}
               onActivitySetReplaySpeed={activity.setReplaySpeed}
               onActivityToggleShowOnMap={activity.toggleShowOnMap}
+              labelSize={labelSize}
+              onLabelSizeChange={setLabelSize}
             />
           </div>
         </div>
@@ -300,6 +310,7 @@ function App() {
           gpsActive={gpsActive}
           onGpsToggle={toggleGps}
           gpsError={gpsError}
+          labelSize={labelSize}
           dailyTrack={activity.track}
           dailySegments={activity.segments}
           showDailyTrack={activity.showOnMap}

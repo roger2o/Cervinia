@@ -39,6 +39,8 @@ interface MobileMenuProps {
   onActivityStopReplay: () => void;
   onActivitySetReplaySpeed: (speed: number) => void;
   onActivityToggleShowOnMap: () => void;
+  labelSize: number;
+  onLabelSizeChange: (size: number) => void;
 }
 
 export function MobileMenu({
@@ -68,6 +70,8 @@ export function MobileMenu({
   onActivityStopReplay,
   onActivitySetReplaySpeed,
   onActivityToggleShowOnMap,
+  labelSize,
+  onLabelSizeChange,
 }: MobileMenuProps) {
   const [open, setOpen] = useState(false);
   const [view, setView] = useState<MenuView>('menu');
@@ -190,6 +194,25 @@ export function MobileMenu({
                 <span className="font-medium">Ski Site</span>
                 <span className="text-xs text-gray-400 truncate ml-2">{areaId}</span>
               </button>
+              <div className="px-4 py-3 border-b border-gray-100">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-sm font-medium">Label Size</span>
+                  <span className="text-xs text-gray-400">{labelSize}px</span>
+                </div>
+                <input
+                  type="range"
+                  min="8"
+                  max="24"
+                  step="1"
+                  value={labelSize}
+                  onChange={(e) => onLabelSizeChange(Number(e.target.value))}
+                  className="w-full"
+                />
+                <div className="flex justify-between text-[10px] text-gray-400">
+                  <span>Small</span>
+                  <span>Large</span>
+                </div>
+              </div>
               <button
                 onClick={async () => {
                   const regs = await navigator.serviceWorker?.getRegistrations();

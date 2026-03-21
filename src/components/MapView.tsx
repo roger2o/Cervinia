@@ -20,6 +20,7 @@ interface MapViewProps {
   gpsActive: boolean;
   onGpsToggle: () => void;
   gpsError: string | null;
+  labelSize: number;
   dailyTrack?: TrackPoint[];
   dailySegments?: TrackSegment[];
   showDailyTrack?: boolean;
@@ -169,6 +170,7 @@ export function MapView({
   gpsActive,
   onGpsToggle,
   gpsError,
+  labelSize,
   dailyTrack = [],
   dailySegments = [],
   showDailyTrack = false,
@@ -210,6 +212,7 @@ export function MapView({
         onStationClick={onStationClick}
         selectedStepIndex={selectedStepIndex}
         closedEdgeIds={closedEdgeIds}
+        labelSize={labelSize}
       />
       <FlyToArea center={center} zoom={zoom} />
       <FlyToSegment route={route} selectedStepIndex={selectedStepIndex} />

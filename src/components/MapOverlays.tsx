@@ -10,6 +10,7 @@ interface MapOverlaysProps {
   onStationClick: (stationId: string) => void;
   selectedStepIndex: number | null;
   closedEdgeIds: Set<string>;
+  labelSize: number;
 }
 
 function makeStopIcon(index: number): L.DivIcon {
@@ -27,10 +28,10 @@ function makeStopIcon(index: number): L.DivIcon {
   });
 }
 
-function makeStationLabel(name: string): L.DivIcon {
+function makeStationLabel(name: string, fontSize: number): L.DivIcon {
   return L.divIcon({
     className: 'station-label',
-    html: `${name}`,
+    html: `<span style="font-size:${fontSize}px">${name}</span>`,
     iconSize: [0, 0],
     iconAnchor: [-8, 4],
   });
@@ -42,7 +43,7 @@ function isAutoName(name: string): boolean {
   return !name || AUTO_NAME_RE.test(name) || name === '(top)' || name === '(bottom)';
 }
 
-export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds }: MapOverlaysProps) {
+export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds, labelSize }: MapOverlaysProps) {
   const zoom = useZoom();
   if (!geo) return null;
 
@@ -218,7 +219,7 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
             <Marker
               key={`station-label-${props.id}`}
               position={[lat, lon]}
-              icon={makeStationLabel(props.name)}
+              icon={makeStationLabel(props.name, labelSize)}
               interactive={false}
             />
           );
