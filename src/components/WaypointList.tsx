@@ -32,6 +32,7 @@ export function WaypointList({
         subAreas={subAreas}
       />
 
+      <div className="max-h-24 overflow-y-auto">
       {waypoints.length === 0 && (
         <p className="text-xs text-gray-400">Tap the map or search to add your first stop</p>
       )}
@@ -72,6 +73,7 @@ export function WaypointList({
           </div>
         );
       })}
+      </div>
     </div>
   );
 }

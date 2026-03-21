@@ -232,12 +232,15 @@ function App() {
       )}
 
       {/* Top controls */}
-      <div className="flex-shrink-0 p-3 space-y-2 bg-snowflake shadow-md z-[10000] relative">
+      <div className="flex-shrink-0 px-3 py-2 space-y-1 bg-snowflake shadow-md z-[10000] relative">
         <div className="flex items-center justify-between">
-          <h1 className="text-lg font-bold text-blue-900">Ski Route Planner</h1>
+          <div className="flex items-center gap-3">
+            <h1 className="text-base font-bold text-blue-900">Ski Route Planner</h1>
+            <DifficultySelector value={difficultyPref} onChange={setDifficultyPref} />
+          </div>
           <div className="flex items-center gap-2">
             {meta && (
-              <span className="text-xs text-gray-400">{meta.name}</span>
+              <span className="text-xs text-gray-400 hidden sm:inline">{meta.name}</span>
             )}
             <MobileMenu
               areaId={areaId ?? ''}
@@ -281,8 +284,6 @@ function App() {
           onMoveUp={handleWaypointMoveUp}
           onMoveDown={handleWaypointMoveDown}
         />
-
-        <DifficultySelector value={difficultyPref} onChange={setDifficultyPref} />
 
         {noRouteMessage && (
           <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
