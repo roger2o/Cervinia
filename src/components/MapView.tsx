@@ -85,22 +85,39 @@ function MapLegend() {
         </svg>
       </button>
       {open && (
-        <div className="bg-white rounded-lg shadow-lg p-2 max-w-64 max-h-80 overflow-y-auto">
-          <img
-            src="https://www.opensnowmap.org/pics/mapkey_wide.png"
-            alt="OpenSnowMap Legend"
-            className="w-full"
-          />
-          <div className="border-t border-gray-200 mt-2 pt-2 px-1 text-xs">
-            <div className="font-bold text-gray-700 mb-1">Route Planner</div>
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full bg-[#1e40af] text-white text-[9px] font-bold flex items-center justify-center border border-white shrink-0">1</span>
-                <span className="text-gray-600">Stop marker</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-4 h-4 rounded-full bg-white border-2 border-[#1e40af] shrink-0" />
-                <span className="text-gray-600">Station (tap to add stop)</span>
+        <div
+          className="fixed inset-0 z-[2000] bg-black/50 flex items-center justify-center"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="bg-white rounded-lg shadow-lg p-3 m-4 max-w-[90vw] max-h-[85vh] overflow-auto touch-pan-x touch-pan-y"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-bold text-gray-700">Map Legend</span>
+              <button
+                onClick={() => setOpen(false)}
+                className="text-gray-400 hover:text-gray-600 text-lg leading-none px-1"
+              >
+                ✕
+              </button>
+            </div>
+            <img
+              src="https://www.opensnowmap.org/pics/mapkey_wide.png"
+              alt="OpenSnowMap Legend"
+              style={{ minWidth: '500px', width: '100%' }}
+            />
+            <div className="border-t border-gray-200 mt-3 pt-2 text-sm">
+              <div className="font-bold text-gray-700 mb-1">Route Planner</div>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-[#1e40af] text-white text-[10px] font-bold flex items-center justify-center border border-white shrink-0">1</span>
+                  <span className="text-gray-600">Stop marker</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="w-5 h-5 rounded-full bg-white border-2 border-[#1e40af] shrink-0" />
+                  <span className="text-gray-600">Station (tap to add stop)</span>
+                </div>
               </div>
             </div>
           </div>

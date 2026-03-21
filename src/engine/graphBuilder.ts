@@ -404,6 +404,36 @@ function mergeGeoFeatures(geoFeatures: GeoFeature[]): GeoFeature[] {
   return merged;
 }
 
+// --- Elevation fetching ---
+
+async function fetchElevations(stations: GraphNode[]): Promise<void> {
+  if (stations.length === 0) return;
+
+  // Open-Meteo accepts comma-separated lat/lon arrays
+  // Batch in groups of 100 to keep URLs manageable
+  const batchSize = 100;
+  for (let i = 0; i < stations.length; i += batchSize) {
+    const batch = stations.slice(i, i + batchSize);
+    const lats = batch.map((s) => s.lat).join(',');
+    const lons = batch.map((s) => s.lon).join(',');
+
+    try {
+      const res = await fetch(
+        `https://api.open-meteo.com/v1/elevation?latitude=${lats}&longitude=${lons}`,
+        { signal: AbortSignal.timeout(15000) },
+      );
+      if (!res.ok) continue;
+
+      const data: { elevation: number[] } = await res.json();
+      for (let j = 0; j < batch.length && j < data.elevation.length; j++) {
+        batch[j].elevation = Math.round(data.elevation[j]);
+      }
+    } catch {
+      // Elevation fetch failed — leave as 0, non-critical
+    }
+  }
+}
+
 // --- Main build function ---
 
 export interface BuildProgress {
@@ -411,13 +441,13 @@ export interface BuildProgress {
   message: string;
 }
 
-export function buildGraph(
+export async function buildGraph(
   rawData: RawData,
   areaName: string,
   subAreas: string[] = [],
   clusterThreshold = 200,
   onProgress?: (p: BuildProgress) => void,
-): { graph: Graph; geo: GeoJSON.FeatureCollection; meta: AreaMeta } {
+): Promise<{ graph: Graph; geo: GeoJSON.FeatureCollection; meta: AreaMeta }> {
   onProgress?.({ stage: 'clustering', message: 'Clustering stations...' });
 
   const clusterer = new StationClusterer(clusterThreshold);
@@ -432,8 +462,8 @@ export function buildGraph(
     const end = lift.nodes[lift.nodes.length - 1];
     const name = lift.name;
 
-    const fromId = clusterer.findOrCreate(start.lat, start.lon, `${name} (bottom)`);
-    const toId = clusterer.findOrCreate(end.lat, end.lon, `${name} (top)`);
+    const fromId = clusterer.findOrCreate(start.lat, start.lon, name ? `${name} (bottom)` : '');
+    const toId = clusterer.findOrCreate(end.lat, end.lon, name ? `${name} (top)` : '');
 
     const distance = polylineLength(lift.nodes);
     const speedFactor = ['gondola', 'cable_car'].includes(lift.liftType) ? 5.0 : 8.0;
@@ -479,8 +509,8 @@ export function buildGraph(
     const name = piste.name;
     const difficulty = DIFFICULTY_MAP[piste.difficulty] ?? 'red';
 
-    const fromId = clusterer.findOrCreate(start.lat, start.lon, `${name} (top)`);
-    const toId = clusterer.findOrCreate(end.lat, end.lon, `${name} (bottom)`);
+    const fromId = clusterer.findOrCreate(start.lat, start.lon, name ? `${name} (top)` : '');
+    const toId = clusterer.findOrCreate(end.lat, end.lon, name ? `${name} (bottom)` : '');
 
     const distance = polylineLength(piste.nodes);
     const speedMap: Record<string, number> = { blue: 2.0, red: 1.5, black: 1.0 };
@@ -518,11 +548,14 @@ export function buildGraph(
     });
   }
 
-  // Assign sub-areas to stations
+  // Assign sub-areas and fetch elevations for stations
   const stations = clusterer.getStations();
   for (const station of stations) {
     station.subArea = assignSubArea(station.lat, station.lon, rawData.bbox, subAreas);
   }
+
+  onProgress?.({ stage: 'edges', message: 'Fetching elevation data...' });
+  await fetchElevations(stations);
 
   onProgress?.({ stage: 'bridging', message: 'Bridging connectivity gaps...' });
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { AdjacencyList, Graph } from '../types/graph';
 import type { AreaMeta } from '../types/area';
 import { buildAdjacencyList } from '../engine/graphLoader';
-import { getCachedArea, cacheArea } from '../services/cacheManager';
+import { getCachedArea } from '../services/cacheManager';
 
 interface GraphState {
   graph: Graph | null;
@@ -13,25 +13,31 @@ interface GraphState {
   error: string | null;
 }
 
-export function useGraph(areaId: string): GraphState {
-  const [state, setState] = useState<GraphState>({
-    graph: null,
-    adjacency: null,
-    geo: null,
-    meta: null,
-    loading: true,
-    error: null,
-  });
+const EMPTY_STATE: GraphState = {
+  graph: null,
+  adjacency: null,
+  geo: null,
+  meta: null,
+  loading: false,
+  error: null,
+};
+
+export function useGraph(areaId: string | null): GraphState {
+  const [state, setState] = useState<GraphState>(EMPTY_STATE);
 
   useEffect(() => {
+    if (!areaId) {
+      setState(EMPTY_STATE);
+      return;
+    }
+
     let cancelled = false;
 
     async function load() {
       setState((s) => ({ ...s, loading: true, error: null }));
 
       try {
-        // Try cache first
-        const cached = await getCachedArea(areaId);
+        const cached = await getCachedArea(areaId!);
         if (cached && !cancelled) {
           const adj = buildAdjacencyList(cached.graph);
           setState({
@@ -45,29 +51,12 @@ export function useGraph(areaId: string): GraphState {
           return;
         }
 
-        // Fetch from network
-        const [graphRes, geoRes, metaRes] = await Promise.all([
-          fetch(`/data/${areaId}/graph.json`),
-          fetch(`/data/${areaId}/geo.json`),
-          fetch(`/data/${areaId}/meta.json`),
-        ]);
-
-        if (!graphRes.ok || !geoRes.ok || !metaRes.ok) {
-          throw new Error('Failed to load area data');
-        }
-
-        const graph: Graph = await graphRes.json();
-        const geo: GeoJSON.FeatureCollection = await geoRes.json();
-        const meta: AreaMeta = await metaRes.json();
-
-        // Cache for offline use
-        await cacheArea(areaId, graph, geo, meta).catch(() => {
-          // IndexedDB might not be available
-        });
-
         if (!cancelled) {
-          const adj = buildAdjacencyList(graph);
-          setState({ graph, adjacency: adj, geo, meta, loading: false, error: null });
+          setState((s) => ({
+            ...s,
+            loading: false,
+            error: 'No data for this area. Search and select a ski area to load it.',
+          }));
         }
       } catch (err) {
         if (!cancelled) {

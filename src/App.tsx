@@ -14,16 +14,15 @@ import { useGeolocation } from './hooks/useGeolocation';
 import { useDailyActivity } from './hooks/useDailyActivity';
 import { useWeather } from './hooks/useWeather';
 import { useDragSheet } from './hooks/useDragSheet';
-import { DEFAULT_AREA, getArea, registerDynamicArea } from './data/areaRegistry';
+import { getArea, registerDynamicArea } from './data/areaRegistry';
 import type { DifficultyPreference } from './types/graph';
 import { PREFERENCE_ORDER } from './data/difficultyMap';
 import { resolvePreference } from './types/graph';
 import { PREFERENCE_LABELS } from './data/difficultyMap';
 
 function App() {
-  const [areaId, setAreaId] = useState(() => {
-    const saved = localStorage.getItem('lastAreaId');
-    return saved ?? DEFAULT_AREA;
+  const [areaId, setAreaId] = useState<string | null>(() => {
+    return localStorage.getItem('lastAreaId');
   });
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
@@ -31,7 +30,7 @@ function App() {
 
   // Persist selected area so it survives app restarts
   useEffect(() => {
-    localStorage.setItem('lastAreaId', areaId);
+    if (areaId) localStorage.setItem('lastAreaId', areaId);
   }, [areaId]);
 
   // Restore route from URL query params (for shared links)
@@ -78,14 +77,14 @@ function App() {
   const { route, failedLeg } = useRoute(adjacency, stableWaypoints, maxDifficulty, stableClosedEdgeIds, preferEasier);
   const { bannerVisible, checkOnline } = useOffline();
   const { cachedAreaId } = useAreaCache();
-  const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId);
+  const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId ?? '');
   const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps } = useGeolocation();
   const activity = useDailyActivity(gpsPosition, gpsActive);
   const dragSheet = useDragSheet({ resetDep: route });
 
   // Register dynamic area from cached meta when not in static registry
   useEffect(() => {
-    if (meta && !getArea(areaId)) {
+    if (meta && areaId && !getArea(areaId)) {
       const latSpan = meta.bbox.north - meta.bbox.south;
       const defaultZoom = latSpan > 0.15 ? 12 : latSpan > 0.08 ? 13 : 14;
       registerDynamicArea({
@@ -101,7 +100,7 @@ function App() {
     }
   }, [meta, areaId]);
 
-  const area = getArea(areaId);
+  const area = areaId ? getArea(areaId) : undefined;
   // Fall back to meta for center/zoom when area not yet registered
   const effectiveCenter = area?.center ?? meta?.center ?? [45.9369, 7.6292] as [number, number];
   const effectiveZoom = area?.defaultZoom ?? 13;
@@ -179,7 +178,7 @@ function App() {
     const mins = Math.round(route.totalDuration);
 
     const params = new URLSearchParams({
-      area: areaId,
+      area: areaId ?? '',
       stops: waypoints.join(','),
       diff: difficultyPref,
     });
@@ -228,7 +227,7 @@ function App() {
               <span className="text-xs text-gray-400">{meta.name}</span>
             )}
             <MobileMenu
-              areaId={areaId}
+              areaId={areaId ?? ''}
               area={area}
               onDynamicArea={handleDynamicArea}
               cachedAreaId={cachedAreaId}

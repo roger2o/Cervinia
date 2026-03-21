@@ -36,10 +36,10 @@ function makeStationLabel(name: string): L.DivIcon {
   });
 }
 
-const AUTO_NAME_RE = /^(Piste|Lift|Station)\s+\d{6,}/;
+const AUTO_NAME_RE = /^(Piste|Lift|Station)\s+\d+/;
 
 function isAutoName(name: string): boolean {
-  return !name || AUTO_NAME_RE.test(name);
+  return !name || AUTO_NAME_RE.test(name) || name === '(top)' || name === '(bottom)';
 }
 
 export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds }: MapOverlaysProps) {
