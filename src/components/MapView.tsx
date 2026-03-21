@@ -204,6 +204,7 @@ export function MapView({
   replayIndex = 0,
 }: MapViewProps) {
   return (
+    <>
     <MapContainer
       center={center}
       zoom={zoom}
@@ -280,8 +281,8 @@ export function MapView({
         />
       )}
 
-      {/* Locate button (rendered outside MapContainer via portal would be ideal, but positioning works here) */}
-      <LocateButton active={gpsActive} onToggle={onGpsToggle} error={gpsError} />
     </MapContainer>
+    <LocateButton active={gpsActive} onToggle={onGpsToggle} error={gpsError} />
+    </>
   );
 }
