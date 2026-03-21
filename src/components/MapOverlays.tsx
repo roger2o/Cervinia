@@ -40,7 +40,12 @@ function makeStationLabel(name: string, fontSize: number): L.DivIcon {
 const AUTO_NAME_RE = /^(Piste|Lift|Station)\s+\d+/;
 
 function isAutoName(name: string): boolean {
-  return !name || AUTO_NAME_RE.test(name) || name === '(top)' || name === '(bottom)';
+  if (!name) return true;
+  if (AUTO_NAME_RE.test(name)) return true;
+  const stripped = name.replace(/\s*\((top|bottom)\)\s*/gi, '').trim();
+  if (!stripped) return true;
+  if (AUTO_NAME_RE.test(stripped)) return true;
+  return false;
 }
 
 export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds, labelSize }: MapOverlaysProps) {
@@ -51,7 +56,7 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
     (f) => f.geometry.type === 'LineString' || f.geometry.type === 'MultiLineString',
   );
   const stations = geo.features.filter(
-    (f) => f.geometry.type === 'Point' && f.properties?.type === 'station',
+    (f) => f.geometry.type === 'Point' && f.properties?.type === 'station' && !isAutoName(f.properties?.name ?? ''),
   );
 
   // Build a lookup from edge ID to geo coordinates

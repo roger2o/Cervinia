@@ -22,7 +22,10 @@ export function StationPicker({ label, nodes, selectedId, onSelect, subAreas }: 
     }
     groups.set('Other', []);
 
+    const autoNameRe = /^(Piste|Lift|Station)\s+\d+/;
     for (const node of nodes) {
+      // Skip auto-generated names from the search list
+      if (!node.name || autoNameRe.test(node.name)) continue;
       const area = node.subArea && subAreas.includes(node.subArea) ? node.subArea : 'Other';
       groups.get(area)!.push(node);
     }

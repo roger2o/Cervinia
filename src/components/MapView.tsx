@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MapContainer, TileLayer, CircleMarker, Circle, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -69,6 +70,69 @@ function FlyToPosition({ position }: { position: GeoPosition }) {
   return null;
 }
 
+function LegendModal({ onClose }: { onClose: () => void }) {
+  const ref = useRef<HTMLDivElement>(null);
+
+  // Block ALL touch events from reaching Leaflet using native listeners
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const stop = (e: Event) => { e.stopPropagation(); e.stopImmediatePropagation(); };
+    el.addEventListener('touchstart', stop, true);
+    el.addEventListener('touchmove', stop, true);
+    el.addEventListener('touchend', stop, true);
+    el.addEventListener('wheel', stop, true);
+    return () => {
+      el.removeEventListener('touchstart', stop, true);
+      el.removeEventListener('touchmove', stop, true);
+      el.removeEventListener('touchend', stop, true);
+      el.removeEventListener('wheel', stop, true);
+    };
+  }, []);
+
+  return createPortal(
+    <div
+      ref={ref}
+      className="fixed inset-0 z-[10001] bg-black/50 flex items-center justify-center"
+      onClick={onClose}
+    >
+      <div
+        className="bg-white rounded-lg shadow-lg p-3 m-4 max-w-[90vw] max-h-[85vh] overflow-auto"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-sm font-bold text-gray-700">Map Legend</span>
+          <button
+            onClick={onClose}
+            className="text-gray-400 hover:text-gray-600 text-lg leading-none px-1"
+          >
+            ✕
+          </button>
+        </div>
+        <img
+          src="https://www.opensnowmap.org/pics/mapkey_wide.png"
+          alt="OpenSnowMap Legend"
+          style={{ minWidth: '500px', width: '100%' }}
+        />
+        <div className="border-t border-gray-200 mt-3 pt-2 text-sm">
+          <div className="font-bold text-gray-700 mb-1">Route Planner</div>
+          <div className="space-y-1">
+            <div className="flex items-center gap-2">
+              <span className="w-5 h-5 rounded-full bg-[#1e40af] text-white text-[10px] font-bold flex items-center justify-center border border-white shrink-0">1</span>
+              <span className="text-gray-600">Stop marker</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-5 h-5 rounded-full bg-white border-2 border-[#1e40af] shrink-0" />
+              <span className="text-gray-600">Station (tap to add stop)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
 function MapLegend() {
   const [open, setOpen] = useState(false);
 
@@ -85,52 +149,14 @@ function MapLegend() {
           <circle cx="9" cy="5.5" r="0.5" fill="currentColor" />
         </svg>
       </button>
-      {open && (
-        <div
-          className="fixed inset-0 z-[2000] bg-black/50 flex items-center justify-center"
-          onClick={() => setOpen(false)}
-        >
-          <div
-            className="bg-white rounded-lg shadow-lg p-3 m-4 max-w-[90vw] max-h-[85vh] overflow-auto touch-pan-x touch-pan-y"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-bold text-gray-700">Map Legend</span>
-              <button
-                onClick={() => setOpen(false)}
-                className="text-gray-400 hover:text-gray-600 text-lg leading-none px-1"
-              >
-                ✕
-              </button>
-            </div>
-            <img
-              src="https://www.opensnowmap.org/pics/mapkey_wide.png"
-              alt="OpenSnowMap Legend"
-              style={{ minWidth: '500px', width: '100%' }}
-            />
-            <div className="border-t border-gray-200 mt-3 pt-2 text-sm">
-              <div className="font-bold text-gray-700 mb-1">Route Planner</div>
-              <div className="space-y-1">
-                <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-[#1e40af] text-white text-[10px] font-bold flex items-center justify-center border border-white shrink-0">1</span>
-                  <span className="text-gray-600">Stop marker</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <span className="w-5 h-5 rounded-full bg-white border-2 border-[#1e40af] shrink-0" />
-                  <span className="text-gray-600">Station (tap to add stop)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      {open && <LegendModal onClose={() => setOpen(false)} />}
     </>
   );
 }
 
 function LocateButton({ active, onToggle, error }: { active: boolean; onToggle: () => void; error: string | null }) {
   return (
-    <div className="absolute bottom-4 right-3 z-[1000] flex flex-col items-end gap-2">
+    <div className="absolute bottom-4 right-3 z-[9999] flex flex-col items-end gap-2">
       <MapLegend />
       {error && active && (
         <div className="bg-red-50 text-red-600 text-xs px-2 py-1 rounded shadow max-w-48">
