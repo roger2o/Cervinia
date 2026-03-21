@@ -218,6 +218,21 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
 
   const segments = useMemo(() => computeSegments(track), [track]);
 
+  const skiingDistance = useMemo(() => {
+    let dist = 0;
+    for (const seg of segments) {
+      if (seg.type === 'run') {
+        for (let i = 1; i < seg.points.length; i++) {
+          dist += haversineDistance(
+            seg.points[i - 1][0], seg.points[i - 1][1],
+            seg.points[i][0], seg.points[i][1],
+          );
+        }
+      }
+    }
+    return dist;
+  }, [segments]);
+
   const start = useCallback(() => {
     setRecording(true);
     lastPositionRef.current = gpsPosition;
@@ -265,6 +280,7 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
     track,
     maxSpeed,
     totalDistance,
+    skiingDistance,
     showOnMap,
     segments,
     replayIndex,

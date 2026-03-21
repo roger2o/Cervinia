@@ -9,13 +9,12 @@ import { useRoute } from './hooks/useRoute';
 import { useOffline } from './hooks/useOffline';
 import { useAreaCache } from './hooks/useAreaCache';
 import { useHistory } from './hooks/useHistory';
-import { useStatus } from './hooks/useStatus';
+// import { useStatus } from './hooks/useStatus';
 import { useGeolocation } from './hooks/useGeolocation';
 import { useDailyActivity } from './hooks/useDailyActivity';
 import { useWeather } from './hooks/useWeather';
 import { useDragSheet } from './hooks/useDragSheet';
-import { DEFAULT_AREA } from './data/areaRegistry';
-import { getArea } from './data/areaRegistry';
+import { DEFAULT_AREA, getArea, registerDynamicArea } from './data/areaRegistry';
 import type { DifficultyPreference } from './types/graph';
 import { PREFERENCE_ORDER } from './data/difficultyMap';
 import { resolvePreference } from './types/graph';
@@ -24,7 +23,7 @@ import { PREFERENCE_LABELS } from './data/difficultyMap';
 function App() {
   const [areaId, setAreaId] = useState(() => {
     const saved = localStorage.getItem('lastAreaId');
-    return saved && getArea(saved) ? saved : DEFAULT_AREA;
+    return saved ?? DEFAULT_AREA;
   });
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
@@ -67,11 +66,9 @@ function App() {
   }, [sharedParamsApplied]);
 
   const { graph, adjacency, geo, meta, loading, error } = useGraph(areaId);
-  const { status, closedEdgeIds, refresh: refreshStatus } = useStatus(areaId);
-
-  // Stabilize closedEdgeIds to avoid re-routing on every render
-  const closedEdgeIdsKey = useMemo(() => [...closedEdgeIds].sort().join(','), [closedEdgeIds]);
-  const stableClosedEdgeIds = useMemo(() => closedEdgeIds, [closedEdgeIdsKey]);
+  // P&L status infrastructure kept in codebase but disabled from UI
+  // (no universal data source for live piste/lift status across resorts)
+  const stableClosedEdgeIds = useMemo(() => new Set<string>(), []);
 
   // Stabilize waypoints array reference for useMemo dependency
   const waypointsKey = waypoints.join(',');
@@ -80,14 +77,35 @@ function App() {
   const { maxDifficulty, preferEasier } = resolvePreference(difficultyPref);
   const { route, failedLeg } = useRoute(adjacency, stableWaypoints, maxDifficulty, stableClosedEdgeIds, preferEasier);
   const { bannerVisible, checkOnline } = useOffline();
-  const { cachedAreaId, switchArea } = useAreaCache();
+  const { cachedAreaId } = useAreaCache();
   const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId);
   const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps } = useGeolocation();
   const activity = useDailyActivity(gpsPosition, gpsActive);
   const dragSheet = useDragSheet({ resetDep: route });
 
+  // Register dynamic area from cached meta when not in static registry
+  useEffect(() => {
+    if (meta && !getArea(areaId)) {
+      const latSpan = meta.bbox.north - meta.bbox.south;
+      const defaultZoom = latSpan > 0.15 ? 12 : latSpan > 0.08 ? 13 : 14;
+      registerDynamicArea({
+        id: meta.id,
+        name: meta.name,
+        bbox: meta.bbox,
+        center: meta.center,
+        subAreas: meta.subAreas,
+        dataUrl: `/data/${meta.id}`,
+        defaultZoom,
+        tileZoomRange: [defaultZoom - 2, defaultZoom + 2],
+      });
+    }
+  }, [meta, areaId]);
+
   const area = getArea(areaId);
-  const weatherCenter = area?.center ?? [45.9369, 7.6292] as [number, number];
+  // Fall back to meta for center/zoom when area not yet registered
+  const effectiveCenter = area?.center ?? meta?.center ?? [45.9369, 7.6292] as [number, number];
+  const effectiveZoom = area?.defaultZoom ?? 13;
+  const weatherCenter = effectiveCenter;
   const { weather, loading: weatherLoading, error: weatherError, refresh: refreshWeather } = useWeather(weatherCenter[0], weatherCenter[1]);
   const nodes = graph?.nodes ?? [];
 
@@ -128,13 +146,13 @@ function App() {
     setSelectedStepIndex(null);
   }, []);
 
-  const handleAreaSwitch = useCallback(
+  const handleDynamicArea = useCallback(
     (newAreaId: string) => {
-      switchArea(newAreaId);
+      // Register from meta once graph loads (meta comes from useGraph via cache)
       setAreaId(newAreaId);
       handleClearRoute();
     },
-    [switchArea, handleClearRoute],
+    [handleClearRoute],
   );
 
   const handleStepClick = useCallback(
@@ -212,12 +230,10 @@ function App() {
             <MobileMenu
               areaId={areaId}
               area={area}
-              onAreaSwitch={handleAreaSwitch}
+              onDynamicArea={handleDynamicArea}
               cachedAreaId={cachedAreaId}
               historyEntries={historyEntries}
               onDeleteHistory={removeHistory}
-              status={status}
-              onRefreshStatus={refreshStatus}
               weather={weather}
               weatherLoading={weatherLoading}
               weatherError={weatherError}
@@ -227,6 +243,7 @@ function App() {
               activityTrack={activity.track}
               activityMaxSpeed={activity.maxSpeed}
               activityTotalDistance={activity.totalDistance}
+              activitySkiingDistance={activity.skiingDistance}
               activityShowOnMap={activity.showOnMap}
               activityReplayPlaying={activity.replayPlaying}
               activityReplaySpeed={activity.replaySpeed}
@@ -244,7 +261,7 @@ function App() {
         <WaypointList
           waypoints={waypoints}
           nodes={nodes}
-          subAreas={area?.subAreas ?? []}
+          subAreas={area?.subAreas ?? meta?.subAreas ?? []}
           onAdd={handleStationClick}
           onRemove={handleWaypointRemove}
           onMoveUp={handleWaypointMoveUp}
@@ -273,8 +290,8 @@ function App() {
           </div>
         )}
         <MapView
-          center={area?.center ?? [45.9369, 7.6292]}
-          zoom={area?.defaultZoom ?? 13}
+          center={effectiveCenter}
+          zoom={effectiveZoom}
           geo={geo}
           route={route}
           onStationClick={handleStationClick}

@@ -5,22 +5,19 @@ import { SeasonSummary } from './SeasonSummary';
 import { WeatherPanel } from './WeatherPanel';
 import { DailyActivityPanel } from './DailyActivityPanel';
 import type { HistoryEntry } from '../types/history';
-import type { StatusData } from '../types/status';
 import type { WeatherData } from '../hooks/useWeather';
 import type { AreaConfig } from '../types/area';
 import { cacheTiles, countTiles, type TileCacheProgress } from '../services/tileCache';
 
-type MenuView = 'menu' | 'history' | 'season' | 'status' | 'site' | 'weather' | 'offline-map' | 'activity';
+type MenuView = 'menu' | 'history' | 'season' | 'site' | 'weather' | 'offline-map' | 'activity';
 
 interface MobileMenuProps {
   areaId: string;
   area: AreaConfig | undefined;
-  onAreaSwitch: (areaId: string) => void;
+  onDynamicArea: (areaId: string) => void;
   cachedAreaId: string | null;
   historyEntries: HistoryEntry[];
   onDeleteHistory: (id: string) => void;
-  status: StatusData | null;
-  onRefreshStatus: () => void;
   weather: WeatherData | null;
   weatherLoading: boolean;
   weatherError: string | null;
@@ -31,6 +28,7 @@ interface MobileMenuProps {
   activityTrack: { lat: number; lon: number }[];
   activityMaxSpeed: number;
   activityTotalDistance: number;
+  activitySkiingDistance: number;
   activityShowOnMap: boolean;
   activityReplayPlaying: boolean;
   activityReplaySpeed: number;
@@ -46,12 +44,10 @@ interface MobileMenuProps {
 export function MobileMenu({
   areaId,
   area,
-  onAreaSwitch,
+  onDynamicArea,
   cachedAreaId,
   historyEntries,
   onDeleteHistory,
-  status,
-  onRefreshStatus,
   weather,
   weatherLoading,
   weatherError,
@@ -61,6 +57,7 @@ export function MobileMenu({
   activityTrack,
   activityMaxSpeed,
   activityTotalDistance,
+  activitySkiingDistance,
   activityShowOnMap,
   activityReplayPlaying,
   activityReplaySpeed,
@@ -115,11 +112,6 @@ export function MobileMenu({
     }
   }, [area, tileCount, checkOnline]);
 
-  const openLifts = status ? status.lifts.filter((l) => l.status === 'open').length : 0;
-  const totalLifts = status ? status.lifts.length : 0;
-  const openPistes = status ? status.pistes.filter((p) => p.status === 'open').length : 0;
-  const totalPistes = status ? status.pistes.length : 0;
-
   return (
     <div ref={menuRef} className="relative">
       <button
@@ -168,21 +160,6 @@ export function MobileMenu({
               >
                 <span className="font-medium">Season Summary</span>
                 <span className="text-xs text-gray-400">{historyEntries.length} runs</span>
-              </button>
-              <button
-                onClick={() => setView('status')}
-                className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-100"
-              >
-                <span className="font-medium">P&L Status</span>
-                {status && (totalLifts > 0 || totalPistes > 0) ? (
-                  <span className="text-xs text-gray-400">
-                    {openLifts}/{totalLifts} lifts, {openPistes}/{totalPistes} pistes
-                  </span>
-                ) : (
-                  <span className="text-xs text-gray-400">
-                    {status ? 'All open' : 'Loading...'}
-                  </span>
-                )}
               </button>
               <button
                 onClick={() => setView('weather')}
@@ -243,68 +220,6 @@ export function MobileMenu({
 
           {view === 'season' && (
             <SeasonSummary entries={historyEntries} onClose={close} />
-          )}
-
-          {view === 'status' && (
-            <div>
-              <div className="px-4 py-3 bg-blue-800 text-white flex items-center justify-between">
-                <div className="text-sm font-bold">P&L Status</div>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => { if (checkOnline()) onRefreshStatus(); }}
-                    className="text-xs px-2 py-1 rounded bg-white/20 hover:bg-white/30"
-                  >
-                    Refresh
-                  </button>
-                  <button
-                    onClick={close}
-                    className="text-xs px-2 py-1 rounded bg-white/20 hover:bg-white/30"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-              {status ? (
-                <div className="max-h-64 overflow-y-auto">
-                  <div className="px-4 py-2 text-[10px] text-gray-400">
-                    Updated: {new Date(status.fetchedAt).toLocaleString()}
-                  </div>
-                  {status.lifts.length === 0 && status.pistes.length === 0 && (
-                    <div className="px-4 py-3 text-sm text-gray-500">
-                      All pistes and lifts are open.
-                    </div>
-                  )}
-                  {status.lifts.length > 0 && (
-                    <>
-                      <div className="px-4 py-1 text-xs font-bold text-gray-400 bg-gray-50">Lifts</div>
-                      {status.lifts.map((l) => (
-                        <div key={l.id} className="px-4 py-1.5 text-sm flex items-center justify-between border-b border-gray-50">
-                          <span>{l.name}</span>
-                          <span className={`text-xs font-medium ${l.status === 'open' ? 'text-green-600' : l.status === 'closed' ? 'text-red-600' : 'text-gray-400'}`}>
-                            {l.status}
-                          </span>
-                        </div>
-                      ))}
-                    </>
-                  )}
-                  {status.pistes.length > 0 && (
-                    <>
-                      <div className="px-4 py-1 text-xs font-bold text-gray-400 bg-gray-50">Pistes</div>
-                      {status.pistes.map((p) => (
-                        <div key={p.id} className="px-4 py-1.5 text-sm flex items-center justify-between border-b border-gray-50">
-                          <span>{p.name}</span>
-                          <span className={`text-xs font-medium ${p.status === 'open' ? 'text-green-600' : p.status === 'closed' ? 'text-red-600' : 'text-gray-400'}`}>
-                            {p.status}
-                          </span>
-                        </div>
-                      ))}
-                    </>
-                  )}
-                </div>
-              ) : (
-                <div className="px-4 py-3 text-sm text-gray-500">Loading status...</div>
-              )}
-            </div>
           )}
 
           {view === 'weather' && (
@@ -375,6 +290,7 @@ export function MobileMenu({
               track={activityTrack}
               maxSpeed={activityMaxSpeed}
               totalDistance={activityTotalDistance}
+              skiingDistance={activitySkiingDistance}
               showOnMap={activityShowOnMap}
               replayPlaying={activityReplayPlaying}
               replaySpeed={activityReplaySpeed}
@@ -402,9 +318,8 @@ export function MobileMenu({
               </div>
               <div className="p-3">
                 <AreaSwitcher
-                  currentAreaId={areaId}
-                  onSwitch={(id) => {
-                    onAreaSwitch(id);
+                  onDynamicArea={(area) => {
+                    onDynamicArea(area.id);
                     close();
                   }}
                   cachedAreaId={cachedAreaId}

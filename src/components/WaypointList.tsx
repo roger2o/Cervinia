@@ -24,8 +24,20 @@ export function WaypointList({
 
   return (
     <div className="space-y-1">
+      <StationPicker
+        label="Add stop"
+        nodes={nodes}
+        selectedId={null}
+        onSelect={onAdd}
+        subAreas={subAreas}
+      />
+
       {waypoints.length === 0 && (
-        <p className="text-xs text-gray-400 mb-1">Tap the map or search to add your first stop</p>
+        <p className="text-xs text-gray-400">Tap the map or search to add your first stop</p>
+      )}
+
+      {waypoints.length === 1 && (
+        <p className="text-xs text-gray-400">Add your destination</p>
       )}
 
       {waypoints.map((id, i) => {
@@ -60,18 +72,6 @@ export function WaypointList({
           </div>
         );
       })}
-
-      {waypoints.length === 1 && (
-        <p className="text-xs text-gray-400 mb-1">Add your destination</p>
-      )}
-
-      <StationPicker
-        label="Add stop"
-        nodes={nodes}
-        selectedId={null}
-        onSelect={onAdd}
-        subAreas={subAreas}
-      />
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import type { AreaConfig } from '../types/area';
 
-export const areas: AreaConfig[] = [
+export const builtInAreas: AreaConfig[] = [
   {
     id: 'matterhorn',
     name: 'Matterhorn Ski Paradise',
@@ -23,8 +23,23 @@ export const areas: AreaConfig[] = [
   },
 ];
 
+/** Dynamic areas added at runtime (from Overpass search) */
+const dynamicAreas = new Map<string, AreaConfig>();
+
+export function registerDynamicArea(config: AreaConfig): void {
+  dynamicAreas.set(config.id, config);
+}
+
+/** All areas: built-in + dynamic */
+export function getAllAreas(): AreaConfig[] {
+  return [...builtInAreas, ...dynamicAreas.values()];
+}
+
+/** Keep backward compat — `areas` is just the built-in list */
+export const areas = builtInAreas;
+
 export function getArea(id: string): AreaConfig | undefined {
-  return areas.find((a) => a.id === id);
+  return builtInAreas.find((a) => a.id === id) ?? dynamicAreas.get(id);
 }
 
 export const DEFAULT_AREA = 'matterhorn';

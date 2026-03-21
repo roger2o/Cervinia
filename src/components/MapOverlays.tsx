@@ -1,10 +1,7 @@
-import { GeoJSON, CircleMarker, Tooltip, Polyline, Marker } from 'react-leaflet';
+import { CircleMarker, Tooltip, Polyline, Marker } from 'react-leaflet';
 import L from 'leaflet';
-import type { Feature, GeoJsonProperties, Geometry } from 'geojson';
-import type { PathOptions } from 'leaflet';
 import type { RouteResult } from '../types/route';
 import { DIFFICULTY_ROUTE_COLORS } from '../data/difficultyMap';
-import { getLiftStyle } from '../data/liftStyles';
 import { useZoom } from '../hooks/useZoom';
 
 interface MapOverlaysProps {
@@ -13,27 +10,6 @@ interface MapOverlaysProps {
   onStationClick: (stationId: string) => void;
   selectedStepIndex: number | null;
   closedEdgeIds: Set<string>;
-}
-
-function pisteStyle(feature: Feature<Geometry, GeoJsonProperties> | undefined): PathOptions {
-  if (!feature) return {};
-  const props = feature.properties ?? {};
-
-  if (props.type === 'lift') {
-    const style = getLiftStyle(props.liftType);
-    return {
-      color: style.color,
-      weight: style.weight,
-      dashArray: style.dashArray as string | undefined,
-      opacity: style.opacity,
-    };
-  }
-
-  return {
-    color: props.color || '#ef4444',
-    weight: 4,
-    opacity: 0.85,
-  };
 }
 
 function makeStopIcon(index: number): L.DivIcon {
@@ -51,13 +27,19 @@ function makeStopIcon(index: number): L.DivIcon {
   });
 }
 
-function makeStationLabel(name: string, elevation: number): L.DivIcon {
+function makeStationLabel(name: string): L.DivIcon {
   return L.divIcon({
     className: 'station-label',
-    html: `${name} <span style="opacity:0.7">${elevation}m</span>`,
+    html: `${name}`,
     iconSize: [0, 0],
     iconAnchor: [-8, 4],
   });
+}
+
+const AUTO_NAME_RE = /^(Piste|Lift|Station)\s+\d{6,}/;
+
+function isAutoName(name: string): boolean {
+  return !name || AUTO_NAME_RE.test(name);
 }
 
 export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, closedEdgeIds }: MapOverlaysProps) {
@@ -147,13 +129,6 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
 
   return (
     <>
-      {/* Base pistes and lifts */}
-      <GeoJSON
-        key={`base-geo-${lines.length}-${lines[0]?.properties?.id ?? ''}`}
-        data={{ type: 'FeatureCollection', features: lines } as GeoJSON.FeatureCollection}
-        style={pisteStyle}
-      />
-
       {/* Route segments as individual Polylines */}
       {routeSegments.map((seg) => (
         <Polyline
@@ -224,25 +199,29 @@ export function MapOverlays({ geo, route, onStationClick, selectedStepIndex, clo
               click: () => onStationClick(props.id),
             }}
           >
-            <Tooltip direction="top" offset={[0, -8]}>
-              {props.name} ({props.elevation}m)
-            </Tooltip>
+            {!isAutoName(props.name) && (
+              <Tooltip direction="top" offset={[0, -8]}>
+                {props.name}
+              </Tooltip>
+            )}
           </CircleMarker>
         );
       })}
 
-      {/* Permanent station labels at high zoom */}
-      {zoom >= 15 && stations.map((station) => {
-        const [lon, lat] = (station.geometry as GeoJSON.Point).coordinates;
-        const props = station.properties!;
-        return (
-          <Marker
-            key={`station-label-${props.id}`}
-            position={[lat, lon]}
-            icon={makeStationLabel(props.name, props.elevation)}
-            interactive={false}
-          />
-        );
+      {/* Permanent station labels at high zoom (skip auto-generated names) */}
+      {zoom >= 15 && stations
+        .filter((s) => !isAutoName(s.properties!.name))
+        .map((station) => {
+          const [lon, lat] = (station.geometry as GeoJSON.Point).coordinates;
+          const props = station.properties!;
+          return (
+            <Marker
+              key={`station-label-${props.id}`}
+              position={[lat, lon]}
+              icon={makeStationLabel(props.name)}
+              interactive={false}
+            />
+          );
       })}
     </>
   );

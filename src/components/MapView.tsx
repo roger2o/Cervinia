@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, CircleMarker, Circle, useMap } from 'react-lea
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapOverlays } from './MapOverlays';
-import { MapLabels } from './MapLabels';
 import { DailyActivityOverlay } from './DailyActivityOverlay';
 import type { RouteResult } from '../types/route';
 import type { GeoPosition } from '../hooks/useGeolocation';
@@ -69,9 +68,52 @@ function FlyToPosition({ position }: { position: GeoPosition }) {
   return null;
 }
 
+function MapLegend() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        className="w-10 h-10 rounded-full shadow-lg flex items-center justify-center bg-white text-gray-600 hover:bg-gray-50 transition-colors"
+        title="Map legend"
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
+          <circle cx="9" cy="9" r="7.5" />
+          <line x1="9" y1="8" x2="9" y2="13" />
+          <circle cx="9" cy="5.5" r="0.5" fill="currentColor" />
+        </svg>
+      </button>
+      {open && (
+        <div className="bg-white rounded-lg shadow-lg p-2 max-w-64 max-h-80 overflow-y-auto">
+          <img
+            src="https://www.opensnowmap.org/pics/mapkey_wide.png"
+            alt="OpenSnowMap Legend"
+            className="w-full"
+          />
+          <div className="border-t border-gray-200 mt-2 pt-2 px-1 text-xs">
+            <div className="font-bold text-gray-700 mb-1">Route Planner</div>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded-full bg-[#1e40af] text-white text-[9px] font-bold flex items-center justify-center border border-white shrink-0">1</span>
+                <span className="text-gray-600">Stop marker</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-4 h-4 rounded-full bg-white border-2 border-[#1e40af] shrink-0" />
+                <span className="text-gray-600">Station (tap to add stop)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+
 function LocateButton({ active, onToggle, error }: { active: boolean; onToggle: () => void; error: string | null }) {
   return (
     <div className="absolute bottom-4 right-3 z-[1000] flex flex-col items-end gap-2">
+      <MapLegend />
       {error && active && (
         <div className="bg-red-50 text-red-600 text-xs px-2 py-1 rounded shadow max-w-48">
           {error}
@@ -139,6 +181,12 @@ export function MapView({
         maxZoom={19}
         pane="tooltipPane"
       />
+      <TileLayer
+        attribution='&copy; <a href="https://www.opensnowmap.org">OpenSnowMap</a>'
+        url="https://tiles.opensnowmap.org/pistes/{z}/{x}/{y}.png"
+        maxZoom={18}
+        opacity={1.0}
+      />
       <MapOverlays
         geo={geo}
         route={route}
@@ -146,7 +194,6 @@ export function MapView({
         selectedStepIndex={selectedStepIndex}
         closedEdgeIds={closedEdgeIds}
       />
-      <MapLabels geo={geo} />
       <FlyToArea center={center} zoom={zoom} />
       <FlyToSegment route={route} selectedStepIndex={selectedStepIndex} />
 

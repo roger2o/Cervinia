@@ -3,6 +3,7 @@ interface DailyActivityPanelProps {
   track: { lat: number; lon: number }[];
   maxSpeed: number;
   totalDistance: number;
+  skiingDistance: number;
   showOnMap: boolean;
   replayPlaying: boolean;
   replaySpeed: number;
@@ -23,6 +24,7 @@ export function DailyActivityPanel({
   track,
   maxSpeed,
   totalDistance,
+  skiingDistance,
   showOnMap,
   replayPlaying,
   replaySpeed,
@@ -62,7 +64,7 @@ export function DailyActivityPanel({
 
       <div className="p-4 space-y-4">
         {/* Stats */}
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-3 gap-3">
           <div className="bg-gray-50 rounded-lg p-3 text-center">
             <div className="text-xs text-gray-500">Max Speed</div>
             <div className="text-lg font-bold text-blue-900">
@@ -71,7 +73,13 @@ export function DailyActivityPanel({
             <div className="text-xs text-gray-400">km/h</div>
           </div>
           <div className="bg-gray-50 rounded-lg p-3 text-center">
-            <div className="text-xs text-gray-500">Distance</div>
+            <div className="text-xs text-gray-500">Skiing</div>
+            <div className="text-lg font-bold text-blue-900">
+              {skiingDistance > 0 ? formatDistance(skiingDistance) : '--'}
+            </div>
+          </div>
+          <div className="bg-gray-50 rounded-lg p-3 text-center">
+            <div className="text-xs text-gray-500">Total</div>
             <div className="text-lg font-bold text-blue-900">
               {totalDistance > 0 ? formatDistance(totalDistance) : '--'}
             </div>
