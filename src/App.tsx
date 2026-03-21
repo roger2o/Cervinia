@@ -223,7 +223,7 @@ function App() {
   }, [waypoints, route, failedLeg, nodes, difficultyPref]);
 
   return (
-    <div className="h-screen w-screen flex flex-col overflow-hidden bg-[#F5FAFF]">
+    <div className="h-dvh w-screen flex flex-col overflow-hidden bg-[#F5FAFF]">
       {/* Offline banner (auto-dismisses after 2s) */}
       {bannerVisible && (
         <div className="bg-amber-500 text-white text-center text-xs py-1 px-2">

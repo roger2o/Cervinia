@@ -73,7 +73,7 @@ export function StationPicker({ nodes, selectedId, onSelect, subAreas }: Station
       <input
         type="text"
         className="w-full px-2 py-1.5 border border-gray-300 rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-        placeholder={selectedNode ? selectedNode.name : 'Add stop — search or tap map'}
+        placeholder={selectedNode ? selectedNode.name : 'Add stop'}
         value={search}
         onChange={(e) => {
           setSearch(e.target.value);
