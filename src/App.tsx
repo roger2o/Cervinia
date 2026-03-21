@@ -223,7 +223,7 @@ function App() {
   }, [waypoints, route, failedLeg, nodes, difficultyPref]);
 
   return (
-    <div className="h-dvh w-screen flex flex-col overflow-hidden bg-[#F5FAFF]">
+    <div className="fixed inset-0 flex flex-col overflow-hidden bg-[#F5FAFF]">
       {/* Offline banner (auto-dismisses after 2s) */}
       {bannerVisible && (
         <div className="bg-amber-500 text-white text-center text-xs py-1 px-2">
@@ -293,7 +293,7 @@ function App() {
       </div>
 
       {/* Map */}
-      <div className="flex-1 relative">
+      <div className="flex-1 min-h-0 relative overflow-hidden">
         {loading && (
           <div className="absolute inset-0 flex items-center justify-center bg-white/80 z-20">
             <div className="text-sm text-gray-500">Loading ski area data...</div>
