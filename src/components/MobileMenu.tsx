@@ -3,13 +3,12 @@ import { AreaSwitcher } from './AreaSwitcher';
 import { HistoryPanel } from './HistoryPanel';
 import { SeasonSummary } from './SeasonSummary';
 import { WeatherPanel } from './WeatherPanel';
-import { DailyActivityPanel } from './DailyActivityPanel';
 import type { HistoryEntry } from '../types/history';
 import type { WeatherData } from '../hooks/useWeather';
 import type { AreaConfig } from '../types/area';
 import { cacheTiles, countTiles, type TileCacheProgress } from '../services/tileCache';
 
-type MenuView = 'menu' | 'history' | 'season' | 'site' | 'weather' | 'offline-map' | 'activity';
+type MenuView = 'menu' | 'history' | 'season' | 'site' | 'weather' | 'offline-map';
 
 interface MobileMenuProps {
   areaId: string;
@@ -23,22 +22,6 @@ interface MobileMenuProps {
   weatherError: string | null;
   onRefreshWeather: () => void;
   checkOnline: () => boolean;
-  // Daily activity
-  activityRecording: boolean;
-  activityTrack: { lat: number; lon: number }[];
-  activityMaxSpeed: number;
-  activityTotalDistance: number;
-  activitySkiingDistance: number;
-  activityShowOnMap: boolean;
-  activityReplayPlaying: boolean;
-  activityReplaySpeed: number;
-  onActivityStart: () => void;
-  onActivityStop: () => void;
-  onActivityReset: () => void;
-  onActivityStartReplay: () => void;
-  onActivityStopReplay: () => void;
-  onActivitySetReplaySpeed: (speed: number) => void;
-  onActivityToggleShowOnMap: () => void;
   labelSize: number;
   onLabelSizeChange: (size: number) => void;
 }
@@ -55,21 +38,6 @@ export function MobileMenu({
   weatherError,
   onRefreshWeather,
   checkOnline,
-  activityRecording,
-  activityTrack,
-  activityMaxSpeed,
-  activityTotalDistance,
-  activitySkiingDistance,
-  activityShowOnMap,
-  activityReplayPlaying,
-  activityReplaySpeed,
-  onActivityStart,
-  onActivityStop,
-  onActivityReset,
-  onActivityStartReplay,
-  onActivityStopReplay,
-  onActivitySetReplaySpeed,
-  onActivityToggleShowOnMap,
   labelSize,
   onLabelSizeChange,
 }: MobileMenuProps) {
@@ -137,20 +105,6 @@ export function MobileMenu({
         <div className="absolute right-0 mt-2 w-72 bg-snowflake border border-gray-200 rounded-xl shadow-xl z-[10000] overflow-hidden">
           {view === 'menu' && (
             <div>
-              <button
-                onClick={() => setView('activity')}
-                className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-100"
-              >
-                <span className="font-medium flex items-center gap-1.5">
-                  Daily Activity
-                  {activityRecording && <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />}
-                </span>
-                <span className="text-xs text-gray-400">
-                  {activityTotalDistance > 0
-                    ? `${activityTotalDistance >= 1000 ? (activityTotalDistance / 1000).toFixed(1) + ' km' : Math.round(activityTotalDistance) + ' m'} | ${activityMaxSpeed.toFixed(0)} km/h`
-                    : 'Not started'}
-                </span>
-              </button>
               <button
                 onClick={() => setView('history')}
                 className="w-full text-left px-4 py-3 text-sm hover:bg-gray-50 flex items-center justify-between border-b border-gray-100"
@@ -305,27 +259,6 @@ export function MobileMenu({
                 </button>
               </div>
             </div>
-          )}
-
-          {view === 'activity' && (
-            <DailyActivityPanel
-              recording={activityRecording}
-              track={activityTrack}
-              maxSpeed={activityMaxSpeed}
-              totalDistance={activityTotalDistance}
-              skiingDistance={activitySkiingDistance}
-              showOnMap={activityShowOnMap}
-              replayPlaying={activityReplayPlaying}
-              replaySpeed={activityReplaySpeed}
-              onStart={onActivityStart}
-              onStop={onActivityStop}
-              onReset={onActivityReset}
-              onStartReplay={onActivityStartReplay}
-              onStopReplay={onActivityStopReplay}
-              onSetReplaySpeed={onActivitySetReplaySpeed}
-              onToggleShowOnMap={onActivityToggleShowOnMap}
-              onClose={close}
-            />
           )}
 
           {view === 'site' && (

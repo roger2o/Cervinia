@@ -5,10 +5,12 @@ export type PanelState = 'collapsed' | 'half' | 'full';
 interface UseDragSheetOptions {
   /** Reset to this state when the dependency changes */
   resetDep?: unknown;
+  /** Initial panel state (defaults to 'half') */
+  initialState?: PanelState;
 }
 
 export function useDragSheet(options?: UseDragSheetOptions) {
-  const [panelState, setPanelState] = useState<PanelState>('half');
+  const [panelState, setPanelState] = useState<PanelState>(options?.initialState ?? 'half');
   const handleRef = useRef<HTMLDivElement>(null);
 
   // Track drag state without re-renders

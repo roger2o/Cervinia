@@ -89,6 +89,7 @@ interface SavedData {
   track: TrackPoint[];
   maxSpeed: number;
   totalDistance: number;
+  maxSpeedPoint?: TrackPoint | null;
 }
 
 function loadSaved(): SavedData | null {
@@ -101,18 +102,19 @@ function loadSaved(): SavedData | null {
   }
 }
 
-function save(track: TrackPoint[], maxSpeed: number, totalDistance: number) {
+function save(track: TrackPoint[], maxSpeed: number, totalDistance: number, maxSpeedPoint: TrackPoint | null) {
   try {
-    localStorage.setItem(todayKey(), JSON.stringify({ track, maxSpeed, totalDistance }));
+    localStorage.setItem(todayKey(), JSON.stringify({ track, maxSpeed, totalDistance, maxSpeedPoint }));
   } catch {
     // localStorage full — ignore
   }
 }
 
-export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boolean) {
+export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boolean, startGps: () => void) {
   const [recording, setRecording] = useState(false);
   const [track, setTrack] = useState<TrackPoint[]>([]);
   const [maxSpeed, setMaxSpeed] = useState(0);
+  const [maxSpeedPoint, setMaxSpeedPoint] = useState<TrackPoint | null>(null);
   const [totalDistance, setTotalDistance] = useState(0);
   const [showOnMap, setShowOnMap] = useState(false);
   const [replayIndex, setReplayIndex] = useState(0);
@@ -130,6 +132,7 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
     if (saved) {
       setTrack(saved.track);
       setMaxSpeed(saved.maxSpeed);
+      setMaxSpeedPoint(saved.maxSpeedPoint ?? null);
       setTotalDistance(saved.totalDistance);
     }
   }, []);
@@ -171,13 +174,15 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
       if (next.length % 10 === 0) {
         const newMax = Math.max(maxSpeed, speed);
         const newDist = totalDistance + dist;
-        save(next, newMax, newDist);
+        const newMaxPt = speed > maxSpeed ? point : maxSpeedPoint;
+        save(next, newMax, newDist, newMaxPt);
       }
       return next;
     });
 
     if (speed > maxSpeed) {
       setMaxSpeed(speed);
+      setMaxSpeedPoint(point);
     }
     if (dist > 0) {
       setTotalDistance((prev) => prev + dist);
@@ -234,20 +239,22 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
   }, [segments]);
 
   const start = useCallback(() => {
+    if (!gpsActive) startGps();
     setRecording(true);
     lastPositionRef.current = gpsPosition;
-  }, [gpsPosition]);
+  }, [gpsPosition, gpsActive, startGps]);
 
   const stop = useCallback(() => {
     setRecording(false);
     // Persist on stop
-    save(track, maxSpeed, totalDistance);
-  }, [track, maxSpeed, totalDistance]);
+    save(track, maxSpeed, totalDistance, maxSpeedPoint);
+  }, [track, maxSpeed, totalDistance, maxSpeedPoint]);
 
   const reset = useCallback(() => {
     setRecording(false);
     setTrack([]);
     setMaxSpeed(0);
+    setMaxSpeedPoint(null);
     setTotalDistance(0);
     setReplayIndex(0);
     setReplayPlaying(false);
@@ -279,6 +286,7 @@ export function useDailyActivity(gpsPosition: GeoPosition | null, gpsActive: boo
     recording,
     track,
     maxSpeed,
+    maxSpeedPoint,
     totalDistance,
     skiingDistance,
     showOnMap,

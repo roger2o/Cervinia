@@ -3,7 +3,9 @@ import { MapView } from './components/MapView';
 import { WaypointList } from './components/WaypointList';
 import { DifficultySelector } from './components/DifficultySelector';
 import { RoutePanel } from './components/RoutePanel';
+import { ActivityStatsBar } from './components/ActivityStatsBar';
 import { MobileMenu } from './components/MobileMenu';
+import { identifyPiste } from './utils/pisteMatch';
 import { useGraph } from './hooks/useGraph';
 import { useRoute } from './hooks/useRoute';
 import { useOffline } from './hooks/useOffline';
@@ -26,6 +28,7 @@ function App() {
   const [waypoints, setWaypoints] = useState<string[]>([]);
   const [difficultyPref, setDifficultyPref] = useState<DifficultyPreference>('red');
   const [selectedStepIndex, setSelectedStepIndex] = useState<number | null>(null);
+  const [mode, setMode] = useState<'activity' | 'route'>('activity');
   const [labelSize, setLabelSize] = useState(() => {
     const saved = localStorage.getItem('labelSize');
     return saved ? Number(saved) : 12;
@@ -65,6 +68,7 @@ function App() {
       if (sharedArea) setAreaId(sharedArea);
       if (sharedDiff && PREFERENCE_ORDER.includes(sharedDiff)) setDifficultyPref(sharedDiff);
       setWaypoints(restoredWaypoints);
+      setMode('route');
       // Clean URL without reloading
       window.history.replaceState({}, '', window.location.pathname);
     }
@@ -85,9 +89,16 @@ function App() {
   const { bannerVisible, checkOnline } = useOffline();
   const { cachedAreaId } = useAreaCache();
   const { entries: historyEntries, markDone, remove: removeHistory } = useHistory(areaId ?? '');
-  const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps } = useGeolocation();
-  const activity = useDailyActivity(gpsPosition, gpsActive);
+  const { position: gpsPosition, watching: gpsActive, error: gpsError, toggle: toggleGps, startWatching: startGps } = useGeolocation();
+  const activity = useDailyActivity(gpsPosition, gpsActive, startGps);
   const dragSheet = useDragSheet({ resetDep: route });
+  const activityDragSheet = useDragSheet({ initialState: 'collapsed' });
+
+  // Identify which piste the top speed was achieved on
+  const maxSpeedPiste = useMemo(
+    () => activity.maxSpeedPoint ? identifyPiste(activity.maxSpeedPoint, geo) : null,
+    [activity.maxSpeedPoint, geo],
+  );
 
   // Register dynamic area from cached meta when not in static registry
   useEffect(() => {
@@ -234,13 +245,40 @@ function App() {
       {/* Top controls */}
       <div className="flex-shrink-0 px-3 py-2 space-y-1 bg-snowflake shadow-md z-[10000] relative">
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <h1 className="text-base font-bold text-blue-900">Ski Route Planner</h1>
-            <DifficultySelector value={difficultyPref} onChange={setDifficultyPref} />
+          <div className="flex items-center gap-2 min-w-0">
+            <h1 className="text-sm font-bold text-blue-900 truncate">
+              {meta?.name ?? 'Ski Planner'}
+            </h1>
+            {/* Mode toggle */}
+            <div className="flex bg-gray-200 rounded-lg p-0.5 flex-shrink-0">
+              <button
+                onClick={() => setMode('activity')}
+                className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
+                  mode === 'activity'
+                    ? 'bg-white text-blue-900 shadow-sm'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                Activity
+              </button>
+              <button
+                onClick={() => setMode('route')}
+                className={`px-2.5 py-1 text-xs font-medium rounded-md transition-colors ${
+                  mode === 'route'
+                    ? 'bg-white text-blue-900 shadow-sm'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                Routes
+              </button>
+            </div>
+            {mode === 'route' && (
+              <DifficultySelector value={difficultyPref} onChange={setDifficultyPref} />
+            )}
           </div>
           <div className="flex items-center gap-2">
-            {meta && (
-              <span className="text-xs text-gray-400 hidden sm:inline">{meta.name}</span>
+            {activity.recording && mode === 'route' && (
+              <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" title="Recording" />
             )}
             <MobileMenu
               areaId={areaId ?? ''}
@@ -254,41 +292,30 @@ function App() {
               weatherError={weatherError}
               onRefreshWeather={refreshWeather}
               checkOnline={checkOnline}
-              activityRecording={activity.recording}
-              activityTrack={activity.track}
-              activityMaxSpeed={activity.maxSpeed}
-              activityTotalDistance={activity.totalDistance}
-              activitySkiingDistance={activity.skiingDistance}
-              activityShowOnMap={activity.showOnMap}
-              activityReplayPlaying={activity.replayPlaying}
-              activityReplaySpeed={activity.replaySpeed}
-              onActivityStart={activity.start}
-              onActivityStop={activity.stop}
-              onActivityReset={activity.reset}
-              onActivityStartReplay={activity.startReplay}
-              onActivityStopReplay={activity.stopReplay}
-              onActivitySetReplaySpeed={activity.setReplaySpeed}
-              onActivityToggleShowOnMap={activity.toggleShowOnMap}
               labelSize={labelSize}
               onLabelSizeChange={setLabelSize}
             />
           </div>
         </div>
 
-        <WaypointList
-          waypoints={waypoints}
-          nodes={nodes}
-          subAreas={area?.subAreas ?? meta?.subAreas ?? []}
-          onAdd={handleStationClick}
-          onRemove={handleWaypointRemove}
-          onMoveUp={handleWaypointMoveUp}
-          onMoveDown={handleWaypointMoveDown}
-        />
+        {mode === 'route' && (
+          <>
+            <WaypointList
+              waypoints={waypoints}
+              nodes={nodes}
+              subAreas={area?.subAreas ?? meta?.subAreas ?? []}
+              onAdd={handleStationClick}
+              onRemove={handleWaypointRemove}
+              onMoveUp={handleWaypointMoveUp}
+              onMoveDown={handleWaypointMoveDown}
+            />
 
-        {noRouteMessage && (
-          <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
-            {noRouteMessage}
-          </div>
+            {noRouteMessage && (
+              <div className="text-sm text-red-600 bg-red-50 p-2 rounded">
+                {noRouteMessage}
+              </div>
+            )}
+          </>
         )}
       </div>
 
@@ -319,15 +346,44 @@ function App() {
           labelSize={labelSize}
           dailyTrack={activity.track}
           dailySegments={activity.segments}
-          showDailyTrack={activity.showOnMap}
+          showDailyTrack={mode === 'activity' || activity.showOnMap}
           replayPlaying={activity.replayPlaying}
           replayIndex={activity.replayIndex}
         />
       </div>
 
-      {/* Route panel (bottom sheet) */}
-      {route && (
-        <div className="flex-shrink-0 overflow-hidden">
+      {/* Bottom panel */}
+      <div className="flex-shrink-0 overflow-hidden">
+        {mode === 'activity' && (
+          <ActivityStatsBar
+            recording={activity.recording}
+            track={activity.track}
+            maxSpeed={activity.maxSpeed}
+            totalDistance={activity.totalDistance}
+            skiingDistance={activity.skiingDistance}
+            showOnMap={activity.showOnMap}
+            replayPlaying={activity.replayPlaying}
+            replaySpeed={activity.replaySpeed}
+            maxSpeedPisteName={maxSpeedPiste?.name ?? null}
+            maxSpeedPisteDifficulty={maxSpeedPiste?.difficulty ?? null}
+            onStart={activity.start}
+            onStop={activity.stop}
+            onReset={activity.reset}
+            onStartReplay={activity.startReplay}
+            onStopReplay={activity.stopReplay}
+            onSetReplaySpeed={activity.setReplaySpeed}
+            onToggleShowOnMap={activity.toggleShowOnMap}
+            panelState={activityDragSheet.panelState}
+            onPointerDown={activityDragSheet.onPointerDown}
+            onPointerMove={activityDragSheet.onPointerMove}
+            onPointerUp={activityDragSheet.onPointerUp}
+            onHeaderTap={activityDragSheet.onHeaderTap}
+            handleRef={activityDragSheet.handleRef}
+            panelRef={activityDragSheet.panelRef}
+            transitioning={activityDragSheet.transitioning}
+          />
+        )}
+        {mode === 'route' && route && (
           <RoutePanel
             route={route}
             onClear={handleClearRoute}
@@ -344,8 +400,8 @@ function App() {
             panelRef={dragSheet.panelRef}
             transitioning={dragSheet.transitioning}
           />
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

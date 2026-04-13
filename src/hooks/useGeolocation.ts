@@ -63,5 +63,5 @@ export function useGeolocation() {
     };
   }, [watching]);
 
-  return { position, watching, error, toggle };
+  return { position, watching, error, toggle, startWatching, stopWatching };
 }
