@@ -48,16 +48,60 @@ export interface FetchProgress {
   message: string;
 }
 
-const OVERPASS_URL = 'https://overpass-api.de/api/interpreter';
+// Public Overpass servers, tried in order. The main server has been refusing
+// browser requests (406) since 2026, so fall back to mirrors that allow CORS.
+const OVERPASS_URLS = [
+  'https://overpass-api.de/api/interpreter',
+  'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
+  'https://overpass.private.coffee/api/interpreter',
+  'https://overpass.kumi.systems/api/interpreter',
+];
+
+// The server that last answered is tried first, so one area load doesn't
+// wait on a failing server for every query.
+let preferredIndex = 0;
+
+// Give up after this long across all servers, so the user isn't left waiting minutes
+const OVERALL_TIMEOUT_MS = 90000;
 
 async function overpassQuery(query: string): Promise<unknown> {
   // Use GET with encoded query — more reliable with CORS and caching
-  const url = `${OVERPASS_URL}?data=${encodeURIComponent(query)}`;
-  const res = await fetch(url, { signal: AbortSignal.timeout(45000) });
-  if (!res.ok) {
-    throw new Error(`Overpass API error: ${res.status} ${res.statusText}`);
+  const order = [preferredIndex, ...OVERPASS_URLS.keys()].filter((i, pos, arr) => arr.indexOf(i) === pos);
+  let lastError: unknown;
+  const deadline = Date.now() + OVERALL_TIMEOUT_MS;
+  for (const i of order) {
+    if (Date.now() >= deadline) break;
+    const url = `${OVERPASS_URLS[i]}?data=${encodeURIComponent(query)}`;
+    // Mirrors often answer a busy moment with an instant 429/504, so retry those once
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const res = await fetch(url, { signal: AbortSignal.timeout(Math.min(45000, Math.max(1000, deadline - Date.now()))) });
+        if (!res.ok) {
+          lastError = new Error(`Overpass API error: ${res.status} ${res.statusText}`);
+          if ((res.status === 429 || res.status === 504) && attempt === 0) {
+            await new Promise((r) => setTimeout(r, 2000));
+            continue;
+          }
+          break;
+        }
+        const data = await res.json();
+        // A busy server can reply 200 with a "remark" (timeout / out of memory) and
+        // partial data; treat that as a failure so the map isn't silently incomplete
+        if (!Array.isArray(data?.elements) || typeof data.remark === 'string') {
+          lastError = new Error(`Overpass API incomplete reply${data?.remark ? `: ${data.remark}` : ''}`);
+          break;
+        }
+        preferredIndex = i;
+        return data;
+      } catch (err) {
+        lastError = err;
+        break;
+      }
+    }
   }
-  return res.json();
+  throw new Error(
+    `Could not reach any map data server (${lastError instanceof Error ? lastError.message : String(lastError)})`,
+  );
 }
 
 interface OverpassElement {
