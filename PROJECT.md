@@ -121,7 +121,7 @@ Live weather data is available so skiers can plan their day accordingly.
 | **User interface** | React 19 | Widely used, large talent pool, strong community support. Reduces hiring and maintenance risk. |
 | **Programming language** | TypeScript 5 | Catches errors before they reach users. Makes the codebase easier to maintain as it grows. |
 | **Map display** | Leaflet with react-leaflet | Lightweight, mobile-optimised, and well-proven for interactive maps. Free and open-source. |
-| **Map tiles** | CartoDB (base) + ArcGIS (hillshade) + OpenSnowMap (piste overlay) | Provides clear topographic maps with ski-specific piste and lift detail. All services offer free tiers. |
+| **Map tiles** | OpenTopoMap (base, with place names) + ArcGIS (hillshade) + OpenSnowMap (piste overlay) | Provides clear topographic maps with ski-specific piste and lift detail. All are free and need no key. CARTO was dropped in October 2026 when it began requiring a key. |
 | **Build and bundling** | Vite 7 | Fast development workflow and optimised production output. Industry-standard tool. |
 | **Styling** | Tailwind CSS 4 | Enables rapid, consistent visual design without writing custom style sheets. |
 | **Offline/PWA support** | vite-plugin-pwa + Workbox | Generates the service worker that enables offline use and home-screen installation. |
@@ -140,7 +140,7 @@ Live weather data is available so skiers can plan their day accordingly.
 - **No user accounts or login.** The app does not collect personal information, emails, or passwords. There is no authentication system.
 - **All data stored locally on the user's device.** Run history, preferences, and cached map data are stored in the browser's local database (IndexedDB). Nothing is sent to a server.
 - **No backend server.** There is no database or server that could be breached. The app is a static website.
-- **Third-party API calls.** The app calls external services directly from the browser: OpenStreetMap/Overpass (ski data and elevation), Open-Meteo (weather and elevation), CartoDB/ArcGIS (base map tiles), and OpenSnowMap (piste overlay tiles). These calls do not include any user-identifying information.
+- **Third-party API calls.** The app calls external services directly from the browser: OpenStreetMap/Overpass (ski data and elevation), Open-Meteo (weather and elevation), OpenTopoMap/ArcGIS (base map tiles), and OpenSnowMap (piste overlay tiles). These calls do not include any user-identifying information.
 - **HTTPS enforced.** The app is served over HTTPS via Netlify, ensuring data in transit is encrypted.
 - **GPS data stays on device.** Location tracking data (daily activity) is stored only in the browser and never transmitted.
 - **No API keys in the client.** The external services used do not require API keys, so there are no secrets exposed in the code.
@@ -169,7 +169,7 @@ Live weather data is available so skiers can plan their day accordingly.
 |---|---|---|
 | **OpenStreetMap / Overpass API** | Ski run and lift data | Data is fetched when a user selects a ski area and cached on their device. If the Overpass API goes down, already-cached areas still work. Selecting a new area would be blocked until it returns. |
 | **Open-Meteo** | Weather forecasts | Weather panel would show an error. All other features continue to work. No cost or API key dependency. |
-| **CartoDB / ArcGIS / OpenSnowMap** | Map tile images and piste overlay | If tile servers are unreachable and tiles are not pre-cached, the map background or piste overlay would be blank. Route planning and directions still work. |
+| **OpenTopoMap / ArcGIS / OpenSnowMap** | Map tile images and piste overlay | If tile servers are unreachable and tiles are not pre-cached, the map background or piste overlay would be blank. Route planning and directions still work. |
 | **Netlify** | Hosting and deployment | If Netlify has an outage, new users cannot access the app. Existing users with a cached version can continue using it offline. |
 
 ### Data Quality

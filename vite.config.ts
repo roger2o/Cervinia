@@ -32,13 +32,14 @@ export default defineConfig({
             },
           },
           {
-            urlPattern: /^https:\/\/[abcd]\.basemaps\.cartocdn\.com\/.*/i,
+            // Same cache the offline download writes to (services/tileCache.ts).
+            // No maxAgeSeconds: it would reject downloaded tiles older than the limit.
+            urlPattern: /^https:\/\/[abc]\.tile\.opentopomap\.org\/.*/i,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'ski-carto-tiles',
+              cacheName: 'ski-map-tiles',
               expiration: {
                 maxEntries: 5000,
-                maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
               },
             },
           },

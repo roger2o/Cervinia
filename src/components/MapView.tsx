@@ -216,16 +216,14 @@ export function MapView({
         url="https://server.arcgisonline.com/ArcGIS/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}"
         maxZoom={18}
       />
+      {/* Must match TILE_URL_TEMPLATE in services/tileCache.ts so pre-downloaded tiles are used offline */}
       <TileLayer
-        attribution='&copy; <a href="https://carto.com">CARTO</a>'
-        url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png"
-        maxZoom={19}
-        opacity={0.35}
-      />
-      <TileLayer
-        url="https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png"
-        maxZoom={19}
-        pane="tooltipPane"
+        attribution='&copy; <a href="https://opentopomap.org">OpenTopoMap</a> (CC-BY-SA)'
+        url="https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png"
+        maxZoom={18}
+        maxNativeZoom={17}
+        opacity={0.7}
+        crossOrigin="anonymous"
       />
       <TileLayer
         attribution='&copy; <a href="https://www.opensnowmap.org">OpenSnowMap</a>'
