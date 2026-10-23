@@ -140,7 +140,7 @@ Live weather data is available so skiers can plan their day accordingly.
 - **No user accounts or login.** The app does not collect personal information, emails, or passwords. There is no authentication system.
 - **All data stored locally on the user's device.** Run history, preferences, and cached map data are stored in the browser's local database (IndexedDB). Nothing is sent to a server.
 - **No backend server.** There is no database or server that could be breached. The app is a static website.
-- **Third-party API calls.** The app calls external services directly from the browser: OpenStreetMap/Overpass (ski data and elevation), Open-Meteo (weather and elevation), OpenTopoMap/ArcGIS (base map tiles), and OpenSnowMap (piste overlay tiles). These calls do not include any user-identifying information.
+- **Third-party API calls.** The app calls external services directly from the browser: OpenStreetMap/Overpass (ski data and elevation; since 23 Oct 2026 also public mirror servers, including one run by mail.ru, which receive the boundaries of the area being loaded but never the user's GPS position), Open-Meteo (weather and elevation), OpenTopoMap/ArcGIS (base map tiles), and OpenSnowMap (piste overlay tiles). These calls do not include any user-identifying information.
 - **HTTPS enforced.** The app is served over HTTPS via Netlify, ensuring data in transit is encrypted.
 - **GPS data stays on device.** Location tracking data (daily activity) is stored only in the browser and never transmitted.
 - **No API keys in the client.** The external services used do not require API keys, so there are no secrets exposed in the code.
@@ -167,7 +167,7 @@ Live weather data is available so skiers can plan their day accordingly.
 ### Third-Party Services
 | Service | What It Provides | Risk If Unavailable |
 |---|---|---|
-| **OpenStreetMap / Overpass API** | Ski run and lift data | Data is fetched when a user selects a ski area and cached on their device. If the Overpass API goes down, already-cached areas still work. Selecting a new area would be blocked until it returns. |
+| **OpenStreetMap / Overpass API** | Ski run and lift data | Data is fetched when a user selects a ski area and cached on their device. If the Overpass API goes down, already-cached areas still work. Selecting a new area would be blocked until it returns. Since 23 Oct 2026 the main server refuses browser requests, so the app falls back to public mirrors, which are slower and sometimes busy. |
 | **Open-Meteo** | Weather forecasts | Weather panel would show an error. All other features continue to work. No cost or API key dependency. |
 | **OpenTopoMap / ArcGIS / OpenSnowMap** | Map tile images and piste overlay | If tile servers are unreachable and tiles are not pre-cached, the map background or piste overlay would be blank. Route planning and directions still work. |
 | **Netlify** | Hosting and deployment | If Netlify has an outage, new users cannot access the app. Existing users with a cached version can continue using it offline. |
@@ -211,7 +211,18 @@ Live weather data is available so skiers can plan their day accordingly.
 
 ### Known Limitations
 - Route planning quality depends on the completeness of OpenStreetMap data for a given ski area. Well-mapped areas (e.g., major Alpine resorts) work well; less-mapped areas may have gaps in connectivity.
+- Switching to a new ski area takes about 20-30 seconds, because the data now comes from slower backup servers (see Open Questions).
 - The graph-building step when first selecting an area can take a few seconds on slower devices or large areas.
+
+### Decisions, 23 October 2026
+- **Map background moved from CARTO to OpenTopoMap.**
+  - What: the CARTO background and label layers were replaced by one OpenTopoMap layer, faded slightly so pistes stay readable.
+  - Why: CARTO began requiring a paid key and showed an "API key required" image; OpenTopoMap is free, has place names, and is what the offline download already saved, so offline maps now actually work.
+  - Deferred: whether OpenTopoMap's usage policy allows the bulk offline download.
+- **Ski data now falls back to public mirror servers.**
+  - What: the app tries the main Overpass server and then three mirrors, remembers the one that answered, retries a busy server once, rejects partial replies, and gives up after 90 seconds.
+  - Why: the main server began refusing browser requests, so switching area failed with "Failed to fetch".
+  - Deferred: a small service on our own Netlify site, which would be more reliable; to do if area switching proves flaky.
 
 ---
 
