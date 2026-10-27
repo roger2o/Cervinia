@@ -183,6 +183,7 @@ Live weather data is available so skiers can plan their day accordingly.
 ### Other Risks
 - **Browser compatibility.** PWA support varies by browser and operating system. iOS Safari has historically lagged behind in PWA features (e.g., limited IndexedDB storage, no push notifications).
 - **Data freshness.** Ski area data is fetched from OpenStreetMap when a user first selects an area and cached locally. If the real-world ski area changes, the cached data becomes stale. Users can clear their cache via the "Refresh App Data" menu option to re-fetch.
+- **Known dependency vulnerabilities, re-measured 2026-10-27.** 20 in total (1 critical, 13 high, 4 moderate, 2 low). **None reach the live app: the live-app count is 0.** All are in the build and test tools; the critical one is `vitest`. All 20 have a non-breaking fix, so a plain `npm audit fix` should clear them, followed by the test suite. Measured with `npm audit` right after a fresh install on the new laptop; the live-app figure is `npm audit --omit=dev`, which counts only what ships to users.
 
 ---
 
